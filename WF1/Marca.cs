@@ -26,7 +26,7 @@ namespace WF1
         }
         public string getnombreMarca()
         {
-            return nombreMarca;
+            return nombreMarca;//
         }
 
 
