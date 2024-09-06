@@ -23,5 +23,26 @@ namespace WF1
         {
 
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void aLTAToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formAlta ventaAlta = new formAlta();
+            ventaAlta.ShowDialog();
+        }
+
+        private void mODIFICARToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SalirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
