@@ -30,11 +30,12 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ArticulosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lISTADOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AltaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ModificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lISTADOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SalirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aRTICULOSToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,12 +61,6 @@
             this.ArticulosToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
             this.ArticulosToolStripMenuItem.Text = "ARTICULOS";
             // 
-            // lISTADOSToolStripMenuItem
-            // 
-            this.lISTADOSToolStripMenuItem.Name = "lISTADOSToolStripMenuItem";
-            this.lISTADOSToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
-            this.lISTADOSToolStripMenuItem.Text = "LISTADOS";
-            // 
             // AltaToolStripMenuItem
             // 
             this.AltaToolStripMenuItem.Name = "AltaToolStripMenuItem";
@@ -86,12 +81,27 @@
             this.ModificarToolStripMenuItem.Text = "&3- MODIFICAR";
             this.ModificarToolStripMenuItem.Click += new System.EventHandler(this.mODIFICARToolStripMenuItem_Click);
             // 
+            // lISTADOSToolStripMenuItem
+            // 
+            this.lISTADOSToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aRTICULOSToolStripMenuItem1});
+            this.lISTADOSToolStripMenuItem.Name = "lISTADOSToolStripMenuItem";
+            this.lISTADOSToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
+            this.lISTADOSToolStripMenuItem.Text = "LISTADOS";
+            // 
             // SalirToolStripMenuItem
             // 
             this.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem";
             this.SalirToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
             this.SalirToolStripMenuItem.Text = "SALIR";
             this.SalirToolStripMenuItem.Click += new System.EventHandler(this.SalirToolStripMenuItem_Click);
+            // 
+            // aRTICULOSToolStripMenuItem1
+            // 
+            this.aRTICULOSToolStripMenuItem1.Name = "aRTICULOSToolStripMenuItem1";
+            this.aRTICULOSToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.aRTICULOSToolStripMenuItem1.Text = "ARTICULOS";
+            this.aRTICULOSToolStripMenuItem1.Click += new System.EventHandler(this.aRTICULOSToolStripMenuItem1_Click);
             // 
             // Form1
             // 
@@ -121,6 +131,7 @@
         private System.Windows.Forms.ToolStripMenuItem ModificarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lISTADOSToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem SalirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aRTICULOSToolStripMenuItem1;
     }
 }
 
