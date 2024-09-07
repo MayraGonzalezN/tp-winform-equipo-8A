@@ -1,4 +1,4 @@
-﻿namespace TPWinForm_equipo-8A
+﻿namespace WinForm
 {
     partial class ListadoArticulos
     {

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 
-namespace TPWinForm_equipo-8A
+namespace WinForm
 {
     class GestionArticulos
     {

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TPWinForm_equipo-8A
+namespace WinForm
 {
     public partial class ListadoArticulos : Form
     {
