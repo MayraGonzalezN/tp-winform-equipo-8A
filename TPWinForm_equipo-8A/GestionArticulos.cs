@@ -4,7 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
-namespace WF1
+
+namespace TPWinForm_equipo-8A
 {
     class GestionArticulos
     {

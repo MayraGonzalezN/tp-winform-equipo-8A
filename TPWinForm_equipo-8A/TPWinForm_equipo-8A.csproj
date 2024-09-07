@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{2851C70A-CA25-4BC6-9B57-204F235CED64}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>WF1</RootNamespace>
-    <AssemblyName>WF1</AssemblyName>
+    <RootNamespace>TPWinForm_equipo-8A</RootNamespace>
+    <AssemblyName>TPWinForm_equipo-8A</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

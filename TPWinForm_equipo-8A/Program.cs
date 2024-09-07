@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WF1
+namespace TPWinForm_equipo-8A
 {
     internal static class Program
     {

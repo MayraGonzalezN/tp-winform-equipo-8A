@@ -1,6 +1,6 @@
 ﻿namespace WF1
 {
-    partial class Form1
+    partial class TPWinForm_equipo-8A
     {
         /// <summary>
         /// Required designer variable.

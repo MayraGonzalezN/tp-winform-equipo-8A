@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WF1", "WF1\WF1.csproj", "{2851C70A-CA25-4BC6-9B57-204F235CED64}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPWinForm_equipo-8A", "TPWinForm_equipo-8A\TPWinForm_equipo-8A.csproj", "{2851C70A-CA25-4BC6-9B57-204F235CED64}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

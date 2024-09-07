@@ -1,4 +1,4 @@
-﻿namespace WF1
+﻿namespace TPWinForm_equipo-8A
 {
     partial class formAlta
     {

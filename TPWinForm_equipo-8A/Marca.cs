@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WF1
+namespace TPWinForm_equipo-8A
 {
     internal class Marca
     {
