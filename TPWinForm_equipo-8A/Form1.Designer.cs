@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaPrincipal));
-           // this.toolrara = new System.Windows.Forms.ToolStripContainer();
+          
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ArticulosDesplegable = new System.Windows.Forms.ToolStripMenuItem();
             this.AltaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -38,18 +38,11 @@
             this.ListadoDesplegable = new System.Windows.Forms.ToolStripMenuItem();
             this.aRTICULOSToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.SalirDesplegable = new System.Windows.Forms.ToolStripMenuItem();
-           // this.toolrara.SuspendLayout();
+       
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // toolrara
-            // 
-            // 
-            // toolrara.ContentPanel
-            // 
-           //resources.ApplyResources(this.toolrara.ContentPanel, "toolrara.ContentPanel");
-            //resources.ApplyResources(this.toolrara, "toolrara");
-            //this.toolrara.Name = "toolrara";
+           
             // 
             // menuStrip1
             // 
@@ -110,14 +103,13 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.Controls.Add(this.toolrara);
+     
             this.Controls.Add(this.menuStrip1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "PantallaPrincipal";
             this.Load += new System.EventHandler(this.Form1_Load);
-            //this.toolrara.ResumeLayout(false);
-            //this.toolrara.PerformLayout();
+          
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

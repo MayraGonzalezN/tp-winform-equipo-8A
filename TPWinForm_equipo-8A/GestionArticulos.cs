@@ -4,11 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using TPWinForm_equipo_8A;
+
 
 namespace WinForm
 {
     class GestionArticulos
     {
+        // clase para acceso a datos, listar, agegar, modificar,
         public List<Articulo> Listar()
         {
             List<Articulo> Lista = new List<Articulo>();
@@ -18,8 +21,7 @@ namespace WinForm
 
             try
             {
-                conexion.ConnectionString = "server=.\\SQLEXPRESS01; database=CATALOGO_P3_DB; integrated security=true";
-          
+                conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.CommandText = "SELECT Nombre,Descripcion,idMarca,idCategoria,Codigo FROM ARTICULOS";
                 comando.Connection = conexion;
@@ -50,5 +52,44 @@ namespace WinForm
                 throw ex;
             }
         }
+
+        public void agregar(Articulo nuevoArt)
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+
+            try
+            {
+                /////////////ACA ESTA EL ERROR CREO QUE HAY ALGO EN EL FORMATO DE LOS DATOS QUE IMPIDE QUE INCERTE DATOS
+                string consulta = "INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio) " +
+                "VALUES ('" + nuevoArt.Codigo + "', '" + nuevoArt.Nombre + "', '" + nuevoArt.Descripcion +
+                "', " + nuevoArt.marca.idM + ", " + nuevoArt.categoria.id + ", " + nuevoArt.Precio + ")"; 
+
+           
+                datos.setearConsulta(consulta);
+                datos.ejecutarAccion();
+
+            }
+
+            catch (Exception ex)
+            {
+                throw ex;
+
+            }
+            finally
+            {
+
+                datos.cerrarConexion();
+            }
+
+        }
+
+        public void modificar(Articulo modificar) { }
+
+
+
+
     }
+
+
 }
