@@ -1,6 +1,6 @@
 ﻿namespace WinForm
 {
-    partial class Form1
+    partial class PantallaPrincipal
     {
         /// <summary>
         /// Required designer variable.
@@ -28,38 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaPrincipal));
+            this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.ArticulosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ArticulosDesplegable = new System.Windows.Forms.ToolStripMenuItem();
             this.AltaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ModificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lISTADOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ListadoDesplegable = new System.Windows.Forms.ToolStripMenuItem();
             this.aRTICULOSToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.SalirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
-            this.button1 = new System.Windows.Forms.Button();
-            this.menuStrip1.SuspendLayout();
+            this.SalirDesplegable = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripContainer1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // toolStripContainer1
+            // 
+            // 
+            // toolStripContainer1.ContentPanel
+            // 
+            resources.ApplyResources(this.toolStripContainer1.ContentPanel, "toolStripContainer1.ContentPanel");
+            resources.ApplyResources(this.toolStripContainer1, "toolStripContainer1");
+            this.toolStripContainer1.Name = "toolStripContainer1";
             // 
             // menuStrip1
             // 
             resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ArticulosToolStripMenuItem,
-            this.lISTADOSToolStripMenuItem,
-            this.SalirToolStripMenuItem});
+            this.ArticulosDesplegable,
+            this.ListadoDesplegable,
+            this.SalirDesplegable});
             this.menuStrip1.Name = "menuStrip1";
             // 
-            // ArticulosToolStripMenuItem
+            // ArticulosDesplegable
             // 
-            this.ArticulosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ArticulosDesplegable.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.AltaToolStripMenuItem,
             this.BajaToolStripMenuItem,
             this.ModificarToolStripMenuItem});
-            this.ArticulosToolStripMenuItem.Name = "ArticulosToolStripMenuItem";
-            resources.ApplyResources(this.ArticulosToolStripMenuItem, "ArticulosToolStripMenuItem");
+            this.ArticulosDesplegable.Name = "ArticulosDesplegable";
+            resources.ApplyResources(this.ArticulosDesplegable, "ArticulosDesplegable");
             // 
             // AltaToolStripMenuItem
             // 
@@ -79,12 +87,12 @@
             resources.ApplyResources(this.ModificarToolStripMenuItem, "ModificarToolStripMenuItem");
             this.ModificarToolStripMenuItem.Click += new System.EventHandler(this.mODIFICARToolStripMenuItem_Click);
             // 
-            // lISTADOSToolStripMenuItem
+            // ListadoDesplegable
             // 
-            this.lISTADOSToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ListadoDesplegable.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aRTICULOSToolStripMenuItem1});
-            this.lISTADOSToolStripMenuItem.Name = "lISTADOSToolStripMenuItem";
-            resources.ApplyResources(this.lISTADOSToolStripMenuItem, "lISTADOSToolStripMenuItem");
+            this.ListadoDesplegable.Name = "ListadoDesplegable";
+            resources.ApplyResources(this.ListadoDesplegable, "ListadoDesplegable");
             // 
             // aRTICULOSToolStripMenuItem1
             // 
@@ -92,42 +100,26 @@
             resources.ApplyResources(this.aRTICULOSToolStripMenuItem1, "aRTICULOSToolStripMenuItem1");
             this.aRTICULOSToolStripMenuItem1.Click += new System.EventHandler(this.aRTICULOSToolStripMenuItem1_Click);
             // 
-            // SalirToolStripMenuItem
+            // SalirDesplegable
             // 
-            this.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem";
-            resources.ApplyResources(this.SalirToolStripMenuItem, "SalirToolStripMenuItem");
-            this.SalirToolStripMenuItem.Click += new System.EventHandler(this.SalirToolStripMenuItem_Click);
+            this.SalirDesplegable.Name = "SalirDesplegable";
+            resources.ApplyResources(this.SalirDesplegable, "SalirDesplegable");
+            this.SalirDesplegable.Click += new System.EventHandler(this.SalirToolStripMenuItem_Click);
             // 
-            // toolStripContainer1
-            // 
-            // 
-            // toolStripContainer1.ContentPanel
-            // 
-            resources.ApplyResources(this.toolStripContainer1.ContentPanel, "toolStripContainer1.ContentPanel");
-            resources.ApplyResources(this.toolStripContainer1, "toolStripContainer1");
-            this.toolStripContainer1.Name = "toolStripContainer1";
-            // 
-            // button1
-            // 
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // Form1
+            // PantallaPrincipal
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.toolStripContainer1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
+            this.Name = "PantallaPrincipal";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.toolStripContainer1.ResumeLayout(false);
             this.toolStripContainer1.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,15 +128,14 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem ArticulosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ArticulosDesplegable;
         private System.Windows.Forms.ToolStripMenuItem AltaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem BajaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ModificarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem lISTADOSToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem SalirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ListadoDesplegable;
+        private System.Windows.Forms.ToolStripMenuItem SalirDesplegable;
         private System.Windows.Forms.ToolStripMenuItem aRTICULOSToolStripMenuItem1;
         private System.Windows.Forms.ToolStripContainer toolStripContainer1;
-        private System.Windows.Forms.Button button1;
     }
 }
 

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WinForm
 {
-    public partial class Form1 : Form
+    public partial class PantallaPrincipal : Form
     {
-        public Form1()
+        public PantallaPrincipal()
         {
             InitializeComponent();
             
