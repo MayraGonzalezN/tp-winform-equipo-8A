@@ -18,9 +18,10 @@ namespace WinForm
 
             try
             {
-                conexion.ConnectionString = "server=.\\SQLEXPRESS; database=Articulos; integrated security = true ";
+                conexion.ConnectionString = "server=.\\SQLEXPRESS01; database=CATALOGO_P3_DB; integrated security=true";
+          
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "Select CodigoArticulo, Nombre, Descripcion from Productos";
+                comando.CommandText = "SELECT Nombre,Descripcion,idMarca,idCategoria,Codigo FROM ARTICULOS";
                 comando.Connection = conexion;
 
                 conexion.Open();
@@ -29,19 +30,24 @@ namespace WinForm
                 while (lector.Read())
                 {
                     Articulo aux = new Articulo();
-                    aux.CodigoArticulo = (string)lector["CodigoArticulo"];
+                    aux.Codigo = (string)lector["Codigo"];
                     aux.Nombre = (string)lector["Nombre"];
                     aux.Descripcion = (string)lector["Descripcion"];
-                    //aux.Precio = lector.GetFloat(3);
-                    //aux.Imagen = (string)lector["Imagen"];
+
+                    aux.categoria = new Categoria();
+                    aux.categoria.id = (int)lector["idCategoria"];
+
+                    aux.marca = new Marca();
+                    aux.marca.idM = (int)lector["idMarca"];
+
                     Lista.Add(aux);
                 }
                 conexion.Close();
                 return Lista;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                throw ex;
             }
         }
     }

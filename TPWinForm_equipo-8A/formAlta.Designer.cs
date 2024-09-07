@@ -201,9 +201,7 @@
             this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.lblArticuloTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
             this.Name = "formAlta";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ALTA ARTICULO";
             this.ResumeLayout(false);
             this.PerformLayout();

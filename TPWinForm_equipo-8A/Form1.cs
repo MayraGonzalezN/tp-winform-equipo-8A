@@ -18,7 +18,6 @@ namespace WinForm
             
 
         }
-
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -26,7 +25,7 @@ namespace WinForm
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void aLTAToolStripMenuItem_Click(object sender, EventArgs e)
@@ -49,6 +48,11 @@ namespace WinForm
         {
             ListadoArticulos listadoArticulos = new ListadoArticulos();
             listadoArticulos.ShowDialog();
+        }
+
+        private void BajaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -28,28 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ArticulosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AltaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ModificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lISTADOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.SalirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aRTICULOSToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.SalirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
+            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
+            this.toolStripContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ArticulosToolStripMenuItem,
             this.lISTADOSToolStripMenuItem,
             this.SalirToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
             // 
             // ArticulosToolStripMenuItem
             // 
@@ -58,27 +59,24 @@
             this.BajaToolStripMenuItem,
             this.ModificarToolStripMenuItem});
             this.ArticulosToolStripMenuItem.Name = "ArticulosToolStripMenuItem";
-            this.ArticulosToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
-            this.ArticulosToolStripMenuItem.Text = "ARTICULOS";
+            resources.ApplyResources(this.ArticulosToolStripMenuItem, "ArticulosToolStripMenuItem");
             // 
             // AltaToolStripMenuItem
             // 
             this.AltaToolStripMenuItem.Name = "AltaToolStripMenuItem";
-            this.AltaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.AltaToolStripMenuItem.Text = "&1- ALTA";
+            resources.ApplyResources(this.AltaToolStripMenuItem, "AltaToolStripMenuItem");
             this.AltaToolStripMenuItem.Click += new System.EventHandler(this.aLTAToolStripMenuItem_Click);
             // 
             // BajaToolStripMenuItem
             // 
             this.BajaToolStripMenuItem.Name = "BajaToolStripMenuItem";
-            this.BajaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.BajaToolStripMenuItem.Text = "&2- BAJA";
+            resources.ApplyResources(this.BajaToolStripMenuItem, "BajaToolStripMenuItem");
+            this.BajaToolStripMenuItem.Click += new System.EventHandler(this.BajaToolStripMenuItem_Click);
             // 
             // ModificarToolStripMenuItem
             // 
             this.ModificarToolStripMenuItem.Name = "ModificarToolStripMenuItem";
-            this.ModificarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.ModificarToolStripMenuItem.Text = "&3- MODIFICAR";
+            resources.ApplyResources(this.ModificarToolStripMenuItem, "ModificarToolStripMenuItem");
             this.ModificarToolStripMenuItem.Click += new System.EventHandler(this.mODIFICARToolStripMenuItem_Click);
             // 
             // lISTADOSToolStripMenuItem
@@ -86,37 +84,50 @@
             this.lISTADOSToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aRTICULOSToolStripMenuItem1});
             this.lISTADOSToolStripMenuItem.Name = "lISTADOSToolStripMenuItem";
-            this.lISTADOSToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
-            this.lISTADOSToolStripMenuItem.Text = "LISTADOS";
-            // 
-            // SalirToolStripMenuItem
-            // 
-            this.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem";
-            this.SalirToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
-            this.SalirToolStripMenuItem.Text = "SALIR";
-            this.SalirToolStripMenuItem.Click += new System.EventHandler(this.SalirToolStripMenuItem_Click);
+            resources.ApplyResources(this.lISTADOSToolStripMenuItem, "lISTADOSToolStripMenuItem");
             // 
             // aRTICULOSToolStripMenuItem1
             // 
             this.aRTICULOSToolStripMenuItem1.Name = "aRTICULOSToolStripMenuItem1";
-            this.aRTICULOSToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.aRTICULOSToolStripMenuItem1.Text = "ARTICULOS";
+            resources.ApplyResources(this.aRTICULOSToolStripMenuItem1, "aRTICULOSToolStripMenuItem1");
             this.aRTICULOSToolStripMenuItem1.Click += new System.EventHandler(this.aRTICULOSToolStripMenuItem1_Click);
+            // 
+            // SalirToolStripMenuItem
+            // 
+            this.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem";
+            resources.ApplyResources(this.SalirToolStripMenuItem, "SalirToolStripMenuItem");
+            this.SalirToolStripMenuItem.Click += new System.EventHandler(this.SalirToolStripMenuItem_Click);
+            // 
+            // toolStripContainer1
+            // 
+            // 
+            // toolStripContainer1.ContentPanel
+            // 
+            resources.ApplyResources(this.toolStripContainer1.ContentPanel, "toolStripContainer1.ContentPanel");
+            resources.ApplyResources(this.toolStripContainer1, "toolStripContainer1");
+            this.toolStripContainer1.Name = "toolStripContainer1";
+            // 
+            // button1
+            // 
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            resources.ApplyResources(this, "$this");
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.toolStripContainer1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "APP1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.toolStripContainer1.ResumeLayout(false);
+            this.toolStripContainer1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,6 +143,8 @@
         private System.Windows.Forms.ToolStripMenuItem lISTADOSToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem SalirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aRTICULOSToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripContainer toolStripContainer1;
+        private System.Windows.Forms.Button button1;
     }
 }
 

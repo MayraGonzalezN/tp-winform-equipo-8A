@@ -9,10 +9,16 @@ namespace WinForm
     partial class Articulo
     {
 
-        private Marca marca;
-        private Categoria categoria;
+       // private Marca idmarca;
+       // private
 
-        public string CodigoArticulo { get; set; }
+       // Categoria categoria;
+        public Categoria categoria { get; set; } 
+        public Marca marca { get; set; }
+
+
+
+        public string Codigo { get; set; }
         public string Nombre { get; set; }  
         public string Descripcion { get; set; }
         public string Imagen { get; set; }  

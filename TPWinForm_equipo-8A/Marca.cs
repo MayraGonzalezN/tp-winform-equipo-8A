@@ -8,26 +8,32 @@ namespace WinForm
 {
     internal class Marca
     {
-        private int idMarca;
-        private string nombreMarca;
+        /*  private int idMarca;
+          private string nombreMarca;
 
 
-        public void setidMarca(int mar)
-        {
-            idMarca = mar;
-        }
-        public int getidMarca()
-        {
-            return idMarca;
-        }
-        public void setnombreMarca(string nombreMar)
-        {
-            nombreMarca = nombreMar;
-        }
-        public string getnombreMarca()
-        {
-            return nombreMarca;//
-        }
+          public void setidMarca(int mar)
+          {
+              idMarca = mar;
+          }
+          public int getidMarca()
+          {
+              return idMarca;
+          }
+          public void setnombreMarca(string nombreMar)
+          {
+              nombreMarca = nombreMar;
+          }
+          public string getnombreMarca()
+          {
+              return nombreMarca;//
+          }
+        */
+        public int idM { get; set; }
+        public string NombreM { get; set; }
+
+
+
 
 
     }
