@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaPrincipal));
-            this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
+          
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ArticulosDesplegable = new System.Windows.Forms.ToolStripMenuItem();
             this.AltaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -38,18 +38,11 @@
             this.ListadoDesplegable = new System.Windows.Forms.ToolStripMenuItem();
             this.aRTICULOSToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.SalirDesplegable = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripContainer1.SuspendLayout();
+       
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // toolStripContainer1
-            // 
-            // 
-            // toolStripContainer1.ContentPanel
-            // 
-            resources.ApplyResources(this.toolStripContainer1.ContentPanel, "toolStripContainer1.ContentPanel");
-            resources.ApplyResources(this.toolStripContainer1, "toolStripContainer1");
-            this.toolStripContainer1.Name = "toolStripContainer1";
+           
             // 
             // menuStrip1
             // 
@@ -110,14 +103,13 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+     
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.toolStripContainer1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "PantallaPrincipal";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.toolStripContainer1.ResumeLayout(false);
-            this.toolStripContainer1.PerformLayout();
+          
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -135,7 +127,7 @@
         private System.Windows.Forms.ToolStripMenuItem ListadoDesplegable;
         private System.Windows.Forms.ToolStripMenuItem SalirDesplegable;
         private System.Windows.Forms.ToolStripMenuItem aRTICULOSToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripContainer toolStripContainer1;
+        private System.Windows.Forms.ToolStripContainer toolrara;
     }
 }
 
