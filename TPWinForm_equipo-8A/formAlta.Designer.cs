@@ -1,4 +1,4 @@
-﻿namespace WinForm
+﻿namespace TPWinForm_equipo_8A
 {
     partial class formAlta
     {
@@ -36,9 +36,9 @@
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.lblMarca = new System.Windows.Forms.Label();
-            this.cbMarca = new System.Windows.Forms.ComboBox();
+            this.cboMarca = new System.Windows.Forms.ComboBox();
             this.lblCategoria = new System.Windows.Forms.Label();
-            this.cbCategoria = new System.Windows.Forms.ComboBox();
+            this.cboCategoria = new System.Windows.Forms.ComboBox();
             this.lblImagen = new System.Windows.Forms.Label();
             this.lblPrecio = new System.Windows.Forms.Label();
             this.txtPrecio = new System.Windows.Forms.TextBox();
@@ -118,14 +118,15 @@
             this.lblMarca.TabIndex = 7;
             this.lblMarca.Text = "MARCA:";
             // 
-            // cbMarca
+            // cboMarca
             // 
-            this.cbMarca.FormattingEnabled = true;
-            this.cbMarca.Location = new System.Drawing.Point(319, 202);
-            this.cbMarca.Name = "cbMarca";
-            this.cbMarca.Size = new System.Drawing.Size(121, 21);
-            this.cbMarca.TabIndex = 3;
-            this.cbMarca.SelectedIndexChanged += new System.EventHandler(this.cbMarca_SelectedIndexChanged);
+            this.cboMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboMarca.FormattingEnabled = true;
+            this.cboMarca.Location = new System.Drawing.Point(319, 202);
+            this.cboMarca.Name = "cboMarca";
+            this.cboMarca.Size = new System.Drawing.Size(121, 21);
+            this.cboMarca.TabIndex = 3;
+            this.cboMarca.SelectedIndexChanged += new System.EventHandler(this.cbMarca_SelectedIndexChanged);
             // 
             // lblCategoria
             // 
@@ -137,13 +138,14 @@
             this.lblCategoria.TabIndex = 9;
             this.lblCategoria.Text = "CATEGORÍA: ";
             // 
-            // cbCategoria
+            // cboCategoria
             // 
-            this.cbCategoria.FormattingEnabled = true;
-            this.cbCategoria.Location = new System.Drawing.Point(319, 245);
-            this.cbCategoria.Name = "cbCategoria";
-            this.cbCategoria.Size = new System.Drawing.Size(121, 21);
-            this.cbCategoria.TabIndex = 4;
+            this.cboCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCategoria.FormattingEnabled = true;
+            this.cboCategoria.Location = new System.Drawing.Point(319, 245);
+            this.cboCategoria.Name = "cboCategoria";
+            this.cboCategoria.Size = new System.Drawing.Size(121, 21);
+            this.cboCategoria.TabIndex = 4;
             // 
             // lblImagen
             // 
@@ -202,9 +204,9 @@
             this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.lblPrecio);
             this.Controls.Add(this.lblImagen);
-            this.Controls.Add(this.cbCategoria);
+            this.Controls.Add(this.cboCategoria);
             this.Controls.Add(this.lblCategoria);
-            this.Controls.Add(this.cbMarca);
+            this.Controls.Add(this.cboMarca);
             this.Controls.Add(this.lblMarca);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.lblDescripcion);
@@ -215,7 +217,9 @@
             this.Controls.Add(this.lblArticuloTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "formAlta";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ALTA ARTICULO";
+            this.Load += new System.EventHandler(this.formAlta_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,9 +235,9 @@
         private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label lblMarca;
-        private System.Windows.Forms.ComboBox cbMarca;
+        private System.Windows.Forms.ComboBox cboMarca;
         private System.Windows.Forms.Label lblCategoria;
-        private System.Windows.Forms.ComboBox cbCategoria;
+        private System.Windows.Forms.ComboBox cboCategoria;
         private System.Windows.Forms.Label lblImagen;
         private System.Windows.Forms.Label lblPrecio;
         private System.Windows.Forms.TextBox txtPrecio;

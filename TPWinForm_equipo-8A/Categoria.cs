@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WinForm
+namespace TPWinForm_equipo_8A
 {
     internal class Categoria
     {

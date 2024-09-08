@@ -7,8 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WinTPWinForm_equipo_8AForm;
 
-namespace WinForm
+namespace TPWinForm_equipo_8A
 {
     public partial class formAlta : Form
     {
@@ -34,28 +35,42 @@ namespace WinForm
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-                Articulo aux = new Articulo();
-                GestionArticulos art = new GestionArticulos();
+                Articulo articulo = new Articulo();
+                GestionArticulos gestionArticulo = new GestionArticulos();
 
             try
             {
-                aux.Codigo = txtCodigo.Text;
-                aux.Nombre = txtNombre.Text;
-                aux.Descripcion = txtDescripcion.Text;
-                //aux.marca = 
-                //aux.categoria=
-               // aunx.Imagen = txtimagen.Text; lo cargamos como string???
-               aux.Precio = int.Parse (txtPrecio.Text);
+                articulo.Codigo = txtCodigo.Text;
+                articulo.Nombre = txtNombre.Text;
+                articulo.Descripcion = txtDescripcion.Text;
+                articulo.marca = (Marca)cboMarca.SelectedItem;
+                articulo.categoria = (Categoria)cboCategoria.SelectedItem;
+                articulo.Precio = (float)decimal.Parse (txtPrecio.Text);
 
-                art.agregar(aux);
+                gestionArticulo.agregar(articulo);
                 MessageBox.Show("Agregado exitosamente");
-                this.Close();
+                Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
 
+        private void formAlta_Load(object sender, EventArgs e)
+        {
+            MarcaNegocio marcaNegocio = new MarcaNegocio();
+            CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
+            try
+            {
+                cboMarca.DataSource = marcaNegocio.listar();
+                cboCategoria.DataSource = categoriaNegocio.listar();
+                cboCategoria.DisplayMember = "Nombre";
             }
             catch (Exception ex)
             {

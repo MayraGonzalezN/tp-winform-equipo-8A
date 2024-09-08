@@ -7,8 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WinTPWinForm_equipo_8AForm;
 
-namespace WinForm
+namespace TPWinForm_equipo_8A
 {
     public partial class ListadoArticulos : Form
     {
@@ -30,9 +31,10 @@ namespace WinForm
             dgvArt.DataSource = listaArticulos;
             dgvArt.Columns["Imagen"].Visible = false;
             dgvArt.Columns["marca"].DataPropertyName = "Nombre";
-            dgvArt.Columns["categoria"].DataPropertyName = "Descripcion";
+            dgvArt.Columns["Categoria"].DataPropertyName = "Descripcion";
             cargarImagen(listaArticulos[0].Imagen);
         }
+
         private void dgvArt_SelectionChanged(object sender, EventArgs e)
         {
             Articulo seleccionado = (Articulo)dgvArt.CurrentRow.DataBoundItem;

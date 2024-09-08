@@ -1,4 +1,4 @@
-﻿namespace WinForm
+﻿namespace TPWinForm_equipo_8A
 {
     partial class PantallaPrincipal
     {

@@ -14,9 +14,10 @@ namespace TPWinForm_equipo_8A
         private SqlConnection conexion;
         private SqlCommand comando;
         private SqlDataReader lector;
+
         public SqlDataReader Lector
         {
-            get { return lector; }
+            get { return lector;}
         }
 
         public AccesoDatos()
@@ -53,20 +54,13 @@ namespace TPWinForm_equipo_8A
             {
                 conexion.Open();
                 comando.ExecuteNonQuery();
-
             }
 
             catch (Exception ex)
             {
-
                 throw ex;
-
             }
-
-
-
         }
-
 
         public void cerrarConexion()
         {
@@ -74,13 +68,6 @@ namespace TPWinForm_equipo_8A
                 lector.Close();
             conexion.Close();
         }
-
-
-
-
-
     }
-
-
 }
 

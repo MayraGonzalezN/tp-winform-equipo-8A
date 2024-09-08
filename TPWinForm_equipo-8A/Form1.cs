@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WinForm
+namespace TPWinForm_equipo_8A
 {
     public partial class PantallaPrincipal : Form
     {
