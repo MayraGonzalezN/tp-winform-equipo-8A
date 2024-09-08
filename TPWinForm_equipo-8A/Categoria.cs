@@ -32,5 +32,9 @@ namespace WinForm
         public int id { get; set; }
         public string Nombre { get; set; }
 
+        //public override string ToString() ///NO FUNCIONA >:( 
+        //{
+        //    return Nombre; 
+        //}
     }
 }

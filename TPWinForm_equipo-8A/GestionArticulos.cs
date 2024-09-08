@@ -18,10 +18,10 @@ namespace WinForm
 
             try
             {
-                conexion.ConnectionString = "server=.\\SQLEXPRESS01; database=CATALOGO_P3_DB; integrated security=true";
+                conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
           
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "SELECT Nombre,Descripcion,idMarca,idCategoria,Codigo FROM ARTICULOS";
+                comando.CommandText = "select Codigo, Nombre, A.Descripcion, IdMarca, Precio, IdCategoria, C.Descripcion categoria, M.Descripcion marca, ImagenUrl from ARTICULOS A, CATEGORIAS C, MARCAS M, IMAGENES I where C.id = A.IdCategoria and M.id = A.IdMarca and A.Id = I.id\r\n";
                 comando.Connection = conexion;
 
                 conexion.Open();
@@ -30,9 +30,13 @@ namespace WinForm
                 while (lector.Read())
                 {
                     Articulo aux = new Articulo();
-                    aux.Codigo = (string)lector["Codigo"];
-                    aux.Nombre = (string)lector["Nombre"];
-                    aux.Descripcion = (string)lector["Descripcion"];
+                    aux.Codigo = lector["Codigo"].ToString();
+                    aux.Nombre = lector["Nombre"].ToString();
+                    aux.Descripcion = lector["Descripcion"].ToString();
+                    aux.Imagen = lector["ImagenUrl"].ToString();
+                    //decimal preciodec = (decimal)lector["precio"];
+                    //aux.Precio = (float)preciodec;
+                    aux.Precio = (float)(decimal)lector["Precio"];
 
                     aux.categoria = new Categoria();
                     aux.categoria.id = (int)lector["idCategoria"];

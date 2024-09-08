@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             this.dgvArt = new System.Windows.Forms.DataGridView();
+            this.pbxImagen = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxImagen)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvArt
@@ -37,20 +39,33 @@
             this.dgvArt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvArt.Location = new System.Drawing.Point(36, 46);
             this.dgvArt.Name = "dgvArt";
-            this.dgvArt.Size = new System.Drawing.Size(728, 307);
+            this.dgvArt.Size = new System.Drawing.Size(643, 247);
             this.dgvArt.TabIndex = 0;
             this.dgvArt.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dgvArt.SelectionChanged += new System.EventHandler(this.dgvArt_SelectionChanged);
+            // 
+            // pbxImagen
+            // 
+            this.pbxImagen.Location = new System.Drawing.Point(696, 46);
+            this.pbxImagen.Name = "pbxImagen";
+            this.pbxImagen.Size = new System.Drawing.Size(311, 247);
+            this.pbxImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxImagen.TabIndex = 1;
+            this.pbxImagen.TabStop = false;
             // 
             // ListadoArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1019, 329);
+            this.Controls.Add(this.pbxImagen);
             this.Controls.Add(this.dgvArt);
             this.Name = "ListadoArticulos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ListadoArticulos";
             this.Load += new System.EventHandler(this.ListadoArticulos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvArt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxImagen)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -58,5 +73,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvArt;
+        private System.Windows.Forms.PictureBox pbxImagen;
     }
 }

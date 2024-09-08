@@ -32,6 +32,15 @@ namespace WinForm
         public int idM { get; set; }
         public string NombreM { get; set; }
 
+        //public override string ToString()
+        //{
+        //    return NombreM;
+        //}
+        public override string ToString()
+        {
+            return NombreM;
+        }
+
 
 
 
