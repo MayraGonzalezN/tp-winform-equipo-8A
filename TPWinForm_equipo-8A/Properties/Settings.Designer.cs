@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WF1.Properties
+namespace WinTPWinForm_equipo_8A.Properties
 {
 
 

@@ -8,33 +8,17 @@ namespace TPWinForm_equipo_8A
 {
     internal class Categoria
     {
-
-        /* private int idCategoria;
-         private string nombreCategoria;
-
-
-         public void setidCategoria(int cat)
-         {
-             idCategoria = cat;
-         }
-         public int getidCategoria()
-         {
-             return idCategoria;
-         }
-         public void setnombreCategoria(string nombreCat)
-         {
-             nombreCategoria = nombreCat;
-         }
-         public string getnombreCategoria()
-         {
-             return nombreCategoria;
-         }*/
-        public int id { get; set; }
+        public int Id { get; set; }
         public string Nombre { get; set; }
-
-        //public override string ToString() ///NO FUNCIONA >:( 
-        //{
-        //    return Nombre; 
-        //}
+        public Categoria() { }
+        public Categoria(int id, string nombre)
+        {
+            Id = id;
+            Nombre = nombre;
+        }
+        public override string ToString()
+        {
+            return Nombre;
+        }
     }
 }

@@ -21,7 +21,7 @@ namespace TPWinForm_equipo_8A
                 while (datos.Lector.Read())
                 {
                     Categoria categoria = new Categoria();
-                    categoria.id = (int)datos.Lector["id"];
+                    categoria.Id = (int)datos.Lector["id"];
                     categoria.Nombre = datos.Lector["descripcion"].ToString();
 
                     lista.Add(categoria);

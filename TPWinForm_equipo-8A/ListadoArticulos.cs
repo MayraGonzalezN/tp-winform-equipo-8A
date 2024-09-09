@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WinTPWinForm_equipo_8AForm;
+using WinTPWinForm_equipo_8A;
 
 namespace TPWinForm_equipo_8A
 {
@@ -30,8 +30,8 @@ namespace TPWinForm_equipo_8A
             listaArticulos = articulos.Listar();
             dgvArt.DataSource = listaArticulos;
             dgvArt.Columns["Imagen"].Visible = false;
-            dgvArt.Columns["marca"].DataPropertyName = "Nombre";
-            dgvArt.Columns["Categoria"].DataPropertyName = "Descripcion";
+            //dgvArt.Columns["marca"].DataPropertyName = "Nombre";
+            //dgvArt.Columns["categoria"].DataPropertyName = "categoria";
             cargarImagen(listaArticulos[0].Imagen);
         }
 

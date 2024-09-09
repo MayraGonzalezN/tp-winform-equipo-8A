@@ -8,42 +8,17 @@ namespace TPWinForm_equipo_8A
 {
     internal class Marca
     {
-        /*  private int idMarca;
-          private string nombreMarca;
-
-
-          public void setidMarca(int mar)
-          {
-              idMarca = mar;
-          }
-          public int getidMarca()
-          {
-              return idMarca;
-          }
-          public void setnombreMarca(string nombreMar)
-          {
-              nombreMarca = nombreMar;
-          }
-          public string getnombreMarca()
-          {
-              return nombreMarca;//
-          }
-        */
         public int idM { get; set; }
         public string NombreM { get; set; }
-
-        //public override string ToString()
-        //{
-        //    return NombreM;
-        //}
+        public Marca() { }
+        public Marca(int id, string nombre)
+        {
+            idM = id;
+            NombreM = nombre;
+        }
         public override string ToString()
         {
             return NombreM;
         }
-
-
-
-
-
     }
 }

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WinTPWinForm_equipo_8AForm;
+using WinTPWinForm_equipo_8A;
 
 namespace TPWinForm_equipo_8A
 {
