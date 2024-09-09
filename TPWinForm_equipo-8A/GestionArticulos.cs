@@ -29,9 +29,11 @@ namespace WinTPWinForm_equipo_8A
                     aux.Codigo = datos.Lector["Codigo"].ToString();
                     aux.Nombre = datos.Lector["Nombre"].ToString();
                     aux.Descripcion = datos.Lector["Descripcion"].ToString();
+
+                    if (!(datos.Lector["ImagenUrl"] is DBNull)) { 
                     aux.Imagen = datos.Lector["ImagenUrl"].ToString();
-                    //decimal preciodec = (decimal)lector["precio"];
-                    //aux.Precio = (float)preciodec;
+                    }
+
                     aux.Precio = (float) (decimal)datos.Lector["Precio"];
                     aux.categoria = new Categoria((int)datos.Lector["idCategoria"], datos.Lector["Categoria"].ToString());
                     aux.marca = new Marca((int)datos.Lector["idMarca"], datos.Lector["Marca"].ToString());

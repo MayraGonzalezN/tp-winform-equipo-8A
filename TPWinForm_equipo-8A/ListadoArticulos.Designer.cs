@@ -37,8 +37,11 @@
             // dgvArt
             // 
             this.dgvArt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvArt.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvArt.Location = new System.Drawing.Point(36, 46);
+            this.dgvArt.MultiSelect = false;
             this.dgvArt.Name = "dgvArt";
+            this.dgvArt.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvArt.Size = new System.Drawing.Size(643, 247);
             this.dgvArt.TabIndex = 0;
             this.dgvArt.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
