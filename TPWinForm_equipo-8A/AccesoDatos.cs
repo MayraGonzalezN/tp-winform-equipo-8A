@@ -68,6 +68,10 @@ namespace TPWinForm_equipo_8A
                 lector.Close();
             conexion.Close();
         }
+        public void SetearParametro(string nombre, object valor)
+        {
+            comando.Parameters.AddWithValue(nombre, valor);
+        }
     }
 }
 

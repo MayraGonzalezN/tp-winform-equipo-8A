@@ -39,7 +39,7 @@
             this.button1.Location = new System.Drawing.Point(180, 11);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
+            this.button1.TabIndex = 1;
             this.button1.Text = "Eliminar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -58,14 +58,14 @@
             this.txtEliminar.Location = new System.Drawing.Point(74, 14);
             this.txtEliminar.Name = "txtEliminar";
             this.txtEliminar.Size = new System.Drawing.Size(100, 20);
-            this.txtEliminar.TabIndex = 2;
+            this.txtEliminar.TabIndex = 0;
             // 
             // btnCancelar
             // 
             this.btnCancelar.Location = new System.Drawing.Point(261, 12);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 3;
+            this.btnCancelar.TabIndex = 2;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);

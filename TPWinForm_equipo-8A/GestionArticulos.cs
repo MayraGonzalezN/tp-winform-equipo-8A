@@ -20,7 +20,7 @@ namespace WinTPWinForm_equipo_8A
 
             try 
 	        {
-                datos.setearConsulta("select Codigo, Nombre, A.Descripcion, IdMarca, Precio, IdCategoria, C.Descripcion categoria, M.Descripcion marca, ImagenUrl from ARTICULOS A, CATEGORIAS C, MARCAS M, IMAGENES I where C.id = A.IdCategoria and M.id = A.IdMarca and A.Id = I.id\r\n");
+                datos.setearConsulta("select Codigo, Nombre, A.Descripcion, IdMarca, Precio, IdCategoria, C.Descripcion categoria, M.Descripcion marca from ARTICULOS A, CATEGORIAS C, MARCAS M where C.id = A.IdCategoria and M.id = A.IdMarca\r\n");
                 datos.ejecutarLectura();
             
                 while (datos.Lector.Read())
@@ -29,7 +29,7 @@ namespace WinTPWinForm_equipo_8A
                     aux.Codigo = datos.Lector["Codigo"].ToString();
                     aux.Nombre = datos.Lector["Nombre"].ToString();
                     aux.Descripcion = datos.Lector["Descripcion"].ToString();
-                    aux.Imagen = datos.Lector["ImagenUrl"].ToString();
+                    //aux.Imagen = datos.Lector["ImagenUrl"].ToString();
                     //decimal preciodec = (decimal)lector["precio"];
                     //aux.Precio = (float)preciodec;
                     aux.Precio = (float) (decimal)datos.Lector["Precio"];
@@ -56,11 +56,9 @@ namespace WinTPWinForm_equipo_8A
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                string consulta = "INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio) " +
-                "VALUES ('" + nuevoArticulo.Codigo + "', '" + nuevoArticulo.Nombre + "', '" + nuevoArticulo.Descripcion +
-                "', " + nuevoArticulo.marca.idM + ", " + nuevoArticulo.categoria.Id + ", " + nuevoArticulo.Precio + ")";
-
-                datos.setearConsulta(consulta);
+                datos.setearConsulta("INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio) " +
+                                     "VALUES ('" + nuevoArticulo.Codigo + "', '" + nuevoArticulo.Nombre + "', '" + nuevoArticulo.Descripcion +
+                                     "', " + nuevoArticulo.marca.idM + ", " + nuevoArticulo.categoria.Id + ", " + nuevoArticulo.Precio + ")");
                 datos.ejecutarAccion();
             }
             catch (Exception ex)

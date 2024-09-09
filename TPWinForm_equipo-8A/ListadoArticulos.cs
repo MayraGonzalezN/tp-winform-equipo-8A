@@ -32,7 +32,7 @@ namespace TPWinForm_equipo_8A
             dgvArt.Columns["Imagen"].Visible = false;
             //dgvArt.Columns["marca"].DataPropertyName = "Nombre";
             //dgvArt.Columns["categoria"].DataPropertyName = "categoria";
-            cargarImagen(listaArticulos[0].Imagen);
+            //cargarImagen(listaArticulos[0].Imagen);
         }
 
         private void dgvArt_SelectionChanged(object sender, EventArgs e)

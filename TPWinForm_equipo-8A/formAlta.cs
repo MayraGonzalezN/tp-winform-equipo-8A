@@ -70,7 +70,7 @@ namespace TPWinForm_equipo_8A
             {
                 cboMarca.DataSource = marcaNegocio.listar();
                 cboCategoria.DataSource = categoriaNegocio.listar();
-                cboCategoria.DisplayMember = "Nombre";
+                //cboCategoria.DisplayMember = "Nombre";
             }
             catch (Exception ex)
             {
