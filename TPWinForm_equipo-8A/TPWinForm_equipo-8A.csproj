@@ -50,6 +50,12 @@
     <Compile Include="Articulo.cs" />
     <Compile Include="Categoria.cs" />
     <Compile Include="CategoriaNegocio.cs" />
+    <Compile Include="EliminarArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarArticulo.Designer.cs">
+      <DependentUpon>EliminarArticulo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,10 +75,19 @@
     <Compile Include="ListadoArticulos.Designer.cs">
       <DependentUpon>ListadoArticulos.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListarxMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListarxMarca.Designer.cs">
+      <DependentUpon>ListarxMarca.cs</DependentUpon>
+    </Compile>
     <Compile Include="Marca.cs" />
     <Compile Include="MarcaNegocio.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="EliminarArticulo.resx">
+      <DependentUpon>EliminarArticulo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -81,6 +96,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ListadoArticulos.resx">
       <DependentUpon>ListadoArticulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListarxMarca.resx">
+      <DependentUpon>ListarxMarca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -74,5 +74,22 @@ namespace WinTPWinForm_equipo_8A
         }
 
         public void modificar(Articulo modificar) { }
+
+        public void Eliminar(Articulo Eliminar) {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                string consulta = "DELETE FROM ARTICULOS where Codigo = '"+ Eliminar.Codigo +"'";
+
+                datos.setearConsulta(consulta);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex) {
+                throw ex;
+            }
+            finally { datos.cerrarConexion();}
+
+        }
     }
 }

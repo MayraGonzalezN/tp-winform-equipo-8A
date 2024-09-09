@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaPrincipal));
-          
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ArticulosDesplegable = new System.Windows.Forms.ToolStripMenuItem();
             this.AltaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -38,11 +37,9 @@
             this.ListadoDesplegable = new System.Windows.Forms.ToolStripMenuItem();
             this.aRTICULOSToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.SalirDesplegable = new System.Windows.Forms.ToolStripMenuItem();
-       
+            this.ListarXMARCAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-           
             // 
             // menuStrip1
             // 
@@ -83,7 +80,8 @@
             // ListadoDesplegable
             // 
             this.ListadoDesplegable.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aRTICULOSToolStripMenuItem1});
+            this.aRTICULOSToolStripMenuItem1,
+            this.ListarXMARCAToolStripMenuItem});
             this.ListadoDesplegable.Name = "ListadoDesplegable";
             resources.ApplyResources(this.ListadoDesplegable, "ListadoDesplegable");
             // 
@@ -99,17 +97,21 @@
             resources.ApplyResources(this.SalirDesplegable, "SalirDesplegable");
             this.SalirDesplegable.Click += new System.EventHandler(this.SalirToolStripMenuItem_Click);
             // 
+            // ListarXMARCAToolStripMenuItem
+            // 
+            this.ListarXMARCAToolStripMenuItem.Name = "ListarXMARCAToolStripMenuItem";
+            resources.ApplyResources(this.ListarXMARCAToolStripMenuItem, "ListarXMARCAToolStripMenuItem");
+            this.ListarXMARCAToolStripMenuItem.Click += new System.EventHandler(this.ListarXMARCAToolStripMenuItem_Click);
+            // 
             // PantallaPrincipal
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-     
             this.Controls.Add(this.menuStrip1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "PantallaPrincipal";
             this.Load += new System.EventHandler(this.Form1_Load);
-          
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -128,6 +130,7 @@
         private System.Windows.Forms.ToolStripMenuItem SalirDesplegable;
         private System.Windows.Forms.ToolStripMenuItem aRTICULOSToolStripMenuItem1;
         private System.Windows.Forms.ToolStripContainer toolrara;
+        private System.Windows.Forms.ToolStripMenuItem ListarXMARCAToolStripMenuItem;
     }
 }
 

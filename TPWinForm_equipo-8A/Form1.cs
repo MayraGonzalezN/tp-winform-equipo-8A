@@ -52,7 +52,14 @@ namespace TPWinForm_equipo_8A
 
         private void BajaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            EliminarArticulo eliminar = new EliminarArticulo();
+            eliminar.ShowDialog();
+        }
 
+        private void ListarXMARCAToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListarxMarca ListarxMarca = new ListarxMarca();
+            ListarxMarca.ShowDialog();
         }
     }
 }

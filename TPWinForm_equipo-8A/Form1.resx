@@ -117,92 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;toolrara.BottomToolStripPanel.Name" xml:space="preserve">
-    <value>toolrara.BottomToolStripPanel</value>
-  </data>
-  <data name="&gt;&gt;toolrara.BottomToolStripPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolrara.BottomToolStripPanel.Parent" xml:space="preserve">
-    <value>toolrara</value>
-  </data>
-  <data name="&gt;&gt;toolrara.BottomToolStripPanel.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="toolrara.ContentPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 150</value>
-  </data>
-  <data name="&gt;&gt;toolrara.ContentPanel.Name" xml:space="preserve">
-    <value>toolrara.ContentPanel</value>
-  </data>
-  <data name="&gt;&gt;toolrara.ContentPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripContentPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolrara.ContentPanel.Parent" xml:space="preserve">
-    <value>toolrara</value>
-  </data>
-  <data name="&gt;&gt;toolrara.ContentPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;toolrara.LeftToolStripPanel.Name" xml:space="preserve">
-    <value>toolrara.LeftToolStripPanel</value>
-  </data>
-  <data name="&gt;&gt;toolrara.LeftToolStripPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolrara.LeftToolStripPanel.Parent" xml:space="preserve">
-    <value>toolrara</value>
-  </data>
-  <data name="&gt;&gt;toolrara.LeftToolStripPanel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="toolrara.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="&gt;&gt;toolrara.RightToolStripPanel.Name" xml:space="preserve">
-    <value>toolrara.RightToolStripPanel</value>
-  </data>
-  <data name="&gt;&gt;toolrara.RightToolStripPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolrara.RightToolStripPanel.Parent" xml:space="preserve">
-    <value>toolrara</value>
-  </data>
-  <data name="&gt;&gt;toolrara.RightToolStripPanel.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="toolrara.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 175</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="toolrara.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;toolrara.TopToolStripPanel.Name" xml:space="preserve">
-    <value>toolrara.TopToolStripPanel</value>
-  </data>
-  <data name="&gt;&gt;toolrara.TopToolStripPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolrara.TopToolStripPanel.Parent" xml:space="preserve">
-    <value>toolrara</value>
-  </data>
-  <data name="&gt;&gt;toolrara.TopToolStripPanel.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;toolrara.Name" xml:space="preserve">
-    <value>toolrara</value>
-  </data>
-  <data name="&gt;&gt;toolrara.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolrara.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;toolrara.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -210,6 +124,7 @@
   <data name="menuStrip1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>None</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="AltaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>180, 22</value>
   </data>
@@ -235,10 +150,16 @@
     <value>ARTICULOS</value>
   </data>
   <data name="aRTICULOSToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 22</value>
+    <value>180, 22</value>
   </data>
   <data name="aRTICULOSToolStripMenuItem1.Text" xml:space="preserve">
     <value>ARTICULOS</value>
+  </data>
+  <data name="ListarXMARCAToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="ListarXMARCAToolStripMenuItem.Text" xml:space="preserve">
+    <value>LISTAR X MARCA</value>
   </data>
   <data name="ListadoDesplegable.Size" type="System.Drawing.Size, System.Drawing">
     <value>70, 20</value>
@@ -256,8 +177,9 @@
     <value>186, 9</value>
   </data>
   <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>206, 24</value>
+    <value>326, 24</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
@@ -274,7 +196,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -337,6 +259,12 @@
     <value>SalirDesplegable</value>
   </data>
   <data name="&gt;&gt;SalirDesplegable.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ListarXMARCAToolStripMenuItem.Name" xml:space="preserve">
+    <value>ListarXMARCAToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;ListarXMARCAToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
