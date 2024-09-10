@@ -20,7 +20,9 @@ namespace WinTPWinForm_equipo_8A
 
             try 
 	        {
-                datos.setearConsulta("select Codigo, Nombre, A.Descripcion, IdMarca, Precio, IdCategoria, C.Descripcion categoria, M.Descripcion marca from ARTICULOS A, CATEGORIAS C, MARCAS M where C.id = A.IdCategoria and M.id = A.IdMarca\r\n");
+                datos.setearConsulta(@"SELECT A.Codigo,A.Nombre, A.Descripcion, A.IdMarca, M.Descripcion AS marca, A.IdCategoria, C.Descripcion AS categoria,  A.Precio, I.ImagenUrl
+                                        FROM ARTICULOS A JOIN MARCAS M ON A.IdMarca = M.Id JOIN CATEGORIAS C ON A.IdCategoria = C.Id
+                                        LEFT JOIN IMAGENES I ON A.Id = I.IdArticulo");
                 datos.ejecutarLectura();
             
                 while (datos.Lector.Read())
@@ -29,21 +31,16 @@ namespace WinTPWinForm_equipo_8A
                     aux.Codigo = datos.Lector["Codigo"].ToString();
                     aux.Nombre = datos.Lector["Nombre"].ToString();
                     aux.Descripcion = datos.Lector["Descripcion"].ToString();
-<<<<<<< HEAD
-                    //aux.Imagen = datos.Lector["ImagenUrl"].ToString();
-                    //decimal preciodec = (decimal)lector["precio"];
-                    //aux.Precio = (float)preciodec;
-=======
-
+                    aux.marca = new Marca((int)datos.Lector["IdMarca"], datos.Lector["marca"].ToString());
+                    aux.categoria = new Categoria((int)datos.Lector["idCategoria"], datos.Lector["categoria"].ToString());
                     if (!(datos.Lector["ImagenUrl"] is DBNull)) { 
                     aux.Imagen = datos.Lector["ImagenUrl"].ToString();
                     }
-
->>>>>>> 906f552f1bf2753ebe5b6095f4c507f9ddc973e8
-                    aux.Precio = (float) (decimal)datos.Lector["Precio"];
-                    aux.categoria = new Categoria((int)datos.Lector["idCategoria"], datos.Lector["Categoria"].ToString());
-                    aux.marca = new Marca((int)datos.Lector["idMarca"], datos.Lector["Marca"].ToString());
-
+                    else
+                    {
+                        aux.Imagen = "https://media.istockphoto.com/id/1128826884/es/vector/ning%C3%BAn-s%C3%ADmbolo-de-vector-de-imagen-falta-icono-disponible-no-hay-galer%C3%ADa-para-este-momento.jpg?s=612x612&w=0&k=20&c=9vnjI4XI3XQC0VHfuDePO7vNJE7WDM8uzQmZJ1SnQgk=";
+                    }
+                    aux.Precio = (float)(decimal)datos.Lector["Precio"];
                     lista.Add(aux);
                 }
 
@@ -58,15 +55,26 @@ namespace WinTPWinForm_equipo_8A
                 datos.cerrarConexion();
             }
         }
-
-        public void agregar(Articulo nuevoArticulo)
+        public void agregar(Articulo articuloNuevo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            agregarArticulo(articuloNuevo);
+            int idArticulo = datos.ObtenerIdArticulo(articuloNuevo.Codigo);
+            agregarImagenUrl(idArticulo,articuloNuevo.Imagen);
+        }
+        public void agregarArticulo(Articulo nuevoArticulo)
         {
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio) " +
-                                     "VALUES ('" + nuevoArticulo.Codigo + "', '" + nuevoArticulo.Nombre + "', '" + nuevoArticulo.Descripcion +
-                                     "', " + nuevoArticulo.marca.idM + ", " + nuevoArticulo.categoria.Id + ", " + nuevoArticulo.Precio + ")");
+                datos.setearConsulta("INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, IdCategoria, IdMarca, Precio) " +
+                          "VALUES (@Codigo, @Nombre, @Descripcion, @IdCategoria, @IdMarca, @Precio);");
+                datos.SetearParametro("@Codigo", nuevoArticulo.Codigo);
+                datos.SetearParametro("@Nombre", nuevoArticulo.Nombre);
+                datos.SetearParametro("@Descripcion", nuevoArticulo.Descripcion);
+                datos.SetearParametro("@IdCategoria", nuevoArticulo.categoria.Id);
+                datos.SetearParametro("@IdMarca", nuevoArticulo.marca.idM);
+                datos.SetearParametro("@Precio", nuevoArticulo.Precio);
                 datos.ejecutarAccion();
             }
             catch (Exception ex)
@@ -78,16 +86,33 @@ namespace WinTPWinForm_equipo_8A
                 datos.cerrarConexion();
             }
         }
-
-        public void modificar(Articulo modificar) { }
-
+        public void agregarImagenUrl(int idArticulo, string Imagen)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("INSERT INTO IMAGENES (IdArticulo, ImagenUrl) " +
+                                     "VALUES (@IdArticulo, @ImagenUrl)");
+                datos.SetearParametro("@IdArticulo", idArticulo);
+                datos.SetearParametro("@ImagenUrl", Imagen);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            { 
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+        public void modificar(Articulo modificar) 
+        { }
         public void Eliminar(Articulo Eliminar) {
             AccesoDatos datos = new AccesoDatos();
-
             try
             {
                 string consulta = "DELETE FROM ARTICULOS where Codigo = '"+ Eliminar.Codigo +"'";
-
                 datos.setearConsulta(consulta);
                 datos.ejecutarAccion();
             }
@@ -95,7 +120,6 @@ namespace WinTPWinForm_equipo_8A
                 throw ex;
             }
             finally { datos.cerrarConexion();}
-
         }
     }
 }

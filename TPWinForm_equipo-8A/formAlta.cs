@@ -17,27 +17,22 @@ namespace TPWinForm_equipo_8A
         {
             InitializeComponent();
         }
-
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
-
         private void cbMarca_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
-
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Close();
         }
-
         private void btnAgregar_Click(object sender, EventArgs e)
         {
                 Articulo articulo = new Articulo();
@@ -50,8 +45,8 @@ namespace TPWinForm_equipo_8A
                 articulo.Descripcion = txtDescripcion.Text;
                 articulo.marca = (Marca)cboMarca.SelectedItem;
                 articulo.categoria = (Categoria)cboCategoria.SelectedItem;
-                articulo.Precio = (float)decimal.Parse (txtPrecio.Text);
-
+                articulo.Precio = (float)decimal.Parse(txtPrecio.Text);
+                articulo.Imagen = txtImagenUrl.Text;
                 gestionArticulo.agregar(articulo);
                 MessageBox.Show("Agregado exitosamente");
                 Close();
@@ -61,7 +56,6 @@ namespace TPWinForm_equipo_8A
                 MessageBox.Show(ex.ToString());
             }
         }
-
         private void formAlta_Load(object sender, EventArgs e)
         {
             MarcaNegocio marcaNegocio = new MarcaNegocio();
@@ -75,6 +69,26 @@ namespace TPWinForm_equipo_8A
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
+            }
+        }
+        private void txtDescripcion_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void txtImagenUrl_Leave(object sender, EventArgs e)
+        {
+            cargarImagen(txtImagenUrl.Text);
+        }
+        public void cargarImagen(string imagen)
+        {
+            try
+            {
+                pbxImagenUrl.Load(imagen);
+            }
+            catch (Exception ex)
+            {
+               // MessageBox.Show($"error:{ex.Message}");
+                pbxImagenUrl.Load("https://media.istockphoto.com/id/1128826884/es/vector/ning%C3%BAn-s%C3%ADmbolo-de-vector-de-imagen-falta-icono-disponible-no-hay-galer%C3%ADa-para-este-momento.jpg?s=612x612&w=0&k=20&c=9vnjI4XI3XQC0VHfuDePO7vNJE7WDM8uzQmZJ1SnQgk=");
             }
         }
     }

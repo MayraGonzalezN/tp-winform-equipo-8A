@@ -5,33 +5,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
 namespace TPWinForm_equipo_8A
 {
-
     public class AccesoDatos
     {
         private SqlConnection conexion;
         private SqlCommand comando;
         private SqlDataReader lector;
-
         public SqlDataReader Lector
         {
             get { return lector;}
         }
-
         public AccesoDatos()
         {
-            conexion = new SqlConnection("server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true");
+            conexion = new SqlConnection("server=.; database=CATALOGO_P3_DB; integrated security=true");
             comando = new SqlCommand();
         }
-
         public void setearConsulta(string consulta)
         {
             comando.CommandType = System.Data.CommandType.Text;
             comando.CommandText = consulta;
         }
-
         public void ejecutarLectura()
         {
             comando.Connection = conexion;
@@ -72,6 +66,28 @@ namespace TPWinForm_equipo_8A
         {
             comando.Parameters.AddWithValue(nombre, valor);
         }
+        public int ObtenerIdArticulo(string codigo) //Permite obtener el nuevo codigo id de articulo
+        {
+            int id = 0;
+            try
+            {
+                setearConsulta("SELECT Id FROM ARTICULOS WHERE Codigo = @Codigo");
+                SetearParametro("@Codigo", codigo);
+                ejecutarLectura();
+                if (Lector.Read())
+                {
+                    id = (int)(Lector["Id"]);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                cerrarConexion();
+            }
+            return id;
+        }
     }
 }
-

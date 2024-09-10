@@ -51,7 +51,7 @@
             // 
             this.pbxImagen.Location = new System.Drawing.Point(696, 46);
             this.pbxImagen.Name = "pbxImagen";
-            this.pbxImagen.Size = new System.Drawing.Size(311, 247);
+            this.pbxImagen.Size = new System.Drawing.Size(327, 247);
             this.pbxImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxImagen.TabIndex = 1;
             this.pbxImagen.TabStop = false;
@@ -60,7 +60,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1019, 329);
+            this.ClientSize = new System.Drawing.Size(1035, 329);
             this.Controls.Add(this.pbxImagen);
             this.Controls.Add(this.dgvArt);
             this.Name = "ListadoArticulos";
