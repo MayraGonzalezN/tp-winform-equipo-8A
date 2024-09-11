@@ -76,7 +76,7 @@ namespace TPWinForm_equipo_8A
                 ejecutarLectura();
                 if (Lector.Read())
                 {
-                    id = (int)(Lector["Id"]);
+                   id = (int)(Lector["Id"]);
                 }
             }
             catch (Exception ex)

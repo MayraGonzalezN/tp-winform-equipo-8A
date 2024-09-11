@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace TPWinForm_equipo_8A
 {
@@ -15,8 +17,6 @@ namespace TPWinForm_equipo_8A
         public PantallaPrincipal()
         {
             InitializeComponent();
-            
-
         }
         private void label1_Click(object sender, EventArgs e)
         {
@@ -25,18 +25,13 @@ namespace TPWinForm_equipo_8A
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            //CargarArticulos(); //En Proceso
         }
 
         private void aLTAToolStripMenuItem_Click(object sender, EventArgs e)
         {
             formAlta ventaAlta = new formAlta();/// me lo copie para cambiar de lugar btnAgregar
             ventaAlta.ShowDialog();
-        }
-
-        private void mODIFICARToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void SalirToolStripMenuItem_Click(object sender, EventArgs e)

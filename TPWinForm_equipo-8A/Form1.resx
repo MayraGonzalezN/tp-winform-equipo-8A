@@ -126,22 +126,22 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="AltaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>137, 22</value>
   </data>
   <data name="AltaToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;1- ALTA</value>
+    <value>&amp;ALTA</value>
   </data>
   <data name="BajaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>137, 22</value>
   </data>
   <data name="BajaToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;2- BAJA</value>
+    <value>&amp;BAJA</value>
   </data>
-  <data name="ModificarToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+  <data name="typeHModificar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 22</value>
   </data>
-  <data name="ModificarToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;3- MODIFICAR</value>
+  <data name="typeHModificar.Text" xml:space="preserve">
+    <value>&amp;MODIFICAR</value>
   </data>
   <data name="ArticulosDesplegable.Size" type="System.Drawing.Size, System.Drawing">
     <value>79, 20</value>
@@ -174,7 +174,7 @@
     <value>SALIR</value>
   </data>
   <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>186, 9</value>
+    <value>247, 10</value>
   </data>
   <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
     <value>206, 24</value>
@@ -196,13 +196,37 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="flowLayoutPanel1.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="flowLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 37</value>
+  </data>
+  <data name="flowLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>683, 549</value>
+  </data>
+  <data name="flowLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.Name" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>59</value>
+    <value>25</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>96, 96</value>
@@ -211,7 +235,7 @@
     <value>True</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>677, 348</value>
+    <value>729, 598</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
@@ -237,10 +261,10 @@
   <data name="&gt;&gt;BajaToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ModificarToolStripMenuItem.Name" xml:space="preserve">
-    <value>ModificarToolStripMenuItem</value>
+  <data name="&gt;&gt;typeHModificar.Name" xml:space="preserve">
+    <value>typeHModificar</value>
   </data>
-  <data name="&gt;&gt;ModificarToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;typeHModificar.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ListadoDesplegable.Name" xml:space="preserve">

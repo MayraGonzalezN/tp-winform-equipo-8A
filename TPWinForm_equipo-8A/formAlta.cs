@@ -13,9 +13,13 @@ namespace TPWinForm_equipo_8A
 {
     public partial class formAlta : Form
     {
+<<<<<<< HEAD
 
        private Articulo articuloMdfc = null;
 
+=======
+        private Articulo articulo = null;
+>>>>>>> d6289c2040079f5f1c10e05aa5bfeeda67cb6020
         public formAlta()
         {
             InitializeComponent();
@@ -48,6 +52,10 @@ namespace TPWinForm_equipo_8A
         }
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
+=======
+                articulo = new Articulo();
+>>>>>>> d6289c2040079f5f1c10e05aa5bfeeda67cb6020
                 GestionArticulos gestionArticulo = new GestionArticulos();
 
             try
@@ -100,6 +108,7 @@ namespace TPWinForm_equipo_8A
                 cboMarca.ValueMember = "IdM";
                 cboMarca.DisplayMember = "Descrpcion";
                 cboCategoria.DataSource = categoriaNegocio.listar();
+<<<<<<< HEAD
                 cboCategoria.ValueMember = "Id";
                 cboCategoria.DisplayMember = "Descrpcion";
 
@@ -120,6 +129,8 @@ namespace TPWinForm_equipo_8A
                 }
 
 
+=======
+>>>>>>> d6289c2040079f5f1c10e05aa5bfeeda67cb6020
             }
             catch (Exception ex)
             {

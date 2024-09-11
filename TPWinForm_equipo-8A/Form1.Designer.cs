@@ -33,11 +33,15 @@
             this.ArticulosDesplegable = new System.Windows.Forms.ToolStripMenuItem();
             this.AltaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ModificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.typeHModificar = new System.Windows.Forms.ToolStripMenuItem();
             this.ListadoDesplegable = new System.Windows.Forms.ToolStripMenuItem();
             this.aRTICULOSToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ListarXMARCAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SalirDesplegable = new System.Windows.Forms.ToolStripMenuItem();
+<<<<<<< HEAD
+=======
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+>>>>>>> d6289c2040079f5f1c10e05aa5bfeeda67cb6020
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,7 +59,7 @@
             this.ArticulosDesplegable.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.AltaToolStripMenuItem,
             this.BajaToolStripMenuItem,
-            this.ModificarToolStripMenuItem});
+            this.typeHModificar});
             this.ArticulosDesplegable.Name = "ArticulosDesplegable";
             resources.ApplyResources(this.ArticulosDesplegable, "ArticulosDesplegable");
             // 
@@ -71,11 +75,10 @@
             resources.ApplyResources(this.BajaToolStripMenuItem, "BajaToolStripMenuItem");
             this.BajaToolStripMenuItem.Click += new System.EventHandler(this.BajaToolStripMenuItem_Click);
             // 
-            // ModificarToolStripMenuItem
+            // typeHModificar
             // 
-            this.ModificarToolStripMenuItem.Name = "ModificarToolStripMenuItem";
-            resources.ApplyResources(this.ModificarToolStripMenuItem, "ModificarToolStripMenuItem");
-            this.ModificarToolStripMenuItem.Click += new System.EventHandler(this.mODIFICARToolStripMenuItem_Click);
+            this.typeHModificar.Name = "typeHModificar";
+            resources.ApplyResources(this.typeHModificar, "typeHModificar");
             // 
             // ListadoDesplegable
             // 
@@ -103,10 +106,19 @@
             resources.ApplyResources(this.SalirDesplegable, "SalirDesplegable");
             this.SalirDesplegable.Click += new System.EventHandler(this.SalirToolStripMenuItem_Click);
             // 
+<<<<<<< HEAD
+=======
+            // flowLayoutPanel1
+            // 
+            resources.ApplyResources(this.flowLayoutPanel1, "flowLayoutPanel1");
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            // 
+>>>>>>> d6289c2040079f5f1c10e05aa5bfeeda67cb6020
             // PantallaPrincipal
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.menuStrip1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.MainMenuStrip = this.menuStrip1;
@@ -125,12 +137,13 @@
         private System.Windows.Forms.ToolStripMenuItem ArticulosDesplegable;
         private System.Windows.Forms.ToolStripMenuItem AltaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem BajaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ModificarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem typeHModificar;
         private System.Windows.Forms.ToolStripMenuItem ListadoDesplegable;
         private System.Windows.Forms.ToolStripMenuItem SalirDesplegable;
         private System.Windows.Forms.ToolStripMenuItem aRTICULOSToolStripMenuItem1;
         private System.Windows.Forms.ToolStripContainer toolrara;
         private System.Windows.Forms.ToolStripMenuItem ListarXMARCAToolStripMenuItem;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
 
