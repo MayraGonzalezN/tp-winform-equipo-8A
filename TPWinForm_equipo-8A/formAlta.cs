@@ -13,13 +13,7 @@ namespace TPWinForm_equipo_8A
 {
     public partial class formAlta : Form
     {
-<<<<<<< HEAD
-
-       private Articulo articuloMdfc = null;
-
-=======
         private Articulo articulo = null;
->>>>>>> d6289c2040079f5f1c10e05aa5bfeeda67cb6020
         public formAlta()
         {
             InitializeComponent();
@@ -28,12 +22,9 @@ namespace TPWinForm_equipo_8A
         {
             InitializeComponent();
            
-            articuloMdfc = artModif;
+            articulo = artModif;
 
         }
-
-
-
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -52,44 +43,32 @@ namespace TPWinForm_equipo_8A
         }
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-=======
                 articulo = new Articulo();
->>>>>>> d6289c2040079f5f1c10e05aa5bfeeda67cb6020
                 GestionArticulos gestionArticulo = new GestionArticulos();
 
             try
             {
+                if(articulo == null)
 
+                articulo = new Articulo();
+                articulo.Codigo = txtCodigo.Text;
+                articulo.Nombre = txtNombre.Text;
+                articulo.Descripcion = txtDescripcion.Text;
+                articulo.marca = (Marca)cboMarca.SelectedItem;
+                articulo.categoria = (Categoria)cboCategoria.SelectedItem;
+                articulo.Precio = (float)decimal.Parse(txtPrecio.Text);
+                articulo.Imagen = txtImagenUrl.Text;
 
-                if(articuloMdfc==null)
-
-                articuloMdfc = new Articulo();
-
-
-                articuloMdfc.Codigo = txtCodigo.Text;
-                articuloMdfc.Nombre = txtNombre.Text;
-                articuloMdfc.Descripcion = txtDescripcion.Text;
-                articuloMdfc.marca = (Marca)cboMarca.SelectedItem;
-                articuloMdfc.categoria = (Categoria)cboCategoria.SelectedItem;
-                articuloMdfc.Precio = (float)decimal.Parse(txtPrecio.Text);
-                articuloMdfc.Imagen = txtImagenUrl.Text;
-
-
-                if(articuloMdfc.Id != 0)
+                if(articulo.Id != 0)
                 {
-                 gestionArticulo.modificar(articuloMdfc);
+                 gestionArticulo.modificar(articulo);
                  MessageBox.Show("Modificado exitosamente");
-
                 }
                 else
                 {
-                gestionArticulo.agregar(articuloMdfc);
+                gestionArticulo.agregar(articulo);
                 MessageBox.Show("Agregado exitosamente");
-
                 }
-             
-
                 Close();
             }
             catch (Exception ex)
@@ -108,29 +87,22 @@ namespace TPWinForm_equipo_8A
                 cboMarca.ValueMember = "IdM";
                 cboMarca.DisplayMember = "Descrpcion";
                 cboCategoria.DataSource = categoriaNegocio.listar();
-<<<<<<< HEAD
                 cboCategoria.ValueMember = "Id";
                 cboCategoria.DisplayMember = "Descrpcion";
 
-
-                //cboCategoria.DisplayMember = "Nombre";
-                if (articuloMdfc != null)
+                if (articulo != null)
                 {
-                    txtCodigo.Text=articuloMdfc.Codigo;
-                    txtNombre.Text = articuloMdfc.Nombre;
-                    txtDescripcion.Text = articuloMdfc.Descripcion;
-                   // txtMarca.Text = articuloMdfc.marca;
-                   // txtCategoria.Text = articuloMdfc.Categoria;
-                    txtImagenUrl.Text = articuloMdfc.Imagen;
-                    cargarImagen(articuloMdfc.Imagen);
-                    txtPrecio.Text = articuloMdfc.Precio.ToString();
-                    cboMarca.SelectedValue = articuloMdfc.marca.idM;
-                    cboCategoria.SelectedValue = articuloMdfc.categoria.Id;
+                    txtCodigo.Text=articulo.Codigo;
+                    txtNombre.Text = articulo.Nombre;
+                    txtDescripcion.Text = articulo.Descripcion;
+                   // txtMarca.Text = articulo.marca;
+                   // txtCategoria.Text = articulo.Categoria;
+                    txtImagenUrl.Text = articulo.Imagen;
+                    cargarImagen(articulo.Imagen);
+                    txtPrecio.Text = articulo.Precio.ToString();
+                    cboMarca.SelectedValue = articulo.marca.idM;
+                    cboCategoria.SelectedValue = articulo.categoria.Id;
                 }
-
-
-=======
->>>>>>> d6289c2040079f5f1c10e05aa5bfeeda67cb6020
             }
             catch (Exception ex)
             {

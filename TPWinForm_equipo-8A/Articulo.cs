@@ -9,13 +9,7 @@ namespace TPWinForm_equipo_8A
 {
     public partial class Articulo
     {
-<<<<<<< HEAD
-
         public int Id { get; set; }
-
-=======
-        public int Id { get; set; }
->>>>>>> d6289c2040079f5f1c10e05aa5bfeeda67cb6020
         [DisplayName("Código")]
         public string Codigo { get; set; }
         public string Nombre { get; set; }

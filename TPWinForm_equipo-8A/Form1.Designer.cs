@@ -38,10 +38,7 @@
             this.aRTICULOSToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ListarXMARCAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SalirDesplegable = new System.Windows.Forms.ToolStripMenuItem();
-<<<<<<< HEAD
-=======
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
->>>>>>> d6289c2040079f5f1c10e05aa5bfeeda67cb6020
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -106,14 +103,11 @@
             resources.ApplyResources(this.SalirDesplegable, "SalirDesplegable");
             this.SalirDesplegable.Click += new System.EventHandler(this.SalirToolStripMenuItem_Click);
             // 
-<<<<<<< HEAD
-=======
             // flowLayoutPanel1
             // 
             resources.ApplyResources(this.flowLayoutPanel1, "flowLayoutPanel1");
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             // 
->>>>>>> d6289c2040079f5f1c10e05aa5bfeeda67cb6020
             // PantallaPrincipal
             // 
             resources.ApplyResources(this, "$this");
@@ -146,4 +140,3 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
-

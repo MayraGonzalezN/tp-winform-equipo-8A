@@ -113,7 +113,6 @@ namespace WinTPWinForm_equipo_8A
             AccesoDatos datos = new AccesoDatos();
             try
             {
-
                 datos.setearConsulta("UPDATE ARTICULOS set  Codigo = @Codigo,Nombre=@Nombre,Descripcion=@Descripcion,IdMarca=@IdMarca,IdCategoria=@IdCategoria,Precio=@Precio where Id=@Id");
                 datos.SetearParametro("@Codigo", modificar.Codigo);
                 datos.SetearParametro("@Nombre", modificar.Nombre);
@@ -136,9 +135,6 @@ namespace WinTPWinForm_equipo_8A
 
                 datos.cerrarConexion(); 
             }
-        
-        
- 
         }
         public void Eliminar(Articulo Eliminar) {
             AccesoDatos datos = new AccesoDatos();
