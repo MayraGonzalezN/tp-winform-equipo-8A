@@ -30,8 +30,7 @@ namespace TPWinForm_equipo_8A
             listaArticulos = articulos.Listar();
             dgvArt.DataSource = listaArticulos;
             dgvArt.Columns["Imagen"].Visible = false;
-            //dgvArt.Columns["marca"].DataPropertyName = "Nombre";
-            //dgvArt.Columns["categoria"].DataPropertyName = "categoria";
+            dgvArt.Columns["Id"].Visible = false;  
             cargarImagen(listaArticulos[0].Imagen);
         }
 

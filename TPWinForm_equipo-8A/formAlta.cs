@@ -13,6 +13,7 @@ namespace TPWinForm_equipo_8A
 {
     public partial class formAlta : Form
     {
+        private Articulo articulo = null;
         public formAlta()
         {
             InitializeComponent();
@@ -35,7 +36,7 @@ namespace TPWinForm_equipo_8A
         }
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-                Articulo articulo = new Articulo();
+                articulo = new Articulo();
                 GestionArticulos gestionArticulo = new GestionArticulos();
 
             try
@@ -64,7 +65,6 @@ namespace TPWinForm_equipo_8A
             {
                 cboMarca.DataSource = marcaNegocio.listar();
                 cboCategoria.DataSource = categoriaNegocio.listar();
-                //cboCategoria.DisplayMember = "Nombre";
             }
             catch (Exception ex)
             {

@@ -20,7 +20,7 @@ namespace WinTPWinForm_equipo_8A
 
             try 
 	        {
-                datos.setearConsulta(@"SELECT A.Codigo,A.Nombre, A.Descripcion, A.IdMarca, M.Descripcion AS marca, A.IdCategoria, C.Descripcion AS categoria,  A.Precio, I.ImagenUrl
+                datos.setearConsulta(@"SELECT A.Id, A.Codigo,A.Nombre, A.Descripcion, A.IdMarca, M.Descripcion AS marca, A.IdCategoria, C.Descripcion AS categoria,  A.Precio, I.ImagenUrl
                                         FROM ARTICULOS A JOIN MARCAS M ON A.IdMarca = M.Id JOIN CATEGORIAS C ON A.IdCategoria = C.Id
                                         LEFT JOIN IMAGENES I ON A.Id = I.IdArticulo");
                 datos.ejecutarLectura();
@@ -28,6 +28,7 @@ namespace WinTPWinForm_equipo_8A
                 while (datos.Lector.Read())
                 {
                     Articulo aux = new Articulo();
+                    aux.Id = (int)datos.Lector["Id"];
                     aux.Codigo = datos.Lector["Codigo"].ToString();
                     aux.Nombre = datos.Lector["Nombre"].ToString();
                     aux.Descripcion = datos.Lector["Descripcion"].ToString();
@@ -68,7 +69,7 @@ namespace WinTPWinForm_equipo_8A
             try
             {
                 datos.setearConsulta("INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, IdCategoria, IdMarca, Precio) " +
-                          "VALUES (@Codigo, @Nombre, @Descripcion, @IdCategoria, @IdMarca, @Precio);");
+                                     "VALUES (@Codigo, @Nombre, @Descripcion, @IdCategoria, @IdMarca, @Precio);");
                 datos.SetearParametro("@Codigo", nuevoArticulo.Codigo);
                 datos.SetearParametro("@Nombre", nuevoArticulo.Nombre);
                 datos.SetearParametro("@Descripcion", nuevoArticulo.Descripcion);
