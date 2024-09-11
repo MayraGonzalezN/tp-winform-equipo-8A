@@ -30,7 +30,7 @@ namespace TPWinForm_equipo_8A
 
         private void aLTAToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            formAlta ventaAlta = new formAlta();
+            formAlta ventaAlta = new formAlta();/// me lo copie para cambiar de lugar btnAgregar
             ventaAlta.ShowDialog();
         }
 

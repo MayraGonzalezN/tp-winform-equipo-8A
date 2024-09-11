@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TPWinForm_equipo_8A
 {
-    internal class Marca
+    public class Marca
     {
         public int idM { get; set; }
         public string NombreM { get; set; }

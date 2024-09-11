@@ -14,6 +14,7 @@ namespace TPWinForm_equipo_8A
     public partial class ListadoArticulos : Form
     {
         private List<Articulo> listaArticulos;
+        private Articulo articuloModificar=null;    
         public ListadoArticulos()
         {
             InitializeComponent();
@@ -54,5 +55,21 @@ namespace TPWinForm_equipo_8A
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)//btnAgregar2 no se porque el nombre del boton esta por defecto
+        {
+            formAlta ventaAlta = new formAlta();
+            ventaAlta.ShowDialog();
+            
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Articulo seleccionado;
+            seleccionado = (Articulo)dgvArt.CurrentRow.DataBoundItem;
+
+            formAlta modificar = new formAlta(seleccionado);//instancia de la clase ventanaAlta
+            modificar.ShowDialog();
+
+        }
     }
 }

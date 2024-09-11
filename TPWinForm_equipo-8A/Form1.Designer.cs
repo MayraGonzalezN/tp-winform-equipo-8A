@@ -36,8 +36,8 @@
             this.ModificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ListadoDesplegable = new System.Windows.Forms.ToolStripMenuItem();
             this.aRTICULOSToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.SalirDesplegable = new System.Windows.Forms.ToolStripMenuItem();
             this.ListarXMARCAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SalirDesplegable = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -91,17 +91,17 @@
             resources.ApplyResources(this.aRTICULOSToolStripMenuItem1, "aRTICULOSToolStripMenuItem1");
             this.aRTICULOSToolStripMenuItem1.Click += new System.EventHandler(this.aRTICULOSToolStripMenuItem1_Click);
             // 
-            // SalirDesplegable
-            // 
-            this.SalirDesplegable.Name = "SalirDesplegable";
-            resources.ApplyResources(this.SalirDesplegable, "SalirDesplegable");
-            this.SalirDesplegable.Click += new System.EventHandler(this.SalirToolStripMenuItem_Click);
-            // 
             // ListarXMARCAToolStripMenuItem
             // 
             this.ListarXMARCAToolStripMenuItem.Name = "ListarXMARCAToolStripMenuItem";
             resources.ApplyResources(this.ListarXMARCAToolStripMenuItem, "ListarXMARCAToolStripMenuItem");
             this.ListarXMARCAToolStripMenuItem.Click += new System.EventHandler(this.ListarXMARCAToolStripMenuItem_Click);
+            // 
+            // SalirDesplegable
+            // 
+            this.SalirDesplegable.Name = "SalirDesplegable";
+            resources.ApplyResources(this.SalirDesplegable, "SalirDesplegable");
+            this.SalirDesplegable.Click += new System.EventHandler(this.SalirToolStripMenuItem_Click);
             // 
             // PantallaPrincipal
             // 

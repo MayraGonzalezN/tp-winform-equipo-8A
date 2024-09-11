@@ -13,10 +13,23 @@ namespace TPWinForm_equipo_8A
 {
     public partial class formAlta : Form
     {
+
+       private Articulo articuloMdfc = null;
+
         public formAlta()
         {
             InitializeComponent();
         }
+        public formAlta(Articulo artModif)
+        {
+            InitializeComponent();
+           
+            articuloMdfc = artModif;
+
+        }
+
+
+
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -35,20 +48,40 @@ namespace TPWinForm_equipo_8A
         }
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-                Articulo articulo = new Articulo();
                 GestionArticulos gestionArticulo = new GestionArticulos();
 
             try
             {
-                articulo.Codigo = txtCodigo.Text;
-                articulo.Nombre = txtNombre.Text;
-                articulo.Descripcion = txtDescripcion.Text;
-                articulo.marca = (Marca)cboMarca.SelectedItem;
-                articulo.categoria = (Categoria)cboCategoria.SelectedItem;
-                articulo.Precio = (float)decimal.Parse(txtPrecio.Text);
-                articulo.Imagen = txtImagenUrl.Text;
-                gestionArticulo.agregar(articulo);
+
+
+                if(articuloMdfc==null)
+
+                articuloMdfc = new Articulo();
+
+
+                articuloMdfc.Codigo = txtCodigo.Text;
+                articuloMdfc.Nombre = txtNombre.Text;
+                articuloMdfc.Descripcion = txtDescripcion.Text;
+                articuloMdfc.marca = (Marca)cboMarca.SelectedItem;
+                articuloMdfc.categoria = (Categoria)cboCategoria.SelectedItem;
+                articuloMdfc.Precio = (float)decimal.Parse(txtPrecio.Text);
+                articuloMdfc.Imagen = txtImagenUrl.Text;
+
+
+                if(articuloMdfc.Id != 0)
+                {
+                 gestionArticulo.modificar(articuloMdfc);
+                 MessageBox.Show("Modificado exitosamente");
+
+                }
+                else
+                {
+                gestionArticulo.agregar(articuloMdfc);
                 MessageBox.Show("Agregado exitosamente");
+
+                }
+             
+
                 Close();
             }
             catch (Exception ex)
@@ -60,11 +93,33 @@ namespace TPWinForm_equipo_8A
         {
             MarcaNegocio marcaNegocio = new MarcaNegocio();
             CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
+            
             try
             {
                 cboMarca.DataSource = marcaNegocio.listar();
+                cboMarca.ValueMember = "IdM";
+                cboMarca.DisplayMember = "Descrpcion";
                 cboCategoria.DataSource = categoriaNegocio.listar();
+                cboCategoria.ValueMember = "Id";
+                cboCategoria.DisplayMember = "Descrpcion";
+
+
                 //cboCategoria.DisplayMember = "Nombre";
+                if (articuloMdfc != null)
+                {
+                    txtCodigo.Text=articuloMdfc.Codigo;
+                    txtNombre.Text = articuloMdfc.Nombre;
+                    txtDescripcion.Text = articuloMdfc.Descripcion;
+                   // txtMarca.Text = articuloMdfc.marca;
+                   // txtCategoria.Text = articuloMdfc.Categoria;
+                    txtImagenUrl.Text = articuloMdfc.Imagen;
+                    cargarImagen(articuloMdfc.Imagen);
+                    txtPrecio.Text = articuloMdfc.Precio.ToString();
+                    cboMarca.SelectedValue = articuloMdfc.marca.idM;
+                    cboCategoria.SelectedValue = articuloMdfc.categoria.Id;
+                }
+
+
             }
             catch (Exception ex)
             {

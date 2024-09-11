@@ -30,6 +30,8 @@
         {
             this.dgvArt = new System.Windows.Forms.DataGridView();
             this.pbxImagen = new System.Windows.Forms.PictureBox();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnAgregar2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagen)).BeginInit();
             this.SuspendLayout();
@@ -56,11 +58,33 @@
             this.pbxImagen.TabIndex = 1;
             this.pbxImagen.TabStop = false;
             // 
+            // btnModificar
+            // 
+            this.btnModificar.Location = new System.Drawing.Point(278, 316);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(113, 41);
+            this.btnModificar.TabIndex = 2;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
+            // btnAgregar2
+            // 
+            this.btnAgregar2.Location = new System.Drawing.Point(88, 316);
+            this.btnAgregar2.Name = "btnAgregar2";
+            this.btnAgregar2.Size = new System.Drawing.Size(108, 41);
+            this.btnAgregar2.TabIndex = 3;
+            this.btnAgregar2.Text = "Agregar";
+            this.btnAgregar2.UseVisualStyleBackColor = true;
+            this.btnAgregar2.Click += new System.EventHandler(this.button1_Click);
+            // 
             // ListadoArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1035, 329);
+            this.ClientSize = new System.Drawing.Size(1035, 379);
+            this.Controls.Add(this.btnAgregar2);
+            this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.pbxImagen);
             this.Controls.Add(this.dgvArt);
             this.Name = "ListadoArticulos";
@@ -77,5 +101,7 @@
 
         private System.Windows.Forms.DataGridView dgvArt;
         private System.Windows.Forms.PictureBox pbxImagen;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnAgregar2;
     }
 }

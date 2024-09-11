@@ -177,7 +177,7 @@
     <value>186, 9</value>
   </data>
   <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>326, 24</value>
+    <value>206, 24</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
@@ -255,16 +255,16 @@
   <data name="&gt;&gt;aRTICULOSToolStripMenuItem1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;SalirDesplegable.Name" xml:space="preserve">
-    <value>SalirDesplegable</value>
-  </data>
-  <data name="&gt;&gt;SalirDesplegable.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;ListarXMARCAToolStripMenuItem.Name" xml:space="preserve">
     <value>ListarXMARCAToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;ListarXMARCAToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SalirDesplegable.Name" xml:space="preserve">
+    <value>SalirDesplegable</value>
+  </data>
+  <data name="&gt;&gt;SalirDesplegable.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

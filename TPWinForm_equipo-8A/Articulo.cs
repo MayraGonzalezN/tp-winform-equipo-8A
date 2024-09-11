@@ -7,8 +7,11 @@ using System.Threading.Tasks;
 
 namespace TPWinForm_equipo_8A
 {
-    partial class Articulo
+    public partial class Articulo
     {
+
+        public int Id { get; set; }
+
         [DisplayName("Código")]
         public string Codigo { get; set; }
         public string Nombre { get; set; }
