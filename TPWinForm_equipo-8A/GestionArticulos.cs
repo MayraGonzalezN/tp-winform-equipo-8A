@@ -12,7 +12,7 @@ namespace WinTPWinForm_equipo_8A
 {
     class GestionArticulos
     {
-        // clase para acceso a datos, listar, agegar, modificar,
+        // clase para listar, agegar, modificar,
         public List<Articulo> Listar()
         { 
             List<Articulo> lista = new List<Articulo>();
@@ -193,5 +193,56 @@ namespace WinTPWinForm_equipo_8A
             }
             finally { datos.cerrarConexion();}
         }
+
+        public Articulo BuscarMenorPrecio()
+        {
+            AccesoDatos datos = new AccesoDatos();
+            Articulo articuloMenorPrecio = null;
+
+            try
+            {
+            
+                string consulta = "SELECT TOP 1 Codigo, Nombre, Descripcion, IdCategoria, IdMarca, Precio " +
+                                  "FROM ARTICULOS ORDER BY Precio ASC";
+                datos.setearConsulta(consulta);
+
+
+                datos.ejecutarLectura();
+
+           
+                if (datos.Lector.Read())
+                {
+                    articuloMenorPrecio = new Articulo
+                    {
+                        Codigo = datos.Lector["Codigo"].ToString(),
+                        Nombre = datos.Lector["Nombre"].ToString(),
+                        Descripcion = datos.Lector["Descripcion"].ToString(),
+                        Precio = (float)(decimal)datos.Lector["Precio"]
+                    };
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
+            return articuloMenorPrecio;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }

@@ -59,6 +59,7 @@
             this.txtEliminar.Name = "txtEliminar";
             this.txtEliminar.Size = new System.Drawing.Size(100, 20);
             this.txtEliminar.TabIndex = 0;
+         //   this.txtEliminar.TextChanged += new System.EventHandler(this.txtEliminar_TextChanged);
             // 
             // btnCancelar
             // 

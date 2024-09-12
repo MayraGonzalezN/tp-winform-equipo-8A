@@ -126,7 +126,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="BajaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>102, 22</value>
   </data>
   <data name="BajaToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;BAJA</value>
@@ -138,16 +138,16 @@
     <value>ARTICULOS</value>
   </data>
   <data name="aRTICULOSToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 22</value>
+    <value>234, 22</value>
   </data>
   <data name="aRTICULOSToolStripMenuItem1.Text" xml:space="preserve">
     <value>ARTICULOS</value>
   </data>
   <data name="ListarXMARCAToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 22</value>
+    <value>234, 22</value>
   </data>
   <data name="ListarXMARCAToolStripMenuItem.Text" xml:space="preserve">
-    <value>LISTAR X MARCA</value>
+    <value>BUSQUEDA MARCA O PRECIO</value>
   </data>
   <data name="ListadoDesplegable.Size" type="System.Drawing.Size, System.Drawing">
     <value>70, 20</value>
@@ -190,7 +190,7 @@
     <value>True</value>
   </data>
   <data name="flowLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 37</value>
+    <value>12, 37</value>
   </data>
   <data name="flowLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>683, 549</value>
