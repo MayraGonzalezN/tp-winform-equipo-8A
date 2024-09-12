@@ -31,9 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaPrincipal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ArticulosDesplegable = new System.Windows.Forms.ToolStripMenuItem();
-            this.AltaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.typeHModificar = new System.Windows.Forms.ToolStripMenuItem();
             this.ListadoDesplegable = new System.Windows.Forms.ToolStripMenuItem();
             this.aRTICULOSToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ListarXMARCAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,28 +52,15 @@
             // ArticulosDesplegable
             // 
             this.ArticulosDesplegable.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.AltaToolStripMenuItem,
-            this.BajaToolStripMenuItem,
-            this.typeHModificar});
+            this.BajaToolStripMenuItem});
             this.ArticulosDesplegable.Name = "ArticulosDesplegable";
             resources.ApplyResources(this.ArticulosDesplegable, "ArticulosDesplegable");
-            // 
-            // AltaToolStripMenuItem
-            // 
-            this.AltaToolStripMenuItem.Name = "AltaToolStripMenuItem";
-            resources.ApplyResources(this.AltaToolStripMenuItem, "AltaToolStripMenuItem");
-            this.AltaToolStripMenuItem.Click += new System.EventHandler(this.aLTAToolStripMenuItem_Click);
             // 
             // BajaToolStripMenuItem
             // 
             this.BajaToolStripMenuItem.Name = "BajaToolStripMenuItem";
             resources.ApplyResources(this.BajaToolStripMenuItem, "BajaToolStripMenuItem");
             this.BajaToolStripMenuItem.Click += new System.EventHandler(this.BajaToolStripMenuItem_Click);
-            // 
-            // typeHModificar
-            // 
-            this.typeHModificar.Name = "typeHModificar";
-            resources.ApplyResources(this.typeHModificar, "typeHModificar");
             // 
             // ListadoDesplegable
             // 
@@ -129,9 +114,7 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem ArticulosDesplegable;
-        private System.Windows.Forms.ToolStripMenuItem AltaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem BajaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem typeHModificar;
         private System.Windows.Forms.ToolStripMenuItem ListadoDesplegable;
         private System.Windows.Forms.ToolStripMenuItem SalirDesplegable;
         private System.Windows.Forms.ToolStripMenuItem aRTICULOSToolStripMenuItem1;

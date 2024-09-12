@@ -107,35 +107,79 @@ namespace WinTPWinForm_equipo_8A
                 datos.cerrarConexion();
             }
         }
-        public void modificar(Articulo modificar) 
+        public void Modificar(Articulo modificar)
         {
-
+            AccesoDatos datos = new AccesoDatos();
+            modificarArticulo(modificar);
+            int idArticulo = datos.ObtenerIdArticulo(modificar.Codigo);
+            modificarImagenUrl(idArticulo, modificar.Imagen);
+        }
+        public void modificarArticulo(Articulo modificar)
+        {
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("UPDATE ARTICULOS set  Codigo = @Codigo,Nombre=@Nombre,Descripcion=@Descripcion,IdMarca=@IdMarca,IdCategoria=@IdCategoria,Precio=@Precio where Id=@Id");
-                datos.SetearParametro("@Codigo", modificar.Codigo);
-                datos.SetearParametro("@Nombre", modificar.Nombre);
-                datos.SetearParametro("@Descripcion", modificar.Descripcion);
-                datos.SetearParametro("@IdCategoria", modificar.categoria.Id);
-                datos.SetearParametro("@IdMarca", modificar.marca.idM);
-                datos.SetearParametro("@Precio", modificar.Precio);
-                datos.SetearParametro("@Id", modificar.Id);
-                datos.ejecutarAccion();
+            datos.setearConsulta("UPDATE ARTICULOS set Codigo = @Codigo, Nombre = @Nombre, Descripcion = @Descripcion, IdMarca = @IdMarca," +
+                                 "IdCategoria = @IdCategoria, Precio = @Precio where Id = @Id"); 
+            datos.SetearParametro("@Codigo", modificar.Codigo);
+            datos.SetearParametro("@Nombre", modificar.Nombre);
+            datos.SetearParametro("@Descripcion", modificar.Descripcion);
+            datos.SetearParametro("@IdCategoria", modificar.categoria.Id);
+            datos.SetearParametro("@IdMarca", modificar.marca.idM);
+            datos.SetearParametro("@Precio", modificar.Precio);
+            datos.SetearParametro("@Id", modificar.Id);
+            datos.ejecutarAccion();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
 
                 throw ex;
-
-
             }
             finally
             {
-
-                datos.cerrarConexion(); 
+                datos.cerrarConexion();
             }
         }
+        public void modificarImagenUrl(int idArticulo, string Imagen)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("UPDATE IMAGENES SET ImagenUrl = @ImagenUrl where idArticulo = @IdArticulo");
+                datos.SetearParametro("@IdArticulo", idArticulo);
+                datos.SetearParametro("@ImagenUrl", Imagen);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+        //AccesoDatos datos = new AccesoDatos();
+        //try
+        //{
+        //    datos.setearConsulta("UPDATE ARTICULOS set Codigo = @Codigo,Nombre=@Nombre,Descripcion=@Descripcion,IdMarca=@IdMarca,IdCategoria=@IdCategoria,Precio=@Precio where Id=@Id");
+        //    datos.SetearParametro("@Codigo", modificar.Codigo);
+        //    datos.SetearParametro("@Nombre", modificar.Nombre);
+        //    datos.SetearParametro("@Descripcion", modificar.Descripcion);
+        //    datos.SetearParametro("@IdCategoria", modificar.categoria.Id);
+        //    datos.SetearParametro("@IdMarca", modificar.marca.idM);
+        //    datos.SetearParametro("@Precio", modificar.Precio);
+        //    datos.SetearParametro("@Id", modificar.Id);
+        //    datos.ejecutarAccion();
+        //}
+        //catch(Exception ex)
+        //{
+        //    throw ex;
+        //}
+        //finally
+        //{
+        //    datos.cerrarConexion(); 
+        //}
         public void Eliminar(Articulo Eliminar) {
             AccesoDatos datos = new AccesoDatos();
             try

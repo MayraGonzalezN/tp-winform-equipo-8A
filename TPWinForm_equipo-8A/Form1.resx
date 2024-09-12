@@ -125,23 +125,11 @@
     <value>None</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="AltaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>137, 22</value>
-  </data>
-  <data name="AltaToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;ALTA</value>
-  </data>
   <data name="BajaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>137, 22</value>
+    <value>180, 22</value>
   </data>
   <data name="BajaToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;BAJA</value>
-  </data>
-  <data name="typeHModificar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>137, 22</value>
-  </data>
-  <data name="typeHModificar.Text" xml:space="preserve">
-    <value>&amp;MODIFICAR</value>
   </data>
   <data name="ArticulosDesplegable.Size" type="System.Drawing.Size, System.Drawing">
     <value>79, 20</value>
@@ -150,13 +138,13 @@
     <value>ARTICULOS</value>
   </data>
   <data name="aRTICULOSToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>164, 22</value>
   </data>
   <data name="aRTICULOSToolStripMenuItem1.Text" xml:space="preserve">
     <value>ARTICULOS</value>
   </data>
   <data name="ListarXMARCAToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>164, 22</value>
   </data>
   <data name="ListarXMARCAToolStripMenuItem.Text" xml:space="preserve">
     <value>LISTAR X MARCA</value>
@@ -177,7 +165,7 @@
     <value>247, 10</value>
   </data>
   <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>206, 24</value>
+    <value>326, 24</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
@@ -249,22 +237,10 @@
   <data name="&gt;&gt;ArticulosDesplegable.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;AltaToolStripMenuItem.Name" xml:space="preserve">
-    <value>AltaToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;AltaToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;BajaToolStripMenuItem.Name" xml:space="preserve">
     <value>BajaToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;BajaToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;typeHModificar.Name" xml:space="preserve">
-    <value>typeHModificar</value>
-  </data>
-  <data name="&gt;&gt;typeHModificar.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ListadoDesplegable.Name" xml:space="preserve">

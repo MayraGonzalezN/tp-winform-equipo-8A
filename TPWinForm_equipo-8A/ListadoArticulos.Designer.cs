@@ -76,7 +76,7 @@
             this.btnAgregar2.TabIndex = 3;
             this.btnAgregar2.Text = "Agregar";
             this.btnAgregar2.UseVisualStyleBackColor = true;
-            this.btnAgregar2.Click += new System.EventHandler(this.button1_Click);
+            this.btnAgregar2.Click += new System.EventHandler(this.btnAgregar2_Click);
             // 
             // ListadoArticulos
             // 

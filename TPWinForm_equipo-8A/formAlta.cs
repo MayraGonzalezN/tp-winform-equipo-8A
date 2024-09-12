@@ -18,12 +18,11 @@ namespace TPWinForm_equipo_8A
         {
             InitializeComponent();
         }
-        public formAlta(Articulo artModif)
+        public formAlta(Articulo articulo)
         {
             InitializeComponent();
-           
-            articulo = artModif;
-
+            this.articulo = articulo;
+            Text = "Modificar Articulo"; 
         }
         private void label1_Click(object sender, EventArgs e)
         {
@@ -41,16 +40,14 @@ namespace TPWinForm_equipo_8A
         {
             Close();
         }
-        private void btnAgregar_Click(object sender, EventArgs e)
+        private void btnAceptar_Click(object sender, EventArgs e)
         {
-                articulo = new Articulo();
                 GestionArticulos gestionArticulo = new GestionArticulos();
 
             try
             {
                 if(articulo == null)
-
-                articulo = new Articulo();
+                    articulo = new Articulo();
                 articulo.Codigo = txtCodigo.Text;
                 articulo.Nombre = txtNombre.Text;
                 articulo.Descripcion = txtDescripcion.Text;
@@ -61,7 +58,7 @@ namespace TPWinForm_equipo_8A
 
                 if(articulo.Id != 0)
                 {
-                 gestionArticulo.modificar(articulo);
+                 gestionArticulo.Modificar(articulo);
                  MessageBox.Show("Modificado exitosamente");
                 }
                 else
@@ -69,6 +66,9 @@ namespace TPWinForm_equipo_8A
                 gestionArticulo.agregar(articulo);
                 MessageBox.Show("Agregado exitosamente");
                 }
+                ListadoArticulos listadoArticulos = new ListadoArticulos();
+                    listadoArticulos.actualizarLista();
+                
                 Close();
             }
             catch (Exception ex)
@@ -80,23 +80,21 @@ namespace TPWinForm_equipo_8A
         {
             MarcaNegocio marcaNegocio = new MarcaNegocio();
             CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
-            
+
             try
             {
                 cboMarca.DataSource = marcaNegocio.listar();
-                cboMarca.ValueMember = "IdM";
-                cboMarca.DisplayMember = "Descrpcion";
+                cboMarca.ValueMember = "idM";
+                cboMarca.DisplayMember = "NombreM";
                 cboCategoria.DataSource = categoriaNegocio.listar();
                 cboCategoria.ValueMember = "Id";
-                cboCategoria.DisplayMember = "Descrpcion";
+                cboCategoria.DisplayMember = "Nombre";
 
                 if (articulo != null)
                 {
                     txtCodigo.Text=articulo.Codigo;
                     txtNombre.Text = articulo.Nombre;
                     txtDescripcion.Text = articulo.Descripcion;
-                   // txtMarca.Text = articulo.marca;
-                   // txtCategoria.Text = articulo.Categoria;
                     txtImagenUrl.Text = articulo.Imagen;
                     cargarImagen(articulo.Imagen);
                     txtPrecio.Text = articulo.Precio.ToString();

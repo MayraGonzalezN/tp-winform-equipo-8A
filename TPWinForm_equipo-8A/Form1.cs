@@ -28,12 +28,6 @@ namespace TPWinForm_equipo_8A
             //CargarArticulos(); //En Proceso
         }
 
-        private void aLTAToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            formAlta ventaAlta = new formAlta();/// me lo copie para cambiar de lugar btnAgregar
-            ventaAlta.ShowDialog();
-        }
-
         private void SalirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Close();
