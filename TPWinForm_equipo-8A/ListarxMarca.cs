@@ -18,9 +18,25 @@ namespace TPWinForm_equipo_8A
             InitializeComponent();
         }
 
+        private List<Articulo>ListadoxMarca;
         private void btnListadoMarca_Click(object sender, EventArgs e)
         {
+            Articulo articulo = new Articulo(); 
+            GestionArticulos gestionArticulos = new GestionArticulos();
             
+            try
+            {
+                articulo.marca = new Marca();
+                articulo.marca.NombreM = txtBusqueda.Text;
+                //gestionArticulos.ListarxMarca(articulo);
+          
+                ListadoxMarca = gestionArticulos.ListarxMarca(articulo);
+                dvgListarxMarca.DataSource = ListadoxMarca;
+            }
+
+            catch(Exception ex) {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -60,6 +76,21 @@ namespace TPWinForm_equipo_8A
             {
                 MessageBox.Show("Ocurrió un error: " + ex.Message);
             }
+
+        }
+
+        private void ListarxMarca_Load(object sender, EventArgs e)
+        {
+            GestionArticulos articulos = new GestionArticulos();
+            Articulo articulo = new Articulo();
+            //articulo.marca.NombreM = txtBusqueda.Text;
+            //ListadoxMarca = articulos.ListarxMarca(articulo);
+            //dvgListarxMarca.DataSource = ListadoxMarca;
+            
+        }
+
+        private void dvgListarxMarca_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

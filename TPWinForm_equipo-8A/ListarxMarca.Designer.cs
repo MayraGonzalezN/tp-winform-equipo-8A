@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.lblMarca = new System.Windows.Forms.Label();
-            this.txtListadoMarca = new System.Windows.Forms.TextBox();
+            this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.dvgListarxMarca = new System.Windows.Forms.DataGridView();
             this.btnListadoMarca = new System.Windows.Forms.Button();
             this.lblMenorPrecio = new System.Windows.Forms.Label();
@@ -48,12 +48,12 @@
             this.lblMarca.TabIndex = 0;
             this.lblMarca.Text = "MARCA: ";
             // 
-            // txtListadoMarca
+            // txtBusqueda
             // 
-            this.txtListadoMarca.Location = new System.Drawing.Point(71, 5);
-            this.txtListadoMarca.Name = "txtListadoMarca";
-            this.txtListadoMarca.Size = new System.Drawing.Size(100, 20);
-            this.txtListadoMarca.TabIndex = 1;
+            this.txtBusqueda.Location = new System.Drawing.Point(71, 5);
+            this.txtBusqueda.Name = "txtBusqueda";
+            this.txtBusqueda.Size = new System.Drawing.Size(100, 20);
+            this.txtBusqueda.TabIndex = 1;
             // 
             // dvgListarxMarca
             // 
@@ -62,6 +62,7 @@
             this.dvgListarxMarca.Name = "dvgListarxMarca";
             this.dvgListarxMarca.Size = new System.Drawing.Size(380, 245);
             this.dvgListarxMarca.TabIndex = 2;
+            this.dvgListarxMarca.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgListarxMarca_CellContentClick);
             // 
             // btnListadoMarca
             // 
@@ -111,10 +112,11 @@
             this.Controls.Add(this.lblMenorPrecio);
             this.Controls.Add(this.btnListadoMarca);
             this.Controls.Add(this.dvgListarxMarca);
-            this.Controls.Add(this.txtListadoMarca);
+            this.Controls.Add(this.txtBusqueda);
             this.Controls.Add(this.lblMarca);
             this.Name = "ListarxMarca";
             this.Text = "ListarxMarca";
+            this.Load += new System.EventHandler(this.ListarxMarca_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dvgListarxMarca)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -125,7 +127,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblMarca;
-        private System.Windows.Forms.TextBox txtListadoMarca;
+        private System.Windows.Forms.TextBox txtBusqueda;
         private System.Windows.Forms.DataGridView dvgListarxMarca;
         private System.Windows.Forms.Button btnListadoMarca;
         private System.Windows.Forms.Label lblMenorPrecio;

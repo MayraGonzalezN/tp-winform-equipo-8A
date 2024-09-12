@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using TPWinForm_equipo_8A;
+using System.Collections;
+using System.Text.RegularExpressions;
 
 
 
@@ -233,6 +235,35 @@ namespace WinTPWinForm_equipo_8A
             return articuloMenorPrecio;
         }
 
+        public List<Articulo> ListarxMarca(Articulo Marca)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            List<Articulo> ListarxMarca = new List<Articulo>();
+
+            try
+            {
+                string Consulta = "SELECT A.Codigo, A.Nombre, A.Descripcion, A.Precio, M.Descripcion as Marca " +
+                          "FROM ARTICULOS A " +
+                          "INNER JOIN MARCAS M ON A.IdMarca = M.Id " +
+                          "WHERE M.Descripcion = '"+ Marca.marca.NombreM +"'";
+                datos.setearConsulta(Consulta);
+                //datos.SetearParametro("@Marca", Marca);
+                datos.ejecutarLectura();
+                while (datos.Lector.Read()) {
+                    Articulo aux = new Articulo();
+                    
+                    aux.Codigo = datos.Lector["Codigo"].ToString();
+                    aux.Nombre = datos.Lector["Nombre"].ToString();
+                    aux.Descripcion = datos.Lector["Descripcion"].ToString();
+                    aux.marca = new Marca(datos.Lector["Marca"].ToString());
+                    aux.Precio = (float)(decimal)datos.Lector["Precio"];
+                    ListarxMarca.Add(aux);
+                }
+                return ListarxMarca;
+            }
+            catch (Exception ex) { throw ex; }
+            finally { datos.cerrarConexion(); }
+        }
 
 
 
