@@ -44,12 +44,12 @@
             // 
             // menuStrip1
             // 
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ListadoDesplegable,
-            this.SalirDesplegable,
             this.mARCASToolStripMenuItem,
-            this.toolstripCategorias});
-            resources.ApplyResources(this.menuStrip1, "menuStrip1");
+            this.toolstripCategorias,
+            this.SalirDesplegable});
             this.menuStrip1.Name = "menuStrip1";
             // 
             // ListadoDesplegable

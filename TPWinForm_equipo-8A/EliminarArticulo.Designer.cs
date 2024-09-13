@@ -36,9 +36,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(201, 50);
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(201, 53);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(75, 30);
             this.button1.TabIndex = 1;
             this.button1.Text = "Eliminar";
             this.button1.UseVisualStyleBackColor = true;
@@ -47,25 +48,28 @@
             // lblEliminar
             // 
             this.lblEliminar.AutoSize = true;
-            this.lblEliminar.Location = new System.Drawing.Point(34, 60);
+            this.lblEliminar.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminar.Location = new System.Drawing.Point(17, 60);
             this.lblEliminar.Name = "lblEliminar";
-            this.lblEliminar.Size = new System.Drawing.Size(55, 13);
+            this.lblEliminar.Size = new System.Drawing.Size(72, 20);
             this.lblEliminar.TabIndex = 1;
             this.lblEliminar.Text = "CÓDIGO: ";
             // 
             // txtEliminar
             // 
+            this.txtEliminar.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEliminar.Location = new System.Drawing.Point(95, 53);
             this.txtEliminar.Name = "txtEliminar";
-            this.txtEliminar.Size = new System.Drawing.Size(100, 20);
+            this.txtEliminar.Size = new System.Drawing.Size(100, 27);
             this.txtEliminar.TabIndex = 0;
             this.txtEliminar.TextChanged += new System.EventHandler(this.txtEliminar_TextChanged);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(282, 51);
+            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Location = new System.Drawing.Point(282, 53);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.Size = new System.Drawing.Size(77, 30);
             this.btnCancelar.TabIndex = 2;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -82,7 +86,7 @@
             this.Controls.Add(this.button1);
             this.Name = "EliminarArticulo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "EliminarArticulo";
+            this.Text = "Eliminar Articulo";
             this.ResumeLayout(false);
             this.PerformLayout();
 

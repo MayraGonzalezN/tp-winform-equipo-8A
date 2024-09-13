@@ -69,13 +69,13 @@ namespace TPWinForm_equipo_8A
             foreach (Articulo articulo in articulos)
             {
                 Panel panelArticulo = new Panel();
-                panelArticulo.Width = 300;
-                panelArticulo.Height = 350;//aca agrego el tamaño que quiero que tenga mi panel x cada articulo
-                panelArticulo.Margin = new Padding(10);
+                panelArticulo.Width = 320;
+                panelArticulo.Height = 380;//aca agrego el tamaño que quiero que tenga mi panel x cada articulo
+                panelArticulo.Margin = new Padding(5);
 
                 PictureBox pictureBox = new PictureBox();
                 pictureBox.Width = panelArticulo.Width - 20;
-                pictureBox.Height = panelArticulo.Height - 40; //en vez de ponerle un with y que quede mal la img, le pongo un - teniendo en cuenta el tam del panel
+                pictureBox.Height = panelArticulo.Height - 50; //en vez de ponerle un with y que quede mal la img, le pongo un - teniendo en cuenta el tam del panel
                 pictureBox.ImageLocation = articulo.Imagen.ToString();
                 pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
 
@@ -95,9 +95,9 @@ namespace TPWinForm_equipo_8A
                 labelNombreArticulo.Dock = DockStyle.Bottom;
 
                 System.Windows.Forms.Button btnDetalles = new System.Windows.Forms.Button();
-                btnDetalles.Text = "Dettales";
-                btnDetalles.Width = panelArticulo.Width - 100;
-                btnDetalles.Height = 20;
+                btnDetalles.Text = "Detalles";
+                btnDetalles.Width = panelArticulo.Width - 50;
+                btnDetalles.Height = 30;
                 btnDetalles.Dock = DockStyle.Bottom;
                 btnDetalles.Cursor = Cursors.Hand;
 

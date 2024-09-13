@@ -61,6 +61,7 @@
             // 
             // btnModificar
             // 
+            this.btnModificar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.Location = new System.Drawing.Point(278, 316);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(113, 41);
@@ -71,6 +72,7 @@
             // 
             // btnAgregar2
             // 
+            this.btnAgregar2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar2.Location = new System.Drawing.Point(88, 316);
             this.btnAgregar2.Name = "btnAgregar2";
             this.btnAgregar2.Size = new System.Drawing.Size(108, 41);
@@ -81,6 +83,7 @@
             // 
             // btnEliminar
             // 
+            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Location = new System.Drawing.Point(478, 316);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(113, 41);
@@ -101,7 +104,7 @@
             this.Controls.Add(this.dgvArt);
             this.Name = "ListadoArticulos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ListadoArticulos";
+            this.Text = "Lista de Articulos";
             this.Load += new System.EventHandler(this.ListadoArticulos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvArt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagen)).EndInit();
