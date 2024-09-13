@@ -26,7 +26,7 @@ namespace TPWinForm_equipo_8A
 
         private void frmGestionMarcas_Load(object sender, EventArgs e)
         {
-            cargarMarcas(); // Cargar las marcas cuando se carga el formulario
+            cargarMarcas(); 
         }
 
 
@@ -42,12 +42,12 @@ namespace TPWinForm_equipo_8A
                 MarcaNegocio negocio = new MarcaNegocio();
                 negocio.agregar(nuevaMarca);
 
-                // Mostrar mensaje de éxito
+              
                 MessageBox.Show("Marca agregada exitosamente.");
 
                 cargarMarcas();
 
-                // Limpiar el TextBox para que el usuario pueda agregar otra marca
+               
                 txtboxMarca.Clear();
 
                
@@ -68,11 +68,10 @@ namespace TPWinForm_equipo_8A
                 MarcaNegocio negocio = new MarcaNegocio();
                 negocio.eliminar(idMarca);
 
-                // Mostrar mensaje de éxito
+              
                 MessageBox.Show("Marca eliminada exitosamente.");
                 cargarMarcas();
 
-                // Limpiar el TextBox para que el usuario pueda agregar otra marca
                 txtboxEliminarMarca.Clear();
 
 
