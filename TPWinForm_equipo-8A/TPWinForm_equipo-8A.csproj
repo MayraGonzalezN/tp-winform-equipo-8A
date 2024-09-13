@@ -50,6 +50,12 @@
     <Compile Include="Articulo.cs" />
     <Compile Include="Categoria.cs" />
     <Compile Include="CategoriaNegocio.cs" />
+    <Compile Include="DetallesXArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetallesXArticulo.Designer.cs">
+      <DependentUpon>DetallesXArticulo.cs</DependentUpon>
+    </Compile>
     <Compile Include="EliminarArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +91,9 @@
     <Compile Include="MarcaNegocio.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DetallesXArticulo.resx">
+      <DependentUpon>DetallesXArticulo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EliminarArticulo.resx">
       <DependentUpon>EliminarArticulo.cs</DependentUpon>
     </EmbeddedResource>

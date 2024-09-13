@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using TPWinForm_equipo_8A;
+using System.Text.RegularExpressions;
+using System.Windows.Forms;
 using System.Collections;
 using System.Text.RegularExpressions;
 
@@ -19,12 +21,16 @@ namespace WinTPWinForm_equipo_8A
         { 
             List<Articulo> lista = new List<Articulo>();
             AccesoDatos datos = new AccesoDatos();
-
             try 
 	        {
-                datos.setearConsulta(@"SELECT A.Id, A.Codigo,A.Nombre, A.Descripcion, A.IdMarca, M.Descripcion AS marca, A.IdCategoria, C.Descripcion AS categoria,  A.Precio, I.ImagenUrl
-                                        FROM ARTICULOS A JOIN MARCAS M ON A.IdMarca = M.Id JOIN CATEGORIAS C ON A.IdCategoria = C.Id
-                                        LEFT JOIN IMAGENES I ON A.Id = I.IdArticulo");
+                datos.setearConsulta(@"SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, A.IdMarca, M.Descripcion AS Marca, 
+                                     A.IdCategoria, C.Descripcion AS Categoria, A.Precio, 
+                                     MIN(I.ImagenUrl) AS ImagenUrl
+                                     FROM ARTICULOS A
+                                     JOIN MARCAS M ON A.IdMarca = M.Id
+                                     LEFT JOIN CATEGORIAS C ON A.IdCategoria = C.Id
+                                     LEFT JOIN IMAGENES I ON A.Id = I.IdArticulo
+                                     GROUP BY A.Id, A.Codigo, A.Nombre, A.Descripcion, A.IdMarca, M.Descripcion, A.IdCategoria, C.Descripcion, A.Precio");
                 datos.ejecutarLectura();
             
                 while (datos.Lector.Read())
@@ -161,27 +167,6 @@ namespace WinTPWinForm_equipo_8A
                 datos.cerrarConexion();
             }
         }
-        //AccesoDatos datos = new AccesoDatos();
-        //try
-        //{
-        //    datos.setearConsulta("UPDATE ARTICULOS set Codigo = @Codigo,Nombre=@Nombre,Descripcion=@Descripcion,IdMarca=@IdMarca,IdCategoria=@IdCategoria,Precio=@Precio where Id=@Id");
-        //    datos.SetearParametro("@Codigo", modificar.Codigo);
-        //    datos.SetearParametro("@Nombre", modificar.Nombre);
-        //    datos.SetearParametro("@Descripcion", modificar.Descripcion);
-        //    datos.SetearParametro("@IdCategoria", modificar.categoria.Id);
-        //    datos.SetearParametro("@IdMarca", modificar.marca.idM);
-        //    datos.SetearParametro("@Precio", modificar.Precio);
-        //    datos.SetearParametro("@Id", modificar.Id);
-        //    datos.ejecutarAccion();
-        //}
-        //catch(Exception ex)
-        //{
-        //    throw ex;
-        //}
-        //finally
-        //{
-        //    datos.cerrarConexion(); 
-        //}
         public void Eliminar(Articulo Eliminar) {
             AccesoDatos datos = new AccesoDatos();
             try
@@ -203,7 +188,6 @@ namespace WinTPWinForm_equipo_8A
 
             try
             {
-            
                 string consulta = "SELECT TOP 1 Codigo, Nombre, Descripcion, IdCategoria, IdMarca, Precio " +
                                   "FROM ARTICULOS ORDER BY Precio ASC";
                 datos.setearConsulta(consulta);
