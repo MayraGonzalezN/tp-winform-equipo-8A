@@ -30,16 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaPrincipal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.ArticulosDesplegable = new System.Windows.Forms.ToolStripMenuItem();
-            this.BajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ListadoDesplegable = new System.Windows.Forms.ToolStripMenuItem();
             this.aRTICULOSToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ListarXMARCAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SalirDesplegable = new System.Windows.Forms.ToolStripMenuItem();
+<<<<<<< HEAD
             this.marcasTollstrip = new System.Windows.Forms.ToolStripMenuItem();
             this.cATEGORIASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mARCASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolstripCategorias = new System.Windows.Forms.ToolStripMenuItem();
+=======
+            this.mARCASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+>>>>>>> 51aaf584023bf9672675f66290968e50f90cb0e2
             this.flpImagenXArt = new System.Windows.Forms.FlowLayoutPanel();
             this.agregarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,29 +51,19 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ArticulosDesplegable,
             this.ListadoDesplegable,
+<<<<<<< HEAD
             this.SalirDesplegable,
             this.marcasTollstrip,
             this.cATEGORIASToolStripMenuItem,
             this.mARCASToolStripMenuItem,
             this.toolstripCategorias});
+=======
+            this.mARCASToolStripMenuItem,
+            this.SalirDesplegable});
+>>>>>>> 51aaf584023bf9672675f66290968e50f90cb0e2
             resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Name = "menuStrip1";
-            // 
-            // ArticulosDesplegable
-            // 
-            this.ArticulosDesplegable.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.BajaToolStripMenuItem});
-            this.ArticulosDesplegable.Name = "ArticulosDesplegable";
-            resources.ApplyResources(this.ArticulosDesplegable, "ArticulosDesplegable");
-            this.ArticulosDesplegable.Tag = "";
-            // 
-            // BajaToolStripMenuItem
-            // 
-            this.BajaToolStripMenuItem.Name = "BajaToolStripMenuItem";
-            resources.ApplyResources(this.BajaToolStripMenuItem, "BajaToolStripMenuItem");
-            this.BajaToolStripMenuItem.Click += new System.EventHandler(this.BajaToolStripMenuItem_Click);
             // 
             // ListadoDesplegable
             // 
@@ -99,15 +91,11 @@
             resources.ApplyResources(this.SalirDesplegable, "SalirDesplegable");
             this.SalirDesplegable.Click += new System.EventHandler(this.SalirToolStripMenuItem_Click);
             // 
-            // marcasTollstrip
+            // mARCASToolStripMenuItem
             // 
-            this.marcasTollstrip.Name = "marcasTollstrip";
-            resources.ApplyResources(this.marcasTollstrip, "marcasTollstrip");
-            // 
-            // cATEGORIASToolStripMenuItem
-            // 
-            this.cATEGORIASToolStripMenuItem.Name = "cATEGORIASToolStripMenuItem";
-            resources.ApplyResources(this.cATEGORIASToolStripMenuItem, "cATEGORIASToolStripMenuItem");
+            this.mARCASToolStripMenuItem.Name = "mARCASToolStripMenuItem";
+            resources.ApplyResources(this.mARCASToolStripMenuItem, "mARCASToolStripMenuItem");
+            this.mARCASToolStripMenuItem.Click += new System.EventHandler(this.mARCASToolStripMenuItem_Click);
             // 
             // mARCASToolStripMenuItem
             // 
@@ -157,18 +145,14 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem ArticulosDesplegable;
-        private System.Windows.Forms.ToolStripMenuItem BajaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ListadoDesplegable;
         private System.Windows.Forms.ToolStripMenuItem SalirDesplegable;
         private System.Windows.Forms.ToolStripMenuItem aRTICULOSToolStripMenuItem1;
         private System.Windows.Forms.ToolStripContainer toolrara;
         private System.Windows.Forms.ToolStripMenuItem ListarXMARCAToolStripMenuItem;
         private System.Windows.Forms.FlowLayoutPanel flpImagenXArt;
-        private System.Windows.Forms.ToolStripMenuItem marcasTollstrip;
         private System.Windows.Forms.ToolStripMenuItem agregarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cATEGORIASToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mARCASToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolstripCategorias;
     }

@@ -22,7 +22,6 @@ namespace TPWinForm_equipo_8A
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
         }
 
         private void ListadoArticulos_Load(object sender, EventArgs e)
@@ -75,6 +74,12 @@ namespace TPWinForm_equipo_8A
             dgvArt.DataSource = listaArticulos;
             dgvArt.Columns["Imagen"].Visible = false;
             dgvArt.Columns["Id"].Visible = false;
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            EliminarArticulo eliminar = new EliminarArticulo();
+            eliminar.ShowDialog();
         }
     }
 }

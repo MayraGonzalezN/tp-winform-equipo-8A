@@ -34,7 +34,8 @@ namespace TPWinForm_equipo_8A
                     Close();
                 }
             }
-            catch (Exception ex) {
+            catch (Exception ex) 
+            {
                 MessageBox.Show(ex.ToString());
             }
         }
@@ -48,10 +49,5 @@ namespace TPWinForm_equipo_8A
         {
 
         }
-
-        //private void txtEliminar_TextChanged(object sender, EventArgs e)
-        //{
-
-        //}
     }
 }

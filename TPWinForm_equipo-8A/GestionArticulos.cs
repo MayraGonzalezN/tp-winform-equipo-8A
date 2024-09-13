@@ -52,7 +52,6 @@ namespace WinTPWinForm_equipo_8A
                     aux.Precio = (float)(decimal)datos.Lector["Precio"];
                     lista.Add(aux);
                 }
-
                 return lista;
             }
 	        catch (Exception ex)
@@ -191,11 +190,8 @@ namespace WinTPWinForm_equipo_8A
                 string consulta = "SELECT TOP 1 Codigo, Nombre, Descripcion, IdCategoria, IdMarca, Precio " +
                                   "FROM ARTICULOS ORDER BY Precio ASC";
                 datos.setearConsulta(consulta);
-
-
                 datos.ejecutarLectura();
 
-           
                 if (datos.Lector.Read())
                 {
                     articuloMenorPrecio = new Articulo
@@ -227,9 +223,9 @@ namespace WinTPWinForm_equipo_8A
             try
             {
                 string Consulta = "SELECT A.Codigo, A.Nombre, A.Descripcion, A.Precio, M.Descripcion as Marca " +
-                          "FROM ARTICULOS A " +
-                          "INNER JOIN MARCAS M ON A.IdMarca = M.Id " +
-                          "WHERE M.Descripcion = '"+ Marca.marca.NombreM +"'";
+                                  "FROM ARTICULOS A " +
+                                  "INNER JOIN MARCAS M ON A.IdMarca = M.Id " +
+                                  "WHERE M.Descripcion = '"+ Marca.marca.NombreM +"'";
                 datos.setearConsulta(Consulta);
                 //datos.SetearParametro("@Marca", Marca);
                 datos.ejecutarLectura();
@@ -248,16 +244,5 @@ namespace WinTPWinForm_equipo_8A
             catch (Exception ex) { throw ex; }
             finally { datos.cerrarConexion(); }
         }
-
-
-
-
-
-
-
-
-
-
-
     }
 }

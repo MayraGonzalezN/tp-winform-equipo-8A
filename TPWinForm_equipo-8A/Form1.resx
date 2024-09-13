@@ -121,6 +121,7 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+<<<<<<< HEAD
   <data name="BajaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>102, 22</value>
   </data>
@@ -145,23 +146,13 @@
   <data name="ListarXMARCAToolStripMenuItem.Text" xml:space="preserve">
     <value>BUSQUEDA MARCA O PRECIO</value>
   </data>
+=======
+>>>>>>> 51aaf584023bf9672675f66290968e50f90cb0e2
   <data name="ListadoDesplegable.Size" type="System.Drawing.Size, System.Drawing">
     <value>70, 20</value>
   </data>
   <data name="ListadoDesplegable.Text" xml:space="preserve">
     <value>LISTADOS</value>
-  </data>
-  <data name="SalirDesplegable.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 20</value>
-  </data>
-  <data name="SalirDesplegable.Text" xml:space="preserve">
-    <value>SALIR</value>
-  </data>
-  <data name="marcasTollstrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>12, 20</value>
-  </data>
-  <data name="cATEGORIASToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>12, 20</value>
   </data>
   <data name="mARCASToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>67, 20</value>
@@ -169,11 +160,19 @@
   <data name="mARCASToolStripMenuItem.Text" xml:space="preserve">
     <value>MARCAS</value>
   </data>
+<<<<<<< HEAD
   <data name="toolstripCategorias.Size" type="System.Drawing.Size, System.Drawing">
     <value>87, 20</value>
   </data>
   <data name="toolstripCategorias.Text" xml:space="preserve">
     <value>CATEGORIAS</value>
+=======
+  <data name="SalirDesplegable.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 20</value>
+  </data>
+  <data name="SalirDesplegable.Text" xml:space="preserve">
+    <value>SALIR</value>
+>>>>>>> 51aaf584023bf9672675f66290968e50f90cb0e2
   </data>
   <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -199,6 +198,18 @@
   </data>
   <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="aRTICULOSToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>234, 22</value>
+  </data>
+  <data name="aRTICULOSToolStripMenuItem1.Text" xml:space="preserve">
+    <value>ARTICULOS</value>
+  </data>
+  <data name="ListarXMARCAToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>234, 22</value>
+  </data>
+  <data name="ListarXMARCAToolStripMenuItem.Text" xml:space="preserve">
+    <value>BUSQUEDA MARCA O PRECIO</value>
   </data>
   <data name="flpImagenXArt.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -258,18 +269,6 @@
   <data name="$this.Text" xml:space="preserve">
     <value>PantallaPrincipal</value>
   </data>
-  <data name="&gt;&gt;ArticulosDesplegable.Name" xml:space="preserve">
-    <value>ArticulosDesplegable</value>
-  </data>
-  <data name="&gt;&gt;ArticulosDesplegable.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;BajaToolStripMenuItem.Name" xml:space="preserve">
-    <value>BajaToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;BajaToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;ListadoDesplegable.Name" xml:space="preserve">
     <value>ListadoDesplegable</value>
   </data>
@@ -294,16 +293,10 @@
   <data name="&gt;&gt;SalirDesplegable.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;marcasTollstrip.Name" xml:space="preserve">
-    <value>marcasTollstrip</value>
+  <data name="&gt;&gt;mARCASToolStripMenuItem.Name" xml:space="preserve">
+    <value>mARCASToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;marcasTollstrip.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cATEGORIASToolStripMenuItem.Name" xml:space="preserve">
-    <value>cATEGORIASToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;cATEGORIASToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;mARCASToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;mARCASToolStripMenuItem.Name" xml:space="preserve">
