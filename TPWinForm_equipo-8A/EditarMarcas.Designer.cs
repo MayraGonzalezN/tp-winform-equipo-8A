@@ -42,7 +42,7 @@
             // 
             this.btnAceptarMarca.Location = new System.Drawing.Point(385, 68);
             this.btnAceptarMarca.Name = "btnAceptarMarca";
-            this.btnAceptarMarca.Size = new System.Drawing.Size(107, 23);
+            this.btnAceptarMarca.Size = new System.Drawing.Size(121, 23);
             this.btnAceptarMarca.TabIndex = 0;
             this.btnAceptarMarca.Text = "Agregar Marca";
             this.btnAceptarMarca.UseVisualStyleBackColor = true;

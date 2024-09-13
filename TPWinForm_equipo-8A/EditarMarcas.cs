@@ -38,25 +38,18 @@ namespace TPWinForm_equipo_8A
                 Marca nuevaMarca = new Marca();
                 nuevaMarca.NombreM = txtboxMarca.Text;
 
-
                 MarcaNegocio negocio = new MarcaNegocio();
                 negocio.agregar(nuevaMarca);
 
-              
                 MessageBox.Show("Marca agregada exitosamente.");
 
                 cargarMarcas();
-
-               
                 txtboxMarca.Clear();
-
-               
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Ocurrió un error al agregar la marca: " + ex.Message);
             }
-
         }
 
         private void btnEliminarMarca_Click(object sender, EventArgs e)
@@ -68,14 +61,9 @@ namespace TPWinForm_equipo_8A
                 MarcaNegocio negocio = new MarcaNegocio();
                 negocio.eliminar(idMarca);
 
-              
                 MessageBox.Show("Marca eliminada exitosamente.");
                 cargarMarcas();
-
                 txtboxEliminarMarca.Clear();
-
-
-
             }
             catch (Exception ex)
             {

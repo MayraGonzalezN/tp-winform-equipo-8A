@@ -28,24 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.BtnAgregarCategoria = new System.Windows.Forms.Button();
             this.BtnEliminarCategoria = new System.Windows.Forms.Button();
             this.dgvEditarCategorias = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.TxtNuevaCategoria = new System.Windows.Forms.TextBox();
             this.TxtEliminarCategoria = new System.Windows.Forms.TextBox();
+            this.btnAceptarCategoria = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEditarCategorias)).BeginInit();
             this.SuspendLayout();
-            // 
-            // BtnAgregarCategoria
-            // 
-            this.BtnAgregarCategoria.Location = new System.Drawing.Point(404, 94);
-            this.BtnAgregarCategoria.Name = "BtnAgregarCategoria";
-            this.BtnAgregarCategoria.Size = new System.Drawing.Size(125, 23);
-            this.BtnAgregarCategoria.TabIndex = 0;
-            this.BtnAgregarCategoria.Text = "Agregar Categoria";
-            this.BtnAgregarCategoria.UseVisualStyleBackColor = true;
             // 
             // BtnEliminarCategoria
             // 
@@ -55,6 +46,7 @@
             this.BtnEliminarCategoria.TabIndex = 1;
             this.BtnEliminarCategoria.Text = "Eliminar";
             this.BtnEliminarCategoria.UseVisualStyleBackColor = true;
+            this.BtnEliminarCategoria.Click += new System.EventHandler(this.BtnEliminarCategoria_Click);
             // 
             // dgvEditarCategorias
             // 
@@ -96,18 +88,28 @@
             this.TxtEliminarCategoria.Size = new System.Drawing.Size(157, 20);
             this.TxtEliminarCategoria.TabIndex = 6;
             // 
+            // btnAceptarCategoria
+            // 
+            this.btnAceptarCategoria.Location = new System.Drawing.Point(404, 94);
+            this.btnAceptarCategoria.Name = "btnAceptarCategoria";
+            this.btnAceptarCategoria.Size = new System.Drawing.Size(125, 22);
+            this.btnAceptarCategoria.TabIndex = 7;
+            this.btnAceptarCategoria.Text = "Agregar Categoria";
+            this.btnAceptarCategoria.UseVisualStyleBackColor = true;
+            this.btnAceptarCategoria.Click += new System.EventHandler(this.btnAceptarCategoria_Click);
+            // 
             // EditarCategorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(618, 450);
+            this.Controls.Add(this.btnAceptarCategoria);
             this.Controls.Add(this.TxtEliminarCategoria);
             this.Controls.Add(this.TxtNuevaCategoria);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvEditarCategorias);
             this.Controls.Add(this.BtnEliminarCategoria);
-            this.Controls.Add(this.BtnAgregarCategoria);
             this.Name = "EditarCategorias";
             this.Text = "EditarCategorias";
             this.Load += new System.EventHandler(this.EditarCategorias_Load);
@@ -118,13 +120,12 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button BtnAgregarCategoria;
         private System.Windows.Forms.Button BtnEliminarCategoria;
         private System.Windows.Forms.DataGridView dgvEditarCategorias;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TxtNuevaCategoria;
         private System.Windows.Forms.TextBox TxtEliminarCategoria;
+        private System.Windows.Forms.Button btnAceptarCategoria;
     }
 }

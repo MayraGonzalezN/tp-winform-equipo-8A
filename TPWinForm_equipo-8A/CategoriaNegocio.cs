@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace TPWinForm_equipo_8A
 {
@@ -15,14 +16,14 @@ namespace TPWinForm_equipo_8A
 
              try
              {
-                 datos.setearConsulta("select id, descripcion from CATEGORIAS");
+                 datos.setearConsulta("select Id, Descripcion from CATEGORIAS");
                  datos.ejecutarLectura();
 
                  while (datos.Lector.Read())
                  {
                      Categoria categoria = new Categoria();
-                     categoria.Id = (int)datos.Lector["id"];
-                     categoria.Nombre = datos.Lector["descripcion"].ToString();
+                     categoria.Id = (int)datos.Lector["Id"];
+                     categoria.Nombre = datos.Lector["Descripcion"].ToString();
 
                      lista.Add(categoria);
                  }
@@ -41,12 +42,12 @@ namespace TPWinForm_equipo_8A
          /// agregar o eliminar categorias de la bd
          public void agregar(Categoria nuevaCategoria)
          {
-             AccesoDatos datos = new AccesoDatos();
+            AccesoDatos datos = new AccesoDatos();
 
              try
              {
-                 datos.setearConsulta("INSERT INTO CATEGORIAS (descripcion) VALUES (@descripcion)");
-                 datos.SetearParametro("@descripcion", nuevaCategoria.Nombre);
+                 datos.setearConsulta("INSERT INTO CATEGORIAS (Descripcion) VALUES (@Descripcion)");
+                 datos.SetearParametro("@Descripcion", nuevaCategoria.Nombre);
                  datos.ejecutarAccion();
              }
              catch (Exception ex)

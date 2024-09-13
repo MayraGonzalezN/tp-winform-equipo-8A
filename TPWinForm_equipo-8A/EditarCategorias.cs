@@ -21,6 +21,7 @@ namespace TPWinForm_equipo_8A
         {
             CategoriaNegocio negocio = new CategoriaNegocio();
             List<Categoria> lista = negocio.listar();
+            dgvEditarCategorias.DataSource = null;
             dgvEditarCategorias.DataSource = lista;
         }
 
@@ -31,26 +32,18 @@ namespace TPWinForm_equipo_8A
 
         private void BtnAgregarCategoria_Click(object sender, EventArgs e)
         {
-
              try
              {
-
                  Categoria nuevaCategoria = new Categoria();
                  nuevaCategoria.Nombre = TxtNuevaCategoria.Text;
-
 
                  CategoriaNegocio negocio = new CategoriaNegocio();
                  negocio.agregar(nuevaCategoria);
 
-
                  MessageBox.Show("Categoria agregada exitosamente.");
 
                  cargarCategoria();
-
-
                  TxtNuevaCategoria.Clear();
-
-
              }
              catch (Exception ex)
              {
@@ -59,6 +52,27 @@ namespace TPWinForm_equipo_8A
            
 
         }
+        private void btnAceptarCategoria_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Categoria nuevaCategoria = new Categoria();
+                nuevaCategoria.Nombre = TxtNuevaCategoria.Text;
+
+                CategoriaNegocio negocio = new CategoriaNegocio();
+                negocio.agregar(nuevaCategoria);
+
+                MessageBox.Show("Categoria agregada exitosamente.");
+
+                cargarCategoria();
+                TxtNuevaCategoria.Clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un error al agregar la categoria: " + ex.Message);
+            }
+        }
+
 
         private void BtnEliminarCategoria_Click(object sender, EventArgs e)
         {
@@ -74,23 +88,11 @@ namespace TPWinForm_equipo_8A
                 cargarCategoria();
 
                 TxtEliminarCategoria.Clear();
-
-
-
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Ocurrió un error: " + ex.Message + "\n" + ex.StackTrace);
             }
         }
-
-     
     }
-   
-
-
-
-
-
-
 }
