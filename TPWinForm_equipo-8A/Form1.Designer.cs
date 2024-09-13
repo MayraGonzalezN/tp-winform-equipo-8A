@@ -36,17 +36,17 @@
             this.aRTICULOSToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ListarXMARCAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SalirDesplegable = new System.Windows.Forms.ToolStripMenuItem();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flpImagenXArt = new System.Windows.Forms.FlowLayoutPanel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
-            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ArticulosDesplegable,
             this.ListadoDesplegable,
             this.SalirDesplegable});
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Name = "menuStrip1";
             // 
             // ArticulosDesplegable
@@ -55,6 +55,7 @@
             this.BajaToolStripMenuItem});
             this.ArticulosDesplegable.Name = "ArticulosDesplegable";
             resources.ApplyResources(this.ArticulosDesplegable, "ArticulosDesplegable");
+            this.ArticulosDesplegable.Tag = "";
             // 
             // BajaToolStripMenuItem
             // 
@@ -88,16 +89,17 @@
             resources.ApplyResources(this.SalirDesplegable, "SalirDesplegable");
             this.SalirDesplegable.Click += new System.EventHandler(this.SalirToolStripMenuItem_Click);
             // 
-            // flowLayoutPanel1
+            // flpImagenXArt
             // 
-            resources.ApplyResources(this.flowLayoutPanel1, "flowLayoutPanel1");
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            resources.ApplyResources(this.flpImagenXArt, "flpImagenXArt");
+            this.flpImagenXArt.Name = "flpImagenXArt";
+            this.flpImagenXArt.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // PantallaPrincipal
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.flpImagenXArt);
             this.Controls.Add(this.menuStrip1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.MainMenuStrip = this.menuStrip1;
@@ -120,6 +122,6 @@
         private System.Windows.Forms.ToolStripMenuItem aRTICULOSToolStripMenuItem1;
         private System.Windows.Forms.ToolStripContainer toolrara;
         private System.Windows.Forms.ToolStripMenuItem ListarXMARCAToolStripMenuItem;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flpImagenXArt;
     }
 }

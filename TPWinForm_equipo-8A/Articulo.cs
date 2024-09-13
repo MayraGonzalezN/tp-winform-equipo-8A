@@ -21,5 +21,34 @@ namespace TPWinForm_equipo_8A
         public Categoria categoria { get; set; }
         [DisplayName("Marca")]
         public Marca marca { get; set; }
+        public List<string> ImagenesXArticulo() 
+        {
+            List<string> imagenes = new List<string>();
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+            datos.setearConsulta("SELECT ImagenUrl FROM IMAGENES WHERE IdArticulo = @IdArticulo");
+            datos.SetearParametro("@IdArticulo", this.Id);
+            datos.ejecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    if (!(datos.Lector["ImagenUrl"] is DBNull))
+                    {
+                        imagenes.Add(datos.Lector["ImagenUrl"].ToString());
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+            datos.cerrarConexion();
+            }
+            return imagenes;
+        }
     }
 }
