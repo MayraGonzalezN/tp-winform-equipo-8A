@@ -36,7 +36,12 @@
             this.aRTICULOSToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ListarXMARCAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SalirDesplegable = new System.Windows.Forms.ToolStripMenuItem();
+            this.marcasTollstrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.cATEGORIASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.flpImagenXArt = new System.Windows.Forms.FlowLayoutPanel();
+            this.agregarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mARCASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,7 +50,10 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ArticulosDesplegable,
             this.ListadoDesplegable,
-            this.SalirDesplegable});
+            this.SalirDesplegable,
+            this.marcasTollstrip,
+            this.cATEGORIASToolStripMenuItem,
+            this.mARCASToolStripMenuItem});
             resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Name = "menuStrip1";
             // 
@@ -89,11 +97,37 @@
             resources.ApplyResources(this.SalirDesplegable, "SalirDesplegable");
             this.SalirDesplegable.Click += new System.EventHandler(this.SalirToolStripMenuItem_Click);
             // 
+            // marcasTollstrip
+            // 
+            this.marcasTollstrip.Name = "marcasTollstrip";
+            resources.ApplyResources(this.marcasTollstrip, "marcasTollstrip");
+            // 
+            // cATEGORIASToolStripMenuItem
+            // 
+            this.cATEGORIASToolStripMenuItem.Name = "cATEGORIASToolStripMenuItem";
+            resources.ApplyResources(this.cATEGORIASToolStripMenuItem, "cATEGORIASToolStripMenuItem");
+            // 
             // flpImagenXArt
             // 
             resources.ApplyResources(this.flpImagenXArt, "flpImagenXArt");
             this.flpImagenXArt.Name = "flpImagenXArt";
             this.flpImagenXArt.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
+            // 
+            // agregarToolStripMenuItem
+            // 
+            this.agregarToolStripMenuItem.Name = "agregarToolStripMenuItem";
+            resources.ApplyResources(this.agregarToolStripMenuItem, "agregarToolStripMenuItem");
+            // 
+            // eliminarToolStripMenuItem
+            // 
+            this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
+            resources.ApplyResources(this.eliminarToolStripMenuItem, "eliminarToolStripMenuItem");
+            // 
+            // mARCASToolStripMenuItem
+            // 
+            this.mARCASToolStripMenuItem.Name = "mARCASToolStripMenuItem";
+            resources.ApplyResources(this.mARCASToolStripMenuItem, "mARCASToolStripMenuItem");
+            this.mARCASToolStripMenuItem.Click += new System.EventHandler(this.mARCASToolStripMenuItem_Click);
             // 
             // PantallaPrincipal
             // 
@@ -123,5 +157,10 @@
         private System.Windows.Forms.ToolStripContainer toolrara;
         private System.Windows.Forms.ToolStripMenuItem ListarXMARCAToolStripMenuItem;
         private System.Windows.Forms.FlowLayoutPanel flpImagenXArt;
+        private System.Windows.Forms.ToolStripMenuItem marcasTollstrip;
+        private System.Windows.Forms.ToolStripMenuItem agregarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cATEGORIASToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mARCASToolStripMenuItem;
     }
 }

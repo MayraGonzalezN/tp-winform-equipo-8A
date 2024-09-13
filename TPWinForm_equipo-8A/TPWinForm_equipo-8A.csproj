@@ -56,6 +56,12 @@
     <Compile Include="DetallesXArticulo.Designer.cs">
       <DependentUpon>DetallesXArticulo.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditarMarcas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarMarcas.Designer.cs">
+      <DependentUpon>EditarMarcas.cs</DependentUpon>
+    </Compile>
     <Compile Include="EliminarArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="DetallesXArticulo.resx">
       <DependentUpon>DetallesXArticulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarMarcas.resx">
+      <DependentUpon>EditarMarcas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EliminarArticulo.resx">
       <DependentUpon>EliminarArticulo.cs</DependentUpon>

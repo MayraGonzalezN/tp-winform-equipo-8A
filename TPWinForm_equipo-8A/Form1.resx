@@ -157,6 +157,18 @@
   <data name="SalirDesplegable.Text" xml:space="preserve">
     <value>SALIR</value>
   </data>
+  <data name="marcasTollstrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 20</value>
+  </data>
+  <data name="cATEGORIASToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 20</value>
+  </data>
+  <data name="mARCASToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 20</value>
+  </data>
+  <data name="mARCASToolStripMenuItem.Text" xml:space="preserve">
+    <value>MARCAS</value>
+  </data>
   <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -205,6 +217,18 @@
   </data>
   <data name="&gt;&gt;flpImagenXArt.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="agregarToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="agregarToolStripMenuItem.Text" xml:space="preserve">
+    <value>Agregar</value>
+  </data>
+  <data name="eliminarToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="eliminarToolStripMenuItem.Text" xml:space="preserve">
+    <value>Eliminar</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -262,6 +286,36 @@
     <value>SalirDesplegable</value>
   </data>
   <data name="&gt;&gt;SalirDesplegable.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;marcasTollstrip.Name" xml:space="preserve">
+    <value>marcasTollstrip</value>
+  </data>
+  <data name="&gt;&gt;marcasTollstrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cATEGORIASToolStripMenuItem.Name" xml:space="preserve">
+    <value>cATEGORIASToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;cATEGORIASToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;agregarToolStripMenuItem.Name" xml:space="preserve">
+    <value>agregarToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;agregarToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;eliminarToolStripMenuItem.Name" xml:space="preserve">
+    <value>eliminarToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;eliminarToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mARCASToolStripMenuItem.Name" xml:space="preserve">
+    <value>mARCASToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;mARCASToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

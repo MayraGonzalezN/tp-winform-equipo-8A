@@ -38,5 +38,56 @@ namespace TPWinForm_equipo_8A
                 datos.cerrarConexion();
             }
         }
+
+        // para agregar marcas nuevas
+        public void agregar(Marca nuevaMarca)
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setearConsulta("INSERT INTO MARCAS (descripcion) VALUES (@descripcion)");
+                datos.SetearParametro("@descripcion", nuevaMarca.NombreM);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public void eliminar(int id)
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setearConsulta("DELETE FROM MARCAS WHERE id = @id");
+                datos.SetearParametro("@id", id);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+
+
+
+
+
+
+
+
+
     }
 }
