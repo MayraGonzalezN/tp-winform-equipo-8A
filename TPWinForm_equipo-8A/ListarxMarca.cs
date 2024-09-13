@@ -28,10 +28,13 @@ namespace TPWinForm_equipo_8A
             {
                 articulo.marca = new Marca();
                 articulo.marca.NombreM = txtBusqueda.Text;
-                //gestionArticulos.ListarxMarca(articulo);
+                
           
                 ListadoxMarca = gestionArticulos.ListarxMarca(articulo);
                 dvgListarxMarca.DataSource = ListadoxMarca;
+                dvgListarxMarca.Columns["Imagen"].Visible = false;
+                dvgListarxMarca.Columns["Id"].Visible = false;
+                dvgListarxMarca.Columns["Categoria"].Visible = false;
             }
 
             catch(Exception ex) {
