@@ -122,7 +122,7 @@
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="BajaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>102, 22</value>
   </data>
   <data name="BajaToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;BAJA</value>
@@ -168,6 +168,12 @@
   </data>
   <data name="mARCASToolStripMenuItem.Text" xml:space="preserve">
     <value>MARCAS</value>
+  </data>
+  <data name="toolstripCategorias.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 20</value>
+  </data>
+  <data name="toolstripCategorias.Text" xml:space="preserve">
+    <value>CATEGORIAS</value>
   </data>
   <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -300,6 +306,18 @@
   <data name="&gt;&gt;cATEGORIASToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;mARCASToolStripMenuItem.Name" xml:space="preserve">
+    <value>mARCASToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;mARCASToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolstripCategorias.Name" xml:space="preserve">
+    <value>toolstripCategorias</value>
+  </data>
+  <data name="&gt;&gt;toolstripCategorias.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;agregarToolStripMenuItem.Name" xml:space="preserve">
     <value>agregarToolStripMenuItem</value>
   </data>
@@ -310,12 +328,6 @@
     <value>eliminarToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;eliminarToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;mARCASToolStripMenuItem.Name" xml:space="preserve">
-    <value>mARCASToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;mARCASToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

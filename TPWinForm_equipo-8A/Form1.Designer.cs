@@ -38,10 +38,11 @@
             this.SalirDesplegable = new System.Windows.Forms.ToolStripMenuItem();
             this.marcasTollstrip = new System.Windows.Forms.ToolStripMenuItem();
             this.cATEGORIASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mARCASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolstripCategorias = new System.Windows.Forms.ToolStripMenuItem();
             this.flpImagenXArt = new System.Windows.Forms.FlowLayoutPanel();
             this.agregarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mARCASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,7 +54,8 @@
             this.SalirDesplegable,
             this.marcasTollstrip,
             this.cATEGORIASToolStripMenuItem,
-            this.mARCASToolStripMenuItem});
+            this.mARCASToolStripMenuItem,
+            this.toolstripCategorias});
             resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Name = "menuStrip1";
             // 
@@ -107,6 +109,18 @@
             this.cATEGORIASToolStripMenuItem.Name = "cATEGORIASToolStripMenuItem";
             resources.ApplyResources(this.cATEGORIASToolStripMenuItem, "cATEGORIASToolStripMenuItem");
             // 
+            // mARCASToolStripMenuItem
+            // 
+            this.mARCASToolStripMenuItem.Name = "mARCASToolStripMenuItem";
+            resources.ApplyResources(this.mARCASToolStripMenuItem, "mARCASToolStripMenuItem");
+            this.mARCASToolStripMenuItem.Click += new System.EventHandler(this.mARCASToolStripMenuItem_Click);
+            // 
+            // toolstripCategorias
+            // 
+            this.toolstripCategorias.Name = "toolstripCategorias";
+            resources.ApplyResources(this.toolstripCategorias, "toolstripCategorias");
+            this.toolstripCategorias.Click += new System.EventHandler(this.toolstripCategorias_Click);
+            // 
             // flpImagenXArt
             // 
             resources.ApplyResources(this.flpImagenXArt, "flpImagenXArt");
@@ -122,12 +136,6 @@
             // 
             this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
             resources.ApplyResources(this.eliminarToolStripMenuItem, "eliminarToolStripMenuItem");
-            // 
-            // mARCASToolStripMenuItem
-            // 
-            this.mARCASToolStripMenuItem.Name = "mARCASToolStripMenuItem";
-            resources.ApplyResources(this.mARCASToolStripMenuItem, "mARCASToolStripMenuItem");
-            this.mARCASToolStripMenuItem.Click += new System.EventHandler(this.mARCASToolStripMenuItem_Click);
             // 
             // PantallaPrincipal
             // 
@@ -162,5 +170,6 @@
         private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cATEGORIASToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mARCASToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolstripCategorias;
     }
 }

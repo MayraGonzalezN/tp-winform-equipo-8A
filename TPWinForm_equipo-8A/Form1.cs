@@ -124,12 +124,21 @@ namespace TPWinForm_equipo_8A
         private void mARCASToolStripMenuItem_Click(object sender, EventArgs e)
         {
             
-                // Crear una instancia del formulario para agregar marcas
+             
                 EditarMarcas formularioEditarMarca = new EditarMarcas();
 
-                // Mostrar el formulario como un diálogo modal
+           
                 formularioEditarMarca.ShowDialog();
             
+        }
+
+        private void toolstripCategorias_Click(object sender, EventArgs e)
+        {
+
+            EditarCategorias formularioEditarCategoria = new EditarCategorias();
+
+
+            formularioEditarCategoria.ShowDialog();
         }
     }
 }
