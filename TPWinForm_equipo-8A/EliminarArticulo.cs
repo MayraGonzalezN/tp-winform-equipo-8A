@@ -44,6 +44,11 @@ namespace TPWinForm_equipo_8A
             Close();
         }
 
+        private void txtEliminar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         //private void txtEliminar_TextChanged(object sender, EventArgs e)
         //{
 

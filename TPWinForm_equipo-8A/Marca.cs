@@ -15,6 +15,11 @@ namespace TPWinForm_equipo_8A
         {
             idM = id;
             NombreM = nombre;
+        } 
+
+        public Marca (string nombre)
+        {
+            NombreM = nombre;
         }
         public override string ToString()
         {
