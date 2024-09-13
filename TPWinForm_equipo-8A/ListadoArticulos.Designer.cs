@@ -32,6 +32,7 @@
             this.pbxImagen = new System.Windows.Forms.PictureBox();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnAgregar2 = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagen)).BeginInit();
             this.SuspendLayout();
@@ -78,11 +79,22 @@
             this.btnAgregar2.UseVisualStyleBackColor = true;
             this.btnAgregar2.Click += new System.EventHandler(this.btnAgregar2_Click);
             // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(478, 316);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(113, 41);
+            this.btnEliminar.TabIndex = 4;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
             // ListadoArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1035, 379);
+            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnAgregar2);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.pbxImagen);
@@ -103,5 +115,6 @@
         private System.Windows.Forms.PictureBox pbxImagen;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnAgregar2;
+        private System.Windows.Forms.Button btnEliminar;
     }
 }

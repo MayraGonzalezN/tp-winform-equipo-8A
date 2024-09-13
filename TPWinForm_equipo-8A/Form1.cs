@@ -79,7 +79,6 @@ namespace TPWinForm_equipo_8A
                 pictureBox.ImageLocation = articulo.Imagen.ToString();
                 pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
 
-
                 try
                 {
                     pictureBox.Load(articulo.Imagen.ToString());
