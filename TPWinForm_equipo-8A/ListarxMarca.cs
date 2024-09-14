@@ -54,6 +54,7 @@ namespace TPWinForm_equipo_8A
             try
             {
                 Articulo articulo = gestionArticulos.BuscarMenorPrecio();
+                Marca marca = new Marca();  
 
                 if (articulo != null)
                 {
@@ -64,7 +65,7 @@ namespace TPWinForm_equipo_8A
                         dataGridView1.Columns.Add("Nombre", "Nombre");
                         dataGridView1.Columns.Add("Precio", "Precio");
                         dataGridView1.Columns.Add("Descripcion","Descripcion");
-
+                        //dataGridView1.Columns.Add(articulo.marca.NombreM, "Marca");
                     }
 
                     dataGridView1.Rows.Clear();
@@ -79,7 +80,6 @@ namespace TPWinForm_equipo_8A
             {
                 MessageBox.Show("Ocurrió un error: " + ex.Message);
             }
-
         }
 
         private void ListarxMarca_Load(object sender, EventArgs e)
@@ -89,10 +89,14 @@ namespace TPWinForm_equipo_8A
             //articulo.marca.NombreM = txtBusqueda.Text;
             //ListadoxMarca = articulos.ListarxMarca(articulo);
             //dvgListarxMarca.DataSource = ListadoxMarca;
-            
         }
 
         private void dvgListarxMarca_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void lblMarca_Click(object sender, EventArgs e)
         {
 
         }

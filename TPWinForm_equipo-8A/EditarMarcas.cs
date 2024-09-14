@@ -21,6 +21,7 @@ namespace TPWinForm_equipo_8A
         {
             MarcaNegocio negocio = new MarcaNegocio();
             List<Marca> lista = negocio.listar();
+            dgvMarcas.DataSource = null;
             dgvMarcas.DataSource = lista; 
         }
 
@@ -34,7 +35,6 @@ namespace TPWinForm_equipo_8A
         {
             try
             {
-
                 Marca nuevaMarca = new Marca();
                 nuevaMarca.NombreM = txtboxMarca.Text;
 

@@ -36,8 +36,15 @@ namespace TPWinForm_equipo_8A
 
         private void dgvArt_SelectionChanged(object sender, EventArgs e)
         {
+            try
+            {
             Articulo seleccionado = (Articulo)dgvArt.CurrentRow.DataBoundItem;
             cargarImagen(seleccionado.Imagen);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         public void cargarImagen(string imagen)

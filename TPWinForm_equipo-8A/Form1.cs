@@ -122,21 +122,13 @@ namespace TPWinForm_equipo_8A
 
         private void mARCASToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
-             
                 EditarMarcas formularioEditarMarca = new EditarMarcas();
-
-           
                 formularioEditarMarca.ShowDialog();
-            
         }
 
         private void toolstripCategorias_Click(object sender, EventArgs e)
         {
-
             EditarCategorias formularioEditarCategoria = new EditarCategorias();
-
-
             formularioEditarCategoria.ShowDialog();
         }
     }

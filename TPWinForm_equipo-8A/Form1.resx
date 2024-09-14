@@ -244,7 +244,7 @@
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>PantallaPrincipal</value>
+    <value>Pantalla Principal</value>
   </data>
   <data name="&gt;&gt;ListadoDesplegable.Name" xml:space="preserve">
     <value>ListadoDesplegable</value>
@@ -264,12 +264,6 @@
   <data name="&gt;&gt;ListarXMARCAToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;SalirDesplegable.Name" xml:space="preserve">
-    <value>SalirDesplegable</value>
-  </data>
-  <data name="&gt;&gt;SalirDesplegable.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;mARCASToolStripMenuItem.Name" xml:space="preserve">
     <value>mARCASToolStripMenuItem</value>
   </data>
@@ -280,6 +274,12 @@
     <value>toolstripCategorias</value>
   </data>
   <data name="&gt;&gt;toolstripCategorias.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SalirDesplegable.Name" xml:space="preserve">
+    <value>SalirDesplegable</value>
+  </data>
+  <data name="&gt;&gt;SalirDesplegable.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;agregarToolStripMenuItem.Name" xml:space="preserve">

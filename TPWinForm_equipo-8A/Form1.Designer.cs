@@ -33,9 +33,9 @@
             this.ListadoDesplegable = new System.Windows.Forms.ToolStripMenuItem();
             this.aRTICULOSToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ListarXMARCAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.SalirDesplegable = new System.Windows.Forms.ToolStripMenuItem();
             this.mARCASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolstripCategorias = new System.Windows.Forms.ToolStripMenuItem();
+            this.SalirDesplegable = new System.Windows.Forms.ToolStripMenuItem();
             this.flpImagenXArt = new System.Windows.Forms.FlowLayoutPanel();
             this.agregarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,6 +44,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ListadoDesplegable,
@@ -72,12 +73,6 @@
             resources.ApplyResources(this.ListarXMARCAToolStripMenuItem, "ListarXMARCAToolStripMenuItem");
             this.ListarXMARCAToolStripMenuItem.Click += new System.EventHandler(this.ListarXMARCAToolStripMenuItem_Click);
             // 
-            // SalirDesplegable
-            // 
-            this.SalirDesplegable.Name = "SalirDesplegable";
-            resources.ApplyResources(this.SalirDesplegable, "SalirDesplegable");
-            this.SalirDesplegable.Click += new System.EventHandler(this.SalirToolStripMenuItem_Click);
-            // 
             // mARCASToolStripMenuItem
             // 
             this.mARCASToolStripMenuItem.Name = "mARCASToolStripMenuItem";
@@ -89,6 +84,12 @@
             this.toolstripCategorias.Name = "toolstripCategorias";
             resources.ApplyResources(this.toolstripCategorias, "toolstripCategorias");
             this.toolstripCategorias.Click += new System.EventHandler(this.toolstripCategorias_Click);
+            // 
+            // SalirDesplegable
+            // 
+            this.SalirDesplegable.Name = "SalirDesplegable";
+            resources.ApplyResources(this.SalirDesplegable, "SalirDesplegable");
+            this.SalirDesplegable.Click += new System.EventHandler(this.SalirToolStripMenuItem_Click);
             // 
             // flpImagenXArt
             // 
@@ -110,6 +111,7 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackColor = System.Drawing.SystemColors.Window;
             this.Controls.Add(this.flpImagenXArt);
             this.Controls.Add(this.menuStrip1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
