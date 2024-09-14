@@ -40,13 +40,97 @@ namespace TPWinForm_equipo_8A
         {
             Close();
         }
+
+        //  validaciones aca ....................................................................................
+        private bool validarCajasTexto()
+        {
+            string mensajeError = "";
+
+       
+            if (!decimal.TryParse(txtPrecio.Text, out _))
+            {
+                mensajeError += "El campo Precio debe contener números.\n";
+            }
+
+        
+            if (!esAlfanumerico(txtCodigo.Text))
+            {
+                mensajeError += "El campo Código debe contener letras y números.\n";
+            }
+
+            if (string.IsNullOrWhiteSpace(txtCodigo.Text))
+            {
+                mensajeError += "El campo Codigo no puede estar vacío.\n";
+            }
+
+            if (!esAlfanumerico(txtDescripcion.Text))
+            {
+                mensajeError += "El campo Descripción debe contener letras y/o numeros.\n";
+            }
+
+            if (string.IsNullOrWhiteSpace(txtDescripcion.Text))
+            {
+                mensajeError += "El campo Descripción no puede estar vacío.\n";
+            }
+
+            if (!esAlfanumerico(txtNombre.Text))
+            {
+                mensajeError += "El campo Nombre debe contener letras y/o numeros.\n";
+            }
+
+            if (string.IsNullOrWhiteSpace(txtNombre.Text))
+            {
+                mensajeError += "El campo Nombre no puede estar vacío.\n";
+            }
+
+          
+            if (mensajeError != "")
+            {
+                MessageBox.Show(mensajeError);
+                return true;
+            }
+
+            return false; 
+        }
+
+     
+        private bool esAlfanumerico(string texto)
+        {
+            foreach (char caracter in texto)
+            {
+                if (!char.IsLetterOrDigit(caracter) && !char.IsWhiteSpace(caracter))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+       
+        private bool esSoloLetras(string texto)
+        {
+            foreach (char caracter in texto)
+            {
+                if (!char.IsLetter(caracter) && !char.IsWhiteSpace(caracter)) 
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+   
+
+        //......................................................................................................
         private void btnAceptar_Click(object sender, EventArgs e)
         {
                 GestionArticulos gestionArticulo = new GestionArticulos();
 
             try
             {
-                if(articulo == null)
+                if (validarCajasTexto())
+                    return;
+
+                if (articulo == null)
                     articulo = new Articulo();
                 articulo.Codigo = txtCodigo.Text;
                 articulo.Nombre = txtNombre.Text;

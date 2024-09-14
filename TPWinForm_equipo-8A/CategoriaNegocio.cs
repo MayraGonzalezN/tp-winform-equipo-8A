@@ -31,8 +31,8 @@ namespace TPWinForm_equipo_8A
              }
              catch (Exception ex)
              {
-                 throw ex;
-             }
+                 throw new Exception("Error al listar las categorías", ex);
+            }
              finally
              {
                  datos.cerrarConexion();

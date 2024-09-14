@@ -79,7 +79,7 @@ namespace WinTPWinForm_equipo_8A
                                      "VALUES (@Codigo, @Nombre, @Descripcion, @IdCategoria, @IdMarca, @Precio);");
                 datos.SetearParametro("@Codigo", nuevoArticulo.Codigo);
                 datos.SetearParametro("@Nombre", nuevoArticulo.Nombre);
-                datos.SetearParametro("@Descripcion", nuevoArticulo.Descripcion);
+                datos.SetearParametro("@Descripcion", nuevoArticulo.Descripcion); 
                 datos.SetearParametro("@IdCategoria", nuevoArticulo.categoria.Id);
                 datos.SetearParametro("@IdMarca", nuevoArticulo.marca.idM);
                 datos.SetearParametro("@Precio", nuevoArticulo.Precio);
