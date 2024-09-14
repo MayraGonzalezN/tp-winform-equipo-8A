@@ -193,7 +193,74 @@ namespace TPWinForm_equipo_8A
 
         }
 
+        public bool ExisteNombreCategoria(string nombreCAT)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            bool existeNombreCat = false;
 
+            try
+            {
+
+                datos.setearConsulta("SELECT Descripcion FROM CATEGORIAS WHERE Descripcion = @descripcion");
+                datos.comando.Parameters.Clear();
+                datos.comando.Parameters.AddWithValue("@descripcion", nombreCAT);
+
+                datos.ejecutarLectura();
+
+
+                if (datos.Lector.Read())
+                {
+                    existeNombreCat = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
+            return existeNombreCat;
+
+
+
+
+        }
+        public bool ExisteIDcategoria(int codCate)
+        {
+
+            AccesoDatos datos = new AccesoDatos();
+            bool existeIDcategoria = false;
+
+            try
+            {
+
+                datos.setearConsulta("SELECT Id FROM CATEGORIAS WHERE Id = @Id");
+                datos.comando.Parameters.Clear();
+                datos.comando.Parameters.AddWithValue("@Id", codCate);
+
+                datos.ejecutarLectura();
+
+
+                if (datos.Lector.Read())
+                {
+                    existeIDcategoria = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
+            return existeIDcategoria;
+
+        }
 
 
     }

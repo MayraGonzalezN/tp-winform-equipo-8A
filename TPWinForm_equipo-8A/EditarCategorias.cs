@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -30,28 +31,18 @@ namespace TPWinForm_equipo_8A
             cargarCategoria();
         }
 
-        private void BtnAgregarCategoria_Click(object sender, EventArgs e)
+        //........................................validacion
+       
+
+    
+        private bool ValidarCategoriaDescripcion(string nombreC)
         {
-             try
-             {
-                 Categoria nuevaCategoria = new Categoria();
-                 nuevaCategoria.Nombre = TxtNuevaCategoria.Text;
+            AccesoDatos datosValidarCate = new AccesoDatos();
+            return datosValidarCate.ExisteNombreCategoria(nombreC);
 
-                 CategoriaNegocio negocio = new CategoriaNegocio();
-                 negocio.agregar(nuevaCategoria);
-
-                 MessageBox.Show("Categoria agregada exitosamente.");
-
-                 cargarCategoria();
-                 TxtNuevaCategoria.Clear();
-             }
-             catch (Exception ex)
-             {
-                 MessageBox.Show("Ocurrió un error al agregar la categoria: " + ex.Message);
-             }
-           
 
         }
+
         private void btnAceptarCategoria_Click(object sender, EventArgs e)
         {
             try
@@ -59,13 +50,23 @@ namespace TPWinForm_equipo_8A
                 Categoria nuevaCategoria = new Categoria();
                 nuevaCategoria.Nombre = TxtNuevaCategoria.Text;
 
-                CategoriaNegocio negocio = new CategoriaNegocio();
-                negocio.agregar(nuevaCategoria);
+                if (!(ValidarCategoriaDescripcion(nuevaCategoria.Nombre)))
+                {
 
-                MessageBox.Show("Categoria agregada exitosamente.");
+                    CategoriaNegocio negocio = new CategoriaNegocio();
+                    negocio.agregar(nuevaCategoria);
 
-                cargarCategoria();
-                TxtNuevaCategoria.Clear();
+                    MessageBox.Show("Categoria agregada exitosamente.");
+
+                    cargarCategoria();
+                    TxtNuevaCategoria.Clear();
+
+                }
+                else
+                {
+                    MessageBox.Show("La categoria ya existe en la base de datos,agregue otra distinta.");
+
+                }
             }
             catch (Exception ex)
             {
@@ -73,21 +74,35 @@ namespace TPWinForm_equipo_8A
             }
         }
 
+        private bool ValidarCodigoCategoria(int codCat)
+        {
+            AccesoDatos datosValidarCod=new AccesoDatos();
+           return  datosValidarCod.ExisteIDcategoria(codCat);
 
+        }
         private void BtnEliminarCategoria_Click(object sender, EventArgs e)
         {
             try
             {
                 int idCategoria = Convert.ToInt32(TxtEliminarCategoria.Text);
 
-                CategoriaNegocio negocio = new CategoriaNegocio();
-                negocio.eliminar(idCategoria);
+
+                if (ValidarCodigoCategoria(idCategoria))
+                {
+                    CategoriaNegocio negocio = new CategoriaNegocio();
+                    negocio.eliminar(idCategoria);
 
 
-                MessageBox.Show("Categoria eliminada exitosamente.");
-                cargarCategoria();
+                    MessageBox.Show("Categoria eliminada exitosamente.");
+                    cargarCategoria();
 
-                TxtEliminarCategoria.Clear();
+                    TxtEliminarCategoria.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("No existe el ID en la base de datos, ingrese otro.");
+                    
+                }
             }
             catch (Exception ex)
             {

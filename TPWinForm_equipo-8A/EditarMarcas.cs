@@ -26,11 +26,11 @@ namespace TPWinForm_equipo_8A
             dgvMarcas.DataSource = lista; 
         }
 
-        private void frmGestionMarcas_Load(object sender, EventArgs e)
-        {
-            cargarMarcas(); 
-        }
 
+        private void EditarMarcas_Load(object sender, EventArgs e)
+        {
+            cargarMarcas();
+        }
 
         //............................validar......................................
 
