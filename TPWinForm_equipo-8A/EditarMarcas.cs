@@ -31,6 +31,11 @@ namespace TPWinForm_equipo_8A
         }
 
 
+        //............................validar......................................
+
+
+
+
         private void btnAceptarMarca_Click(object sender, EventArgs e)
         {
             try

@@ -33,6 +33,7 @@ namespace TPWinForm_equipo_8A
             {
                 articulo.Codigo = txtEliminar.Text;
                 existeCodigo= datosValidar.ExisteCodigoArticulo(articulo.Codigo);
+
                 if (existeCodigo==true)
                 {
 

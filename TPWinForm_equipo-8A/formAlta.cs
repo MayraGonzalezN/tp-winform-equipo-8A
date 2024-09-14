@@ -46,21 +46,27 @@ namespace TPWinForm_equipo_8A
         {
             string mensajeError = "";
 
-       
-            if (!decimal.TryParse(txtPrecio.Text, out _))
-            {
-                mensajeError += "El campo Precio debe contener números.\n";
-            }
-
-        
             if (!esAlfanumerico(txtCodigo.Text))
             {
                 mensajeError += "El campo Código debe contener letras y números.\n";
             }
 
+
+
             if (string.IsNullOrWhiteSpace(txtCodigo.Text))
             {
                 mensajeError += "El campo Codigo no puede estar vacío.\n";
+            }
+
+
+            if (!esAlfanumerico(txtNombre.Text))
+            {
+                mensajeError += "El campo Nombre debe contener letras y/o numeros.\n";
+            }
+
+            if (string.IsNullOrWhiteSpace(txtNombre.Text))
+            {
+                mensajeError += "El campo Nombre no puede estar vacío.\n";
             }
 
             if (!esAlfanumerico(txtDescripcion.Text))
@@ -73,17 +79,12 @@ namespace TPWinForm_equipo_8A
                 mensajeError += "El campo Descripción no puede estar vacío.\n";
             }
 
-            if (!esAlfanumerico(txtNombre.Text))
+
+            if (!decimal.TryParse(txtPrecio.Text, out _))
             {
-                mensajeError += "El campo Nombre debe contener letras y/o numeros.\n";
+                mensajeError += "El campo Precio debe contener números.\n";
             }
 
-            if (string.IsNullOrWhiteSpace(txtNombre.Text))
-            {
-                mensajeError += "El campo Nombre no puede estar vacío.\n";
-            }
-
-          
             if (mensajeError != "")
             {
                 MessageBox.Show(mensajeError);
@@ -119,8 +120,13 @@ namespace TPWinForm_equipo_8A
             return true;
         }
    
+        private bool validarCodigoExistente(String codigo)
+        {
+           AccesoDatos datosValidar = new AccesoDatos();
+           return datosValidar.ExisteCodigoArticulo(codigo); 
+        }
 
-        //......................................................................................................
+        //.........................................................VALIDACIONES.............................................
         private void btnAceptar_Click(object sender, EventArgs e)
         {
                 GestionArticulos gestionArticulo = new GestionArticulos();
@@ -130,30 +136,41 @@ namespace TPWinForm_equipo_8A
                 if (validarCajasTexto())
                     return;
 
-                if (articulo == null)
-                    articulo = new Articulo();
-                articulo.Codigo = txtCodigo.Text;
-                articulo.Nombre = txtNombre.Text;
-                articulo.Descripcion = txtDescripcion.Text;
-                articulo.marca = (Marca)cboMarca.SelectedItem;
-                articulo.categoria = (Categoria)cboCategoria.SelectedItem;
-                articulo.Precio = (float)decimal.Parse(txtPrecio.Text);
-                articulo.Imagen = txtImagenUrl.Text;
-
-                if(articulo.Id != 0)
+                if (!(validarCodigoExistente(txtCodigo.Text)))
                 {
-                 gestionArticulo.Modificar(articulo);
-                 MessageBox.Show("Modificado exitosamente");
+
+                    if (articulo == null)
+                        articulo = new Articulo();
+                    articulo.Codigo = txtCodigo.Text;
+                    articulo.Nombre = txtNombre.Text;
+                    articulo.Descripcion = txtDescripcion.Text;
+                    articulo.marca = (Marca)cboMarca.SelectedItem;
+                    articulo.categoria = (Categoria)cboCategoria.SelectedItem;
+                    articulo.Precio = (float)decimal.Parse(txtPrecio.Text);
+                    articulo.Imagen = txtImagenUrl.Text;
+
+                    if (articulo.Id != 0)
+                    {
+                        gestionArticulo.Modificar(articulo);
+                        MessageBox.Show("Modificado exitosamente");
+                    }
+                    else
+                    {
+                        gestionArticulo.agregar(articulo);
+                        MessageBox.Show("Agregado exitosamente");
+                    }
+                    ListadoArticulos listadoArticulos = new ListadoArticulos();
+                    listadoArticulos.actualizarLista();
+
+                    Close();
+
                 }
                 else
                 {
-                gestionArticulo.agregar(articulo);
-                MessageBox.Show("Agregado exitosamente");
+                    MessageBox.Show("El codigo de articulo ya existe en la base de datos, ingrese otro codigo");
                 }
-                ListadoArticulos listadoArticulos = new ListadoArticulos();
-                    listadoArticulos.actualizarLista();
-                
-                Close();
+
+
             }
             catch (Exception ex)
             {
