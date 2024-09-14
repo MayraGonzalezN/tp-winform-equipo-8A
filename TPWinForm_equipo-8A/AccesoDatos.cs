@@ -125,9 +125,73 @@ namespace TPWinForm_equipo_8A
             return existe;
         }
 
+        public bool ExisteNombreMarca(string nombreMarca)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            bool existeNombre = false;
+
+            try
+            {
+
+                datos.setearConsulta("SELECT Descripcion FROM MARCAS WHERE Descripcion = @descripcion");
+                datos.comando.Parameters.Clear();
+                datos.comando.Parameters.AddWithValue("@descripcion", nombreMarca);
+
+                datos.ejecutarLectura();
 
 
+                if (datos.Lector.Read())
+                {
+                    existeNombre = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
 
+            return existeNombre;
+
+
+        }
+
+        public bool ExisteIDmarca(int codMarca)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            bool existeIDmarca = false;
+
+            try
+            {
+
+                datos.setearConsulta("SELECT Id FROM MARCAS WHERE Id = @Id");
+                datos.comando.Parameters.Clear();
+                datos.comando.Parameters.AddWithValue("@Id", codMarca);
+
+                datos.ejecutarLectura();
+
+
+                if (datos.Lector.Read())
+                {
+                    existeIDmarca = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
+            return existeIDmarca;
+
+
+        }
 
 
 

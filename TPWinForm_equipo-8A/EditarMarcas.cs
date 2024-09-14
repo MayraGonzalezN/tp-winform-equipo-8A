@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 using System.Windows.Forms;
 
 namespace TPWinForm_equipo_8A
@@ -33,9 +34,14 @@ namespace TPWinForm_equipo_8A
 
         //............................validar......................................
 
+        private bool validarMarcaDescripcion(string marca)
+        {
+            AccesoDatos datosValidarMarca = new AccesoDatos();
+           return datosValidarMarca.ExisteNombreMarca(marca);
 
+        }
 
-
+      
         private void btnAceptarMarca_Click(object sender, EventArgs e)
         {
             try
@@ -43,13 +49,22 @@ namespace TPWinForm_equipo_8A
                 Marca nuevaMarca = new Marca();
                 nuevaMarca.NombreM = txtboxMarca.Text;
 
-                MarcaNegocio negocio = new MarcaNegocio();
-                negocio.agregar(nuevaMarca);
+                if (!(validarMarcaDescripcion(nuevaMarca.NombreM)))
+                {
 
-                MessageBox.Show("Marca agregada exitosamente.");
+                    MarcaNegocio negocio = new MarcaNegocio();
+                    negocio.agregar(nuevaMarca);
 
-                cargarMarcas();
-                txtboxMarca.Clear();
+                    MessageBox.Show("Marca agregada exitosamente.");
+
+                    cargarMarcas();
+                    txtboxMarca.Clear();
+
+                }
+                else
+                {
+                    MessageBox.Show("La marca ya existe en la base de datos,agregue otra distinta");
+                }
             }
             catch (Exception ex)
             {
@@ -57,18 +72,33 @@ namespace TPWinForm_equipo_8A
             }
         }
 
+        private bool validarCodigoMarca(int codigo)
+        {
+            AccesoDatos datosValidarIdMarca = new AccesoDatos();
+            return datosValidarIdMarca.ExisteIDmarca(codigo);
+        }
+
         private void btnEliminarMarca_Click(object sender, EventArgs e)
         {
             try
             {
-                int idMarca = Convert.ToInt32(txtboxEliminarMarca.Text); 
+                int idMarca = Convert.ToInt32(txtboxEliminarMarca.Text);
 
-                MarcaNegocio negocio = new MarcaNegocio();
-                negocio.eliminar(idMarca);
 
-                MessageBox.Show("Marca eliminada exitosamente.");
-                cargarMarcas();
-                txtboxEliminarMarca.Clear();
+                if (validarCodigoMarca(idMarca))
+                {
+
+                    MarcaNegocio negocio = new MarcaNegocio();
+                    negocio.eliminar(idMarca);
+
+                    MessageBox.Show("Marca eliminada exitosamente.");
+                    cargarMarcas();
+                    txtboxEliminarMarca.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("No existe el ID en la base de datos, ingrese otro.");
+                }
             }
             catch (Exception ex)
             {
