@@ -14,7 +14,7 @@ namespace TPWinForm_equipo_8A
         private SqlDataReader lector;
         public SqlDataReader Lector
         {
-            get { return lector;}
+            get { return lector; }
         }
         public AccesoDatos()
         {
@@ -76,7 +76,7 @@ namespace TPWinForm_equipo_8A
                 ejecutarLectura();
                 if (Lector.Read())
                 {
-                   id = (int)(Lector["Id"]);
+                    id = (int)(Lector["Id"]);
                 }
             }
             catch (Exception ex)
@@ -88,6 +88,55 @@ namespace TPWinForm_equipo_8A
                 cerrarConexion();
             }
             return id;
+
+
         }
+//..................................................validar.........................................................
+
+        public bool ExisteCodigoArticulo(string codigo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            bool existe = false;
+
+            try
+            {
+               
+                datos.setearConsulta("SELECT Codigo FROM ARTICULOS WHERE Codigo = @codigo");
+                datos.comando.Parameters.Clear();
+                datos.comando.Parameters.AddWithValue("@codigo", codigo);
+
+                datos.ejecutarLectura();
+
+                
+                if (datos.Lector.Read())
+                {
+                    existe = true;  
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
+            return existe;
+        }
+
+
+
+
+
+
+
+
     }
+
+
 }
+
+
+
+
