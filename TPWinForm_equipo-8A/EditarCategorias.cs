@@ -32,9 +32,9 @@ namespace TPWinForm_equipo_8A
         }
 
         //........................................validacion
-       
 
-    
+
+
         private bool ValidarCategoriaDescripcion(string nombreC)
         {
             AccesoDatos datosValidarCate = new AccesoDatos();
@@ -76,31 +76,16 @@ namespace TPWinForm_equipo_8A
 
         private bool ValidarCodigoCategoria(int codCat)
         {
-            AccesoDatos datosValidarCod=new AccesoDatos();
-           return  datosValidarCod.ExisteIDcategoria(codCat);
+            AccesoDatos datosValidarCod = new AccesoDatos();
+            return datosValidarCod.ExisteIDcategoria(codCat);
 
         }
         private void BtnEliminarCategoria_Click(object sender, EventArgs e)
         {
-            AccesoDatos datos = new AccesoDatos();  
             try
             {
                 int idCategoria = Convert.ToInt32(TxtEliminarCategoria.Text);
 
-<<<<<<< HEAD
-                CategoriaNegocio negocio = new CategoriaNegocio();
-                if (datos.ExisteCategotia(idCategoria))
-                {
-                negocio.eliminar(idCategoria);
-                MessageBox.Show("Categoria eliminada exitosamente.");
-                }
-                else
-                {
-                    MessageBox.Show("La categoria que intenta eliminar no existe.");
-                }
-                cargarCategoria();
-                TxtEliminarCategoria.Clear();
-=======
 
                 if (ValidarCodigoCategoria(idCategoria))
                 {
@@ -116,9 +101,8 @@ namespace TPWinForm_equipo_8A
                 else
                 {
                     MessageBox.Show("No existe el ID en la base de datos, ingrese otro.");
-                    
+
                 }
->>>>>>> 70430e4818f2d326b59c52caf098050cb94fd7df
             }
             catch (Exception ex)
             {

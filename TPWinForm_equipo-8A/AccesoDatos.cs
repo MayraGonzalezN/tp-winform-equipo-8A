@@ -91,7 +91,7 @@ namespace TPWinForm_equipo_8A
 
 
         }
-//..................................................validar.........................................................
+        //..................................................validar.........................................................
 
         public bool ExisteCodigoArticulo(string codigo, int idArticulo)
         {
@@ -100,55 +100,31 @@ namespace TPWinForm_equipo_8A
 
             try
             {
-                string consulta;
-                if (idArticulo == 0)
-                {
-                    consulta = "SELECT Codigo FROM ARTICULOS WHERE Codigo = @codigo";
-                }
-                else
-                {
-                    consulta = "SELECT Codigo FROM ARTICULOS WHERE Codigo = @codigo AND Id != @idArticulo";
-                }
-                setearConsulta(consulta);
-                comando.Parameters.Clear();
-                comando.Parameters.AddWithValue("@codigo", codigo);
-                if (idArticulo != 0)
-                {
-                    comando.Parameters.AddWithValue("@idArticulo", idArticulo);
-                }
-                ejecutarLectura();
-                if (Lector.Read())
+
+                datos.setearConsulta("SELECT Codigo FROM ARTICULOS WHERE Codigo = @codigo");
+                datos.comando.Parameters.Clear();
+                datos.comando.Parameters.AddWithValue("@codigo", codigo);
+
+                datos.ejecutarLectura();
+
+
+                if (datos.Lector.Read())
                 {
                     existe = true;
                 }
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
             finally
             {
-                cerrarConexion();
+                datos.cerrarConexion();
             }
+
             return existe;
         }
-        public bool ExisteCategotia(int idCategoria)
-        {
-            bool existe = false;
-            
-            try
-            {
-                setearConsulta("SELECT Id FROM CATEGORIAS WHERE Id = @idCategoria");
-                comando.Parameters.Clear();
-                comando.Parameters.AddWithValue("@idCategoria", idCategoria);
-                ejecutarLectura();
 
-<<<<<<< HEAD
-                if (Lector.Read())
-                {
-                    existe = true;
-=======
         public bool ExisteNombreMarca(string nombreMarca)
         {
             AccesoDatos datos = new AccesoDatos();
@@ -167,13 +143,10 @@ namespace TPWinForm_equipo_8A
                 if (datos.Lector.Read())
                 {
                     existeNombre = true;
->>>>>>> 70430e4818f2d326b59c52caf098050cb94fd7df
                 }
             }
             catch (Exception ex)
             {
-<<<<<<< HEAD
-=======
                 throw ex;
             }
             finally
@@ -250,37 +223,10 @@ namespace TPWinForm_equipo_8A
             }
 
             return existeNombreCat;
->>>>>>> 70430e4818f2d326b59c52caf098050cb94fd7df
 
-                throw ex;
-            }
-            finally
-            {
-                cerrarConexion();
-            }
-            return existe;
-        }
-        public bool ExisteMarca(int idMarca)
-        {
-            bool existe = false;
 
-            try
-            {
-                setearConsulta("SELECT Id FROM MARCAS WHERE Id = @idMarca");
-                comando.Parameters.Clear();
-                comando.Parameters.AddWithValue("@idMarca", idMarca);
-                ejecutarLectura();
 
-                if (Lector.Read())
-                {
-                    existe = true;
-                }
-            }
-            catch (Exception ex)
-            {
 
-<<<<<<< HEAD
-=======
         }
         public bool ExisteIDcategoria(int codCate)
         {
@@ -305,17 +251,10 @@ namespace TPWinForm_equipo_8A
             }
             catch (Exception ex)
             {
->>>>>>> 70430e4818f2d326b59c52caf098050cb94fd7df
                 throw ex;
             }
             finally
             {
-<<<<<<< HEAD
-                cerrarConexion();
-            }
-            return existe;
-        }
-=======
                 datos.cerrarConexion();
             }
 
@@ -324,10 +263,7 @@ namespace TPWinForm_equipo_8A
         }
 
 
->>>>>>> 70430e4818f2d326b59c52caf098050cb94fd7df
     }
+
+
 }
-
-
-
-
