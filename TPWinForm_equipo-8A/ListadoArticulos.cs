@@ -88,5 +88,16 @@ namespace TPWinForm_equipo_8A
             EliminarArticulo eliminar = new EliminarArticulo();
             eliminar.ShowDialog();
         }
+
+        private void btnAgregarImg_Click(object sender, EventArgs e)
+        {
+            if(dgvArt.SelectedRows.Count > 0)
+            {
+                int idArticulo = (int)(dgvArt.SelectedRows[0].Cells["Id"].Value);
+
+                AdministrarImagenes administrarImagenes = new AdministrarImagenes(idArticulo);
+                administrarImagenes.ShowDialog();
+            }
+        }
     }
 }

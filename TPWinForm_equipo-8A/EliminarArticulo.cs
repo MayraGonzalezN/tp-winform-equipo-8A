@@ -32,9 +32,9 @@ namespace TPWinForm_equipo_8A
             try
             {
                 articulo.Codigo = txtEliminar.Text;
-                existeCodigo= datosValidar.ExisteCodigoArticulo(articulo.Codigo);
+                existeCodigo = datosValidar.ExisteCodigoArticulo(articulo.Codigo, 0);
 
-                if (existeCodigo==true)
+                if (existeCodigo == true)
                 {
 
                     DialogResult respuesta = MessageBox.Show("¿Desea eliminar el articulo?", "Eliminar", MessageBoxButtons.YesNo);
@@ -44,14 +44,11 @@ namespace TPWinForm_equipo_8A
                         MessageBox.Show("ARTICULO ELIMINADO");
                         Close();
                     }
-
                 }
                 else
                 {
                     MessageBox.Show("EL CODIGO DE ARTICULO ES INEXISTENTE");
                 }
-                
-                
             }
             catch (Exception ex) 
             {

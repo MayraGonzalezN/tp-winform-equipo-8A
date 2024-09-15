@@ -76,17 +76,22 @@ namespace TPWinForm_equipo_8A
 
         private void BtnEliminarCategoria_Click(object sender, EventArgs e)
         {
+            AccesoDatos datos = new AccesoDatos();  
             try
             {
                 int idCategoria = Convert.ToInt32(TxtEliminarCategoria.Text);
 
                 CategoriaNegocio negocio = new CategoriaNegocio();
+                if (datos.ExisteCategotia(idCategoria))
+                {
                 negocio.eliminar(idCategoria);
-
-
                 MessageBox.Show("Categoria eliminada exitosamente.");
+                }
+                else
+                {
+                    MessageBox.Show("La categoria que intenta eliminar no existe.");
+                }
                 cargarCategoria();
-
                 TxtEliminarCategoria.Clear();
             }
             catch (Exception ex)

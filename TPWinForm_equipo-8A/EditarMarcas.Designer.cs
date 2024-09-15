@@ -119,6 +119,7 @@
             this.Name = "EditarMarcas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Administrar Marcas";
+            this.Load += new System.EventHandler(this.EditarMarcas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -43,12 +43,14 @@ namespace TPWinForm_equipo_8A
         {
             ListadoArticulos listadoArticulos = new ListadoArticulos();
             listadoArticulos.ShowDialog();
+            articulosPrincipal();
         }
 
         private void BajaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             EliminarArticulo eliminar = new EliminarArticulo();
             eliminar.ShowDialog();
+            articulosPrincipal();
         }
 
         private void ListarXMARCAToolStripMenuItem_Click(object sender, EventArgs e)
@@ -59,28 +61,29 @@ namespace TPWinForm_equipo_8A
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
-
         }
         private void articulosPrincipal()
         {
+            flpImagenXArt.Controls.Clear();
             GestionArticulos gestionArticulos = new GestionArticulos();
             List<Articulo> articulos = gestionArticulos.Listar();
-
+            
             foreach (Articulo articulo in articulos)
             {
                 Panel panelArticulo = new Panel();
-                panelArticulo.Width = 320;
+                panelArticulo.Width = 350;
                 panelArticulo.Height = 380;//aca agrego el tamaño que quiero que tenga mi panel x cada articulo
                 panelArticulo.Margin = new Padding(5);
 
                 PictureBox pictureBox = new PictureBox();
-                pictureBox.Width = panelArticulo.Width - 20;
-                pictureBox.Height = panelArticulo.Height - 50; //en vez de ponerle un with y que quede mal la img, le pongo un - teniendo en cuenta el tam del panel
-                pictureBox.ImageLocation = articulo.Imagen.ToString();
-                pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+                pictureBox.Width = panelArticulo.Width - 10;
+                pictureBox.Height = panelArticulo.Height - 60; //en vez de ponerle un with y que quede mal la img, le pongo un - teniendo en cuenta el tam del panel
+                //pictureBox.ImageLocation = articulo.Imagen.ToString();
+                pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
 
                 try
                 {
+                    if(!string.IsNullOrEmpty(articulo.Imagen))
                     pictureBox.Load(articulo.Imagen.ToString());
                 }
                 catch
@@ -130,6 +133,11 @@ namespace TPWinForm_equipo_8A
         {
             EditarCategorias formularioEditarCategoria = new EditarCategorias();
             formularioEditarCategoria.ShowDialog();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

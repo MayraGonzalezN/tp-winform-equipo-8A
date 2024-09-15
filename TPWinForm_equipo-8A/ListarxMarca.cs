@@ -100,5 +100,10 @@ namespace TPWinForm_equipo_8A
         {
 
         }
+
+        private void cbxMarcas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

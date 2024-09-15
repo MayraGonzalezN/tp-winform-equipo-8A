@@ -93,48 +93,101 @@ namespace TPWinForm_equipo_8A
         }
 //..................................................validar.........................................................
 
-        public bool ExisteCodigoArticulo(string codigo)
+        public bool ExisteCodigoArticulo(string codigo, int idArticulo)
         {
             AccesoDatos datos = new AccesoDatos();
             bool existe = false;
 
             try
             {
-               
-                datos.setearConsulta("SELECT Codigo FROM ARTICULOS WHERE Codigo = @codigo");
-                datos.comando.Parameters.Clear();
-                datos.comando.Parameters.AddWithValue("@codigo", codigo);
-
-                datos.ejecutarLectura();
-
-                
-                if (datos.Lector.Read())
+                string consulta;
+                if (idArticulo == 0)
                 {
-                    existe = true;  
+                    consulta = "SELECT Codigo FROM ARTICULOS WHERE Codigo = @codigo";
+                }
+                else
+                {
+                    consulta = "SELECT Codigo FROM ARTICULOS WHERE Codigo = @codigo AND Id != @idArticulo";
+                }
+                setearConsulta(consulta);
+                comando.Parameters.Clear();
+                comando.Parameters.AddWithValue("@codigo", codigo);
+                if (idArticulo != 0)
+                {
+                    comando.Parameters.AddWithValue("@idArticulo", idArticulo);
+                }
+                ejecutarLectura();
+                if (Lector.Read())
+                {
+                    existe = true;
                 }
             }
             catch (Exception ex)
             {
+
                 throw ex;
             }
             finally
             {
-                datos.cerrarConexion();
+                cerrarConexion();
             }
-
             return existe;
         }
+        public bool ExisteCategotia(int idCategoria)
+        {
+            bool existe = false;
+            
+            try
+            {
+                setearConsulta("SELECT Id FROM CATEGORIAS WHERE Id = @idCategoria");
+                comando.Parameters.Clear();
+                comando.Parameters.AddWithValue("@idCategoria", idCategoria);
+                ejecutarLectura();
 
+                if (Lector.Read())
+                {
+                    existe = true;
+                }
+            }
+            catch (Exception ex)
+            {
 
+                throw ex;
+            }
+            finally
+            {
+                cerrarConexion();
+            }
+            return existe;
+        }
+        public bool ExisteMarca(int idMarca)
+        {
+            bool existe = false;
 
+            try
+            {
+                setearConsulta("SELECT Id FROM MARCAS WHERE Id = @idMarca");
+                comando.Parameters.Clear();
+                comando.Parameters.AddWithValue("@idMarca", idMarca);
+                ejecutarLectura();
 
+                if (Lector.Read())
+                {
+                    existe = true;
+                }
+            }
+            catch (Exception ex)
+            {
 
-
-
-
+                throw ex;
+            }
+            finally
+            {
+                cerrarConexion();
+            }
+            return existe;
+        }
     }
-
-
 }
 
 

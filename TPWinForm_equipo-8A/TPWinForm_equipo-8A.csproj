@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccesoDatos.cs" />
+    <Compile Include="AdministrarImagenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdministrarImagenes.Designer.cs">
+      <DependentUpon>AdministrarImagenes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Articulo.cs" />
     <Compile Include="Categoria.cs" />
     <Compile Include="CategoriaNegocio.cs" />
@@ -103,6 +109,9 @@
     <Compile Include="MarcaNegocio.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AdministrarImagenes.resx">
+      <DependentUpon>AdministrarImagenes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DetallesXArticulo.resx">
       <DependentUpon>DetallesXArticulo.cs</DependentUpon>
     </EmbeddedResource>

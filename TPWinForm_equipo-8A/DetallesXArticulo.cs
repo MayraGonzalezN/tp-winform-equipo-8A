@@ -56,17 +56,17 @@ namespace TPWinForm_equipo_8A
                 pbxImagenUrl.Width = 320;
                 pbxImagenUrl.Height = 320;
                 pbxImagenUrl.Margin = new Padding (30);
-                pbxImagenUrl.SizeMode = PictureBoxSizeMode.Zoom;
-                {
+                pbxImagenUrl.SizeMode = PictureBoxSizeMode.StretchImage;
+
                     try
                     {
-                        pbxImagenUrl.ImageLocation = imagen;
+                        pbxImagenUrl.Load(imagen);
                     }
                     catch (Exception ex)
                     {
                         pbxImagenUrl.Load("https://media.istockphoto.com/id/1128826884/es/vector/ning%C3%BAn-s%C3%ADmbolo-de-vector-de-imagen-falta-icono-disponible-no-hay-galer%C3%ADa-para-este-momento.jpg?s=612x612&w=0&k=20&c=9vnjI4XI3XQC0VHfuDePO7vNJE7WDM8uzQmZJ1SnQgk=");
                     }
-                }
+                
                 flpImagenesDetalles.Controls.Add(pbxImagenUrl);
             }
         }

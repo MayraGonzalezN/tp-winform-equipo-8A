@@ -33,6 +33,7 @@
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnAgregar2 = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnAgregarImg = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagen)).BeginInit();
             this.SuspendLayout();
@@ -62,7 +63,7 @@
             // btnModificar
             // 
             this.btnModificar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(278, 316);
+            this.btnModificar.Location = new System.Drawing.Point(207, 316);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(113, 41);
             this.btnModificar.TabIndex = 2;
@@ -73,7 +74,7 @@
             // btnAgregar2
             // 
             this.btnAgregar2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar2.Location = new System.Drawing.Point(88, 316);
+            this.btnAgregar2.Location = new System.Drawing.Point(36, 316);
             this.btnAgregar2.Name = "btnAgregar2";
             this.btnAgregar2.Size = new System.Drawing.Size(108, 41);
             this.btnAgregar2.TabIndex = 3;
@@ -84,7 +85,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(478, 316);
+            this.btnEliminar.Location = new System.Drawing.Point(377, 316);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(113, 41);
             this.btnEliminar.TabIndex = 4;
@@ -92,11 +93,23 @@
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
+            // btnAgregarImg
+            // 
+            this.btnAgregarImg.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarImg.Location = new System.Drawing.Point(549, 316);
+            this.btnAgregarImg.Name = "btnAgregarImg";
+            this.btnAgregarImg.Size = new System.Drawing.Size(113, 41);
+            this.btnAgregarImg.TabIndex = 5;
+            this.btnAgregarImg.Text = "Imagenes";
+            this.btnAgregarImg.UseVisualStyleBackColor = true;
+            this.btnAgregarImg.Click += new System.EventHandler(this.btnAgregarImg_Click);
+            // 
             // ListadoArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1035, 379);
+            this.Controls.Add(this.btnAgregarImg);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnAgregar2);
             this.Controls.Add(this.btnModificar);
@@ -119,5 +132,6 @@
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnAgregar2;
         private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnAgregarImg;
     }
 }

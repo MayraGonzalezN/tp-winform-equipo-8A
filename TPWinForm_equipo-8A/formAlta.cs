@@ -120,23 +120,25 @@ namespace TPWinForm_equipo_8A
             return true;
         }
    
-        private bool validarCodigoExistente(String codigo)
-        {
-           AccesoDatos datosValidar = new AccesoDatos();
-           return datosValidar.ExisteCodigoArticulo(codigo); 
-        }
 
         //.........................................................VALIDACIONES.............................................
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-                GestionArticulos gestionArticulo = new GestionArticulos();
+            GestionArticulos gestionArticulo = new GestionArticulos();
+            AccesoDatos datos = new AccesoDatos();
 
             try
             {
                 if (validarCajasTexto())
                     return;
+                int idArticulo = 0;
+                if(articulo != null)
+                {
+                    idArticulo = articulo.Id;
+                }
+                bool codigoExistente = datos.ExisteCodigoArticulo(txtCodigo.Text, idArticulo);
 
-                if (!(validarCodigoExistente(txtCodigo.Text)))
+                if (!codigoExistente)
                 {
 
                     if (articulo == null)

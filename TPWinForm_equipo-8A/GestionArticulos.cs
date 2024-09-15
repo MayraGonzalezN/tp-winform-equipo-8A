@@ -244,5 +244,26 @@ namespace WinTPWinForm_equipo_8A
             catch (Exception ex) { throw ex; }
             finally { datos.cerrarConexion(); }
         }
+
+        public void EliminarImagenUrl(int idArticulo, string imagenUrl)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                MessageBox.Show($"eliminando imagen: idArticulo = {idArticulo}, imagenUrl = {imagenUrl}");
+                datos.setearConsulta("DELETE FROM IMAGENES WHERE IdArticulo = @idArticulo AND ImagenUrl = @imagenUrl");
+                datos.SetearParametro("@idArticulo", idArticulo);
+                datos.SetearParametro("@imagenUrl", imagenUrl);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"ERROR:{ex.Message}");
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
     }
 }

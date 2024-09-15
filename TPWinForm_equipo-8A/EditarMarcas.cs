@@ -30,7 +30,10 @@ namespace TPWinForm_equipo_8A
             cargarMarcas(); 
         }
 
-
+        private void EditarMarcas_Load(object sender, EventArgs e)
+        {
+            cargarMarcas();
+        }
         //............................validar......................................
 
 
@@ -59,14 +62,21 @@ namespace TPWinForm_equipo_8A
 
         private void btnEliminarMarca_Click(object sender, EventArgs e)
         {
+            AccesoDatos datos = new AccesoDatos();
             try
             {
                 int idMarca = Convert.ToInt32(txtboxEliminarMarca.Text); 
 
                 MarcaNegocio negocio = new MarcaNegocio();
+                if (datos.ExisteMarca(idMarca))
+                {
                 negocio.eliminar(idMarca);
-
                 MessageBox.Show("Marca eliminada exitosamente.");
+                }
+                else
+                {
+                    MessageBox.Show("La marca que intenta eliminar no existe.");
+                }
                 cargarMarcas();
                 txtboxEliminarMarca.Clear();
             }
