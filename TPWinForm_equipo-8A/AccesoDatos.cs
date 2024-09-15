@@ -144,13 +144,113 @@ namespace TPWinForm_equipo_8A
                 comando.Parameters.AddWithValue("@idCategoria", idCategoria);
                 ejecutarLectura();
 
+<<<<<<< HEAD
                 if (Lector.Read())
                 {
                     existe = true;
+=======
+        public bool ExisteNombreMarca(string nombreMarca)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            bool existeNombre = false;
+
+            try
+            {
+
+                datos.setearConsulta("SELECT Descripcion FROM MARCAS WHERE Descripcion = @descripcion");
+                datos.comando.Parameters.Clear();
+                datos.comando.Parameters.AddWithValue("@descripcion", nombreMarca);
+
+                datos.ejecutarLectura();
+
+
+                if (datos.Lector.Read())
+                {
+                    existeNombre = true;
+>>>>>>> 70430e4818f2d326b59c52caf098050cb94fd7df
                 }
             }
             catch (Exception ex)
             {
+<<<<<<< HEAD
+=======
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
+            return existeNombre;
+
+
+        }
+
+        public bool ExisteIDmarca(int codMarca)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            bool existeIDmarca = false;
+
+            try
+            {
+
+                datos.setearConsulta("SELECT Id FROM MARCAS WHERE Id = @Id");
+                datos.comando.Parameters.Clear();
+                datos.comando.Parameters.AddWithValue("@Id", codMarca);
+
+                datos.ejecutarLectura();
+
+
+                if (datos.Lector.Read())
+                {
+                    existeIDmarca = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
+            return existeIDmarca;
+
+
+        }
+
+        public bool ExisteNombreCategoria(string nombreCAT)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            bool existeNombreCat = false;
+
+            try
+            {
+
+                datos.setearConsulta("SELECT Descripcion FROM CATEGORIAS WHERE Descripcion = @descripcion");
+                datos.comando.Parameters.Clear();
+                datos.comando.Parameters.AddWithValue("@descripcion", nombreCAT);
+
+                datos.ejecutarLectura();
+
+
+                if (datos.Lector.Read())
+                {
+                    existeNombreCat = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
+            return existeNombreCat;
+>>>>>>> 70430e4818f2d326b59c52caf098050cb94fd7df
 
                 throw ex;
             }
@@ -179,14 +279,52 @@ namespace TPWinForm_equipo_8A
             catch (Exception ex)
             {
 
+<<<<<<< HEAD
+=======
+        }
+        public bool ExisteIDcategoria(int codCate)
+        {
+
+            AccesoDatos datos = new AccesoDatos();
+            bool existeIDcategoria = false;
+
+            try
+            {
+
+                datos.setearConsulta("SELECT Id FROM CATEGORIAS WHERE Id = @Id");
+                datos.comando.Parameters.Clear();
+                datos.comando.Parameters.AddWithValue("@Id", codCate);
+
+                datos.ejecutarLectura();
+
+
+                if (datos.Lector.Read())
+                {
+                    existeIDcategoria = true;
+                }
+            }
+            catch (Exception ex)
+            {
+>>>>>>> 70430e4818f2d326b59c52caf098050cb94fd7df
                 throw ex;
             }
             finally
             {
+<<<<<<< HEAD
                 cerrarConexion();
             }
             return existe;
         }
+=======
+                datos.cerrarConexion();
+            }
+
+            return existeIDcategoria;
+
+        }
+
+
+>>>>>>> 70430e4818f2d326b59c52caf098050cb94fd7df
     }
 }
 

@@ -102,7 +102,7 @@
             this.btnAceptarCategoria.TabIndex = 1;
             this.btnAceptarCategoria.Text = "Agregar Categoria";
             this.btnAceptarCategoria.UseVisualStyleBackColor = true;
-            this.btnAceptarCategoria.Click += new System.EventHandler(this.btnAceptarCategoria_Click);
+             this.btnAceptarCategoria.Click += new System.EventHandler(this.btnAceptarCategoria_Click);
             // 
             // EditarCategorias
             // 
